@@ -8,6 +8,9 @@ import { SecurityBriefPage } from '../features/brief/SecurityBriefPage'
 import { TrustPathPage } from '../features/trust/TrustPathPage'
 import { ThreatsPage } from '../features/threats/ThreatsPage'
 import { ControlsPage } from '../features/controls/ControlsPage'
+import { ScenariosPage } from '../features/scenarios/ScenariosPage'
+import { StandardsPage } from '../features/standards/StandardsPage'
+import { MethodologyPage } from '../features/methodology/MethodologyPage'
 
 function SectionPlaceholder({ locale, section }: { locale: Locale; section: Section }) {
   return (
@@ -23,6 +26,9 @@ function SectionPage({ locale, section }: { locale: Locale; section: Section }) 
   if (section === 'trust-path') return <TrustPathPage locale={locale} />
   if (section === 'threats') return <ThreatsPage locale={locale} />
   if (section === 'controls') return <ControlsPage locale={locale} />
+  if (section === 'scenarios') return <ScenariosPage locale={locale} />
+  if (section === 'standards') return <StandardsPage locale={locale} />
+  if (section === 'methodology') return <MethodologyPage locale={locale} />
   return <SectionPlaceholder locale={locale} section={section} />
 }
 
