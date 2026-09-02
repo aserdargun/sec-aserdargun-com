@@ -257,6 +257,13 @@ The accepted direction is **forensic ledger × authorization trace**:
 - Square to slightly rounded geometry.
 - IBM Plex Sans for interface and body text; IBM Plex Mono for identities, scopes, claims, traces, and protocol values.
 
+Accepted visual references:
+
+- [`docs/design/sec-primary-desktop.png`](../../design/sec-primary-desktop.png)
+- [`docs/design/sec-primary-mobile.png`](../../design/sec-primary-mobile.png)
+- [`docs/design/sec-control-matrix-desktop.png`](../../design/sec-control-matrix-desktop.png)
+- [`docs/design/implementation-inventory.md`](../../design/implementation-inventory.md)
+
 ### Starting tokens
 
 | Token | Intended value |
