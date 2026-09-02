@@ -10,7 +10,12 @@ export function ControlsPage({ locale }: { locale: Locale }) {
   const [searchParams, setSearchParams] = useSearchParams()
   const filters = readControlFilters(searchParams)
   const controls = catalog.controls.filter((control) => (!filters.node || control.nodeIds.includes(filters.node)) && (!filters.type || control.type === filters.type) && (!filters.assurance || control.assurance === filters.assurance))
-  function update(key: string, value: string) { const next = new URLSearchParams(searchParams); value ? next.set(key, value) : next.delete(key); setSearchParams(next) }
+  function update(key: string, value: string) {
+    const next = new URLSearchParams(searchParams)
+    if (value) next.set(key, value)
+    else next.delete(key)
+    setSearchParams(next)
+  }
   return (
     <section className="controls-page">
       <header className="page-intro"><p className="eyebrow">SEC / 04 / CONTROL MATRIX</p><h1>{locale === 'en' ? 'Controls are claims with proof obligations' : 'Kontroller, kanıt yükümlülüğü taşıyan iddialardır'}</h1><p>{locale === 'en' ? 'Assurance is stated per control—declared, enforced, observed, or proven—never collapsed into one score.' : 'Güvence her kontrol için beyan, uygulandı, gözlendi veya kanıtlandı olarak belirtilir; tek skora indirgenmez.'}</p></header>

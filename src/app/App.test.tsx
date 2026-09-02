@@ -11,14 +11,14 @@ describe('SEC application shell', () => {
   it('renders the Turkish shell and current navigation state', async () => {
     renderAt('/tr/trust-path')
 
-    expect(await screen.findByRole('banner')).toHaveTextContent('AI Sistemleri Güvenlik Gözlemevi')
+    expect(await screen.findByRole('banner', { name: 'AI Sistemleri Güvenlik Gözlemevi' })).toHaveTextContent('AI Sistemleri Güvenlik Gözlemevi')
     expect(screen.getByRole('link', { name: 'Güven zinciri' })).toHaveAttribute('aria-current', 'page')
   })
 
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: 'Security Brief' })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: /Identity is becoming the control plane/i })).toBeVisible()
     expect(window.location.pathname).toBe('/en')
   })
 

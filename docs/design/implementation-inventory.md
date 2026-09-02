@@ -80,3 +80,15 @@ No eyebrow, kicker, pretitle, badge, KPI, aggregate score, marketing CTA, or inv
 - Generated concept URLs, fake trace IDs, timestamps, and sample evidence rows are compositional references only; production content comes from the validated catalog.
 - The generated desktop concept shows an extra standalone link control in the header; implementation may omit it because it has no approved product function.
 - The mobile generated canvas is taller than a physical 390×844 viewport to show continuation; implementation preserves the same reading order through normal vertical scrolling.
+- The mobile implementation keeps one synchronized detail record after the ordered trace instead of duplicating it inside the selected list item; this preserves one accessible source of truth and keeps all eleven 44px targets in uninterrupted order.
+
+## Implemented fidelity ledger
+
+| Reference evidence | Rendered evidence | Resolution |
+| --- | --- | --- |
+| Cold near-white canvas, ink typography, cobalt selection | `--paper`, `--ink`, and `--cobalt` tokens drive every route | Matched |
+| IBM Plex Sans with mono identifiers | Local `@fontsource` assets are bundled; node numbers, dates, and labels use Plex Mono | Matched |
+| Horizontal eleven-node trace plus right inspector on desktop | 1440×1000 render keeps the complete path and synchronized Authorization inspector in one ruled workbench | Matched |
+| Vertical full-width trust rows on mobile | 390×844 render exposes eleven ordered 56px buttons with one numbered circle per row | Matched; synchronized inspector follows the trace as noted above |
+| No cards, glow, aggregate score, or decorative trust meter | Content is expressed through semantic lists, tables, definition records, and fine rules | Matched |
+| Exact primary Trust Path copy | H1, supporting sentence, and review line match the accepted inventory | Matched |

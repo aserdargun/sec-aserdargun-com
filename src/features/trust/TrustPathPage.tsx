@@ -10,14 +10,14 @@ export function TrustPathPage({ locale }: { locale: Locale }) {
   const [searchParams, setSearchParams] = useSearchParams()
   const selectedId = readTrustNode(searchParams.get('node'))
   const node = catalog.trustNodesById.get(selectedId)!
-  const title = locale === 'en' ? 'The chain of evidence behind every agent action' : 'Her agent eyleminin arkasındaki kanıt zinciri'
+  const title = locale === 'en' ? 'Trust is a chain of evidence.' : 'Güven bir kanıt zinciridir.'
 
   return (
     <section className="trust-page">
       <header className="page-intro">
-        <p className="eyebrow">SEC / 02 / TRUST PATH</p>
         <h1>{title}</h1>
-        <p>{locale === 'en' ? 'Select a boundary to inspect its actors, assets, threats, controls, and proof obligations.' : 'Aktörleri, varlıkları, tehditleri, kontrolleri ve kanıt yükümlülüklerini incelemek için bir sınır seçin.'}</p>
+        <p>{locale === 'en' ? 'Trace delegated intent from model capability to auditable action.' : 'Devredilen niyeti model yeteneğinden denetlenebilir eyleme kadar izle.'}</p>
+        <p className="review-line">{locale === 'en' ? 'Reviewed 02 Sep 2026' : 'İncelendi 02 Eyl 2026'}</p>
       </header>
       <div className="trust-workbench">
         <TrustPath

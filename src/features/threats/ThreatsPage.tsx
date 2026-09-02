@@ -11,7 +11,8 @@ export function ThreatsPage({ locale }: { locale: Locale }) {
   const threats = catalog.threats.filter((threat) => (!filters.node || threat.nodeIds.includes(filters.node)) && (!filters.family || threat.family === filters.family))
   function setNode(value: string) {
     const next = new URLSearchParams(searchParams)
-    value ? next.set('node', value) : next.delete('node')
+    if (value) next.set('node', value)
+    else next.delete('node')
     setSearchParams(next)
   }
   return (

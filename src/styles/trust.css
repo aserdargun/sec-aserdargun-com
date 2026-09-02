@@ -1,0 +1,21 @@
+.trust-page .page-intro { padding-block: clamp(2.5rem, 5vw, 4.75rem) clamp(2rem, 3vw, 3rem); }
+.trust-page .page-intro h1 { font-size: clamp(2.5rem, 4.4vw, 4.25rem); }
+.trust-page .review-line { margin-top: 1.4rem; font: .75rem var(--mono); letter-spacing: .035em; }
+.trust-workbench { display: grid; grid-template-columns: minmax(0, 1.8fr) minmax(360px, .85fr); border-top: 1px solid var(--line); }
+.trust-path { position: relative; display: grid; grid-template-columns: repeat(11, minmax(0, 1fr)); align-content: center; min-height: 420px; margin: 0; padding: 3rem 1rem; list-style: none; }
+.trust-path::before { position: absolute; top: 50%; right: 5%; left: 5%; height: 1px; background: var(--line-strong); content: ''; }
+.trust-path li { position: relative; z-index: 1; }
+.trust-path button { display: flex; width: 100%; min-height: 84px; flex-direction: column; align-items: center; justify-content: center; gap: .65rem; padding: .45rem .15rem; border: 1px solid transparent; color: var(--ink); background: transparent; cursor: pointer; font-size: .72rem; }
+.trust-path button::before { width: 24px; height: 24px; border: 1px solid var(--line-strong); background: var(--paper-raised); border-radius: 50%; box-shadow: inset 0 0 0 6px var(--paper-raised); content: ''; }
+.trust-path .node-order { position: absolute; top: 0; color: var(--muted); font: .58rem var(--mono); }
+.trust-path li.is-selected button { color: var(--cobalt); border-color: var(--cobalt); background: var(--paper-raised); box-shadow: var(--shadow); font-weight: 600; }
+.trust-path li.is-selected button::before { border-color: var(--cobalt); background: var(--cobalt); }
+.trust-detail { border-left: 1px solid var(--line); }
+.trust-detail > header, .detail-block { padding: 1.35rem 1.5rem; border-bottom: 1px solid var(--line); }
+.trust-detail > header { border-top: 3px solid var(--cobalt); }
+.trust-detail h2 { margin-bottom: .4rem; font-size: 2rem; }
+.detail-purpose { margin: 0; color: var(--muted); }
+.detail-grid { display: grid; grid-template-columns: 1fr 1fr; }
+.detail-grid .detail-block + .detail-block { border-left: 1px solid var(--line); }
+.detail-block ul { margin-bottom: 0; padding-left: 1.15rem; }
+.detail-block li + li { margin-top: .45rem; }

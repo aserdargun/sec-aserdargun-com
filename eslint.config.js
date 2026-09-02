@@ -8,6 +8,19 @@ export default tseslint.config(
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
+    files: ['**/*.{mjs,cjs}', 'scripts/**/*.{ts,js,mjs}', 'tests/**/*.{ts,js,mjs}', 'vite.config.ts', 'playwright.config.ts'],
+    languageOptions: {
+      globals: {
+        console: 'readonly',
+        process: 'readonly',
+        setTimeout: 'readonly',
+        clearTimeout: 'readonly',
+        URL: 'readonly',
+        Buffer: 'readonly',
+      },
+    },
+  },
+  {
     files: ['**/*.{ts,tsx}'],
     languageOptions: { ecmaVersion: 2022 },
     plugins: { 'react-hooks': reactHooks, 'react-refresh': reactRefresh },
