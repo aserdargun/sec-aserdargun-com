@@ -6,6 +6,8 @@ import { sections, shellCopy, type Section } from '../i18n/copy'
 import type { Locale } from '../content/schema'
 import { SecurityBriefPage } from '../features/brief/SecurityBriefPage'
 import { TrustPathPage } from '../features/trust/TrustPathPage'
+import { ThreatsPage } from '../features/threats/ThreatsPage'
+import { ControlsPage } from '../features/controls/ControlsPage'
 
 function SectionPlaceholder({ locale, section }: { locale: Locale; section: Section }) {
   return (
@@ -19,6 +21,8 @@ function SectionPlaceholder({ locale, section }: { locale: Locale; section: Sect
 function SectionPage({ locale, section }: { locale: Locale; section: Section }) {
   if (section === 'brief') return <SecurityBriefPage locale={locale} />
   if (section === 'trust-path') return <TrustPathPage locale={locale} />
+  if (section === 'threats') return <ThreatsPage locale={locale} />
+  if (section === 'controls') return <ControlsPage locale={locale} />
   return <SectionPlaceholder locale={locale} section={section} />
 }
 
