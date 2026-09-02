@@ -1,0 +1,60 @@
+{
+  "name": "sec-aserdargun-com",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "npm@11.19.0",
+  "engines": {
+    "node": "22.x"
+  },
+  "scripts": {
+    "runtime:check": "node -p process.versions.node",
+    "dev": "vite --host 127.0.0.1 --port 4174 --strictPort",
+    "build": "npm run content:check && tsc -b && vite build",
+    "content:check": "tsx scripts/validate-content.ts",
+    "typecheck": "tsc -b --pretty false",
+    "lint": "eslint .",
+    "test": "vitest",
+    "test:run": "vitest run",
+    "test:lifecycle": "node --test tests/lifecycle/*.test.mjs",
+    "test:e2e": "playwright test",
+    "preview:serve": "vite preview --host 127.0.0.1 --port 4174 --strictPort",
+    "preview:start": "node scripts/preview-control.mjs start",
+    "preview:status": "node scripts/preview-control.mjs status",
+    "preview:stop": "node scripts/preview-control.mjs stop",
+    "artifact:check": "node scripts/validate-artifact.mjs",
+    "check": "npm run content:check && npm run typecheck && npm run lint && npm run test:run && npm run build",
+    "validate:codex": "npm run preview:stop && npm run test:lifecycle && npm run check && npm run artifact:check && npm run test:e2e && git diff --check"
+  },
+  "dependencies": {
+    "@fontsource/ibm-plex-mono": "^5.3.0",
+    "@fontsource/ibm-plex-sans": "^5.3.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^7.18.3",
+    "zod": "^4.5.4"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.13.0",
+    "@eslint/js": "^10.0.1",
+    "@playwright/test": "^1.62.1",
+    "@testing-library/jest-dom": "^7.0.1",
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.7",
+    "@types/node": "^26.4.1",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.5",
+    "@vitejs/plugin-react": "^6.1.1",
+    "axe-core": "^4.13.0",
+    "eslint": "^10.9.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.5",
+    "jsdom": "^30.0.1",
+    "playwright": "^1.62.1",
+    "tsx": "^4.23.13",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.69.0",
+    "vite": "^8.2.2",
+    "vitest": "^4.1.11"
+  }
+}
