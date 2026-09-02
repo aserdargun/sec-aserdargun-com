@@ -4,6 +4,8 @@ import { LocalizedNotFound } from '../components/LocalizedNotFound'
 import { resolveLocale } from '../i18n/locale'
 import { sections, shellCopy, type Section } from '../i18n/copy'
 import type { Locale } from '../content/schema'
+import { SecurityBriefPage } from '../features/brief/SecurityBriefPage'
+import { TrustPathPage } from '../features/trust/TrustPathPage'
 
 function SectionPlaceholder({ locale, section }: { locale: Locale; section: Section }) {
   return (
@@ -14,6 +16,12 @@ function SectionPlaceholder({ locale, section }: { locale: Locale; section: Sect
   )
 }
 
+function SectionPage({ locale, section }: { locale: Locale; section: Section }) {
+  if (section === 'brief') return <SecurityBriefPage locale={locale} />
+  if (section === 'trust-path') return <TrustPathPage locale={locale} />
+  return <SectionPlaceholder locale={locale} section={section} />
+}
+
 function LocalizedRoutes() {
   const params = useParams()
   const locale = resolveLocale(params.locale)
@@ -22,9 +30,9 @@ function LocalizedRoutes() {
   return (
     <Routes>
       <Route element={<AppShell locale={locale} />}>
-        <Route index element={<SectionPlaceholder locale={locale} section="brief" />} />
+        <Route index element={<SectionPage locale={locale} section="brief" />} />
         {sections.slice(1).map((section) => (
-          <Route key={section} path={section} element={<SectionPlaceholder locale={locale} section={section} />} />
+          <Route key={section} path={section} element={<SectionPage locale={locale} section={section} />} />
         ))}
         <Route path="*" element={<LocalizedNotFound locale={locale} />} />
       </Route>
