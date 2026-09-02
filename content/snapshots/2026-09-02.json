@@ -1,0 +1,12 @@
+{
+  "id": "security-brief-2026-09-02",
+  "cutoffDate": "2026-09-02",
+  "headline": { "en": "Identity is becoming the control plane for agent authority", "tr": "Kimlik, agent yetkisinin kontrol düzlemine dönüşüyor" },
+  "summary": { "en": "The strongest current signal is convergence on first-class agent identity, resource-bound credentials, least privilege, and traceable action evidence. Continuous cross-service authority remains an open watch item.", "tr": "En güçlü güncel sinyal; birinci sınıf agent kimliği, kaynağa bağlı kimlik bilgileri, en az ayrıcalık ve izlenebilir eylem kanıtında yakınsamadır. Servisler arası sürekli yetki hâlâ açık bir izleme konusudur." },
+  "mostImportantClaimId": "agent-first-class-identity",
+  "watchSignalClaimIds": ["continuous-authority-watch", "ai-act-enforcement-is-staged"],
+  "correctionNotes": [
+    { "en": "Framework mappings express research correspondence, not certification or compliance status.", "tr": "Framework eşlemeleri araştırma karşılığını ifade eder; sertifikasyon veya uyum durumu değildir." },
+    { "en": "Control assurance describes the evidence type in this catalog, not universal effectiveness.", "tr": "Kontrol güvence seviyesi bu katalogdaki kanıt türünü açıklar; evrensel etkililik değildir." }
+  ]
+}

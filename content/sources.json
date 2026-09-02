@@ -1,0 +1,114 @@
+[
+  {
+    "id": "nist-ai-800-5",
+    "title": "Summary Analysis of Responses to the Request for Information Regarding Security Considerations for AI Agents",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
+    "publishedAt": "2026-05-18",
+    "checkedAt": "2026-09-02",
+    "kind": "official-publication",
+    "access": "available",
+    "summary": {
+      "en": "NIST AI 800-5 summarizes ecosystem agreement that agent systems create novel threats and require adaptations to established cybersecurity practices.",
+      "tr": "NIST AI 800-5, agent sistemlerinin yeni tehditler oluşturduğu ve yerleşik siber güvenlik uygulamalarının uyarlanması gerektiği yönündeki ekosistem görüşlerini özetler."
+    }
+  },
+  {
+    "id": "nist-agent-standards",
+    "title": "AI Agent Standards Initiative",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
+    "publishedAt": "2026-02-17",
+    "checkedAt": "2026-09-02",
+    "kind": "official-publication",
+    "access": "available",
+    "summary": {
+      "en": "NIST frames agent authentication, identity infrastructure, secure interoperability, and security evaluations as active standards and research priorities.",
+      "tr": "NIST; agent kimlik doğrulaması, kimlik altyapısı, güvenli birlikte çalışabilirlik ve güvenlik değerlendirmelerini aktif standart ve araştırma öncelikleri olarak ele alır."
+    }
+  },
+  {
+    "id": "nist-agent-identity",
+    "title": "Software and AI Agent Identity and Authorization",
+    "publisher": "NIST National Cybersecurity Center of Excellence",
+    "url": "https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization",
+    "publishedAt": "2026-02-05",
+    "checkedAt": "2026-09-02",
+    "kind": "official-publication",
+    "access": "available",
+    "summary": {
+      "en": "The NCCoE project examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents.",
+      "tr": "NCCoE projesi agentlar için standart-temelli kimlik, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve prompt injection kontrollerini inceler."
+    }
+  },
+  {
+    "id": "nist-agent-identity-blog-2026-08-27",
+    "title": "Back to the Future: Why Agentic AI Needs a Strong Identity Foundation",
+    "publisher": "National Institute of Standards and Technology",
+    "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
+    "publishedAt": "2026-08-27",
+    "checkedAt": "2026-09-02",
+    "kind": "official-publication",
+    "access": "available",
+    "summary": {
+      "en": "NIST describes first-class agent identities, dynamic and audience-restricted credentials, least privilege, hardened local harnesses, and the consent-fatigue limits of human approval.",
+      "tr": "NIST; birinci sınıf agent kimliklerini, dinamik ve hedef-kısıtlı kimlik bilgilerini, en az ayrıcalığı, sertleştirilmiş yerel harness'leri ve insan onayındaki onay yorgunluğu sınırlarını açıklar."
+    }
+  },
+  {
+    "id": "mcp-spec-2026-07-28",
+    "title": "The 2026-07-28 Model Context Protocol Specification",
+    "publisher": "Model Context Protocol",
+    "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+    "publishedAt": "2026-07-28",
+    "checkedAt": "2026-09-02",
+    "kind": "official-documentation",
+    "access": "available",
+    "summary": {
+      "en": "The MCP release introduces a stateless core, routable method/tool headers, an extensions model, and authorization hardening including issuer validation changes.",
+      "tr": "MCP sürümü stateless bir çekirdek, yönlendirilebilir method/tool başlıkları, extension modeli ve issuer doğrulamasını içeren yetkilendirme sertleştirmeleri getirir."
+    }
+  },
+  {
+    "id": "owasp-agentic-top10-2026",
+    "title": "OWASP Top 10 for Agentic Applications for 2026",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
+    "publishedAt": "2025-12-09",
+    "checkedAt": "2026-09-02",
+    "kind": "official-framework",
+    "access": "available",
+    "summary": {
+      "en": "A peer-reviewed framework for critical risks affecting autonomous and agentic applications that plan, act, and make decisions across workflows.",
+      "tr": "İş akışlarında planlayan, eyleme geçen ve karar veren otonom/agentic uygulamaları etkileyen kritik riskler için hakemli bir çerçeve."
+    }
+  },
+  {
+    "id": "mitre-atlas",
+    "title": "MITRE ATLAS",
+    "publisher": "MITRE",
+    "url": "https://atlas.mitre.org/",
+    "publishedAt": null,
+    "checkedAt": "2026-09-02",
+    "kind": "official-framework",
+    "access": "available",
+    "summary": {
+      "en": "MITRE ATLAS provides adversarial tactics and techniques for AI-enabled systems, including prompt injection and agent tool/context poisoning techniques.",
+      "tr": "MITRE ATLAS, prompt injection ile agent araç/bağlam zehirleme teknikleri dahil AI destekli sistemlere yönelik saldırı taktik ve tekniklerini sunar."
+    }
+  },
+  {
+    "id": "eu-ai-act-enforcement",
+    "title": "When does enforcement start?",
+    "publisher": "European Commission AI Act Service Desk",
+    "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
+    "publishedAt": null,
+    "checkedAt": "2026-09-02",
+    "kind": "official-regulation",
+    "access": "available",
+    "summary": {
+      "en": "The Commission explains which enforcement powers and obligations apply from 2 August 2026 and which high-risk provisions begin later.",
+      "tr": "Komisyon, 2 Ağustos 2026'dan itibaren hangi uygulama yetkileri ve yükümlülüklerin geçerli olduğunu, yüksek riskli hükümlerin hangilerinin daha sonra başlayacağını açıklar."
+    }
+  }
+]
