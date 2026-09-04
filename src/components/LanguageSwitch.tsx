@@ -8,13 +8,9 @@ export function LanguageSwitch({ locale }: { locale: Locale }) {
 
   return (
     <div className="language-switch" aria-label={locale === 'en' ? 'Language' : 'Dil'}>
-      <span aria-current={locale === 'en' ? 'true' : undefined}>EN</span>
+      <span aria-current="true">{locale.toUpperCase()}</span>
       <span aria-hidden="true">/</span>
-      {target === 'tr' ? (
-        <Link to={`${targetPath}${location.search}`}>TR</Link>
-      ) : (
-        <Link to={`${targetPath}${location.search}`}>EN</Link>
-      )}
+      <Link to={`${targetPath}${location.search}`}>{target.toUpperCase()}</Link>
     </div>
   )
 }

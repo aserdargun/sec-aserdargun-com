@@ -1,6 +1,7 @@
 import type { Locale } from '../../content/schema'
 import { catalog } from '../../content/catalog'
 import { SourceLink } from '../../components/SourceLink'
+import { shellCopy } from '../../i18n/copy'
 
 const content = {
   en: {
@@ -15,11 +16,11 @@ const content = {
   },
   tr: {
     title: 'SEC kanıtı editoryal yargıdan nasıl ayırır',
-    intro: 'SEC statik, sürümlenmiş bir araştırma aracıdır. Sistem taramaz, secret saklamaz, uyum sonucu vermez veya güvenlik incelemesinin yerini almaz.',
+    intro: 'SEC statik, sürümlenmiş bir araştırma aracıdır. Sistem taramaz, gizli bilgi saklamaz, uyum sonucu vermez veya güvenlik incelemesinin yerini almaz.',
     sections: [
       ['Kanıt sınıfları', 'Kanıt kayıtları atıf verilen yetkili kaynaklarla doğrudan desteklenir. Sentez kayıtları açık bir editoryal yargıyla birden çok kaynağı bağlar. İzleme sinyalleri henüz yerleşik kabul edilemeyecek önemli yönleri gösterir.'],
       ['Güvence sözlüğü', 'Beyan, kontrolün dokümante edildiği; uygulandı, teknik sınırın devrede olduğu; gözlendi, etkinin operasyonel kanıtta görüldüğü; kanıtlandı ise odaklı doğrulama testinin amaçlanan sonucu gösterdiği anlamına gelir. Bu seviyeler ortalamaya dönüştürülmez.'],
-      ['Editoryal döngü', 'Her kayıt inceleme tarihi, kaynak kimlikleri ve iki dilli metin taşır. Snapshot araştırma kesimini belirler. Yeni kanıt incelenmiş değişiklikle eklenir ve düzeltme notları görünür kalır.'],
+      ['Editoryal döngü', 'Her kayıt inceleme tarihi, kaynak kimlikleri ve iki dilli metin taşır. Anlık görüntü araştırma kesim tarihini belirler. Yeni kanıt incelenmiş değişiklikle eklenir ve düzeltme notları görünür kalır.'],
       ['Sınırlar', 'Eşleme sertifikasyon değildir. Kanıtlandı işaretli kontrol yalnız belirtilen kanıt yükümlülüğü için kanıtlanmıştır; her uygulama veya tehdit için değil. Bilinmeyen ya da erişilemeyen kanıt bilinmeyen kalır.'],
     ],
   },
@@ -27,5 +28,5 @@ const content = {
 
 export function MethodologyPage({ locale }: { locale: Locale }) {
   const copy = content[locale]
-  return <section className="methodology-page"><header className="page-intro"><p className="eyebrow">SEC / 07 / METHODOLOGY</p><h1>{copy.title}</h1><p>{copy.intro}</p></header><div className="methodology-sections">{copy.sections.map(([title, body], index) => <section key={title}><span className="section-number">0{index + 1}</span><div><h2>{title}</h2><p>{body}</p></div></section>)}</div><section className="source-register"><h2>{locale === 'en' ? 'Source register' : 'Kaynak kaydı'}</h2><ul>{catalog.sources.map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /><small>{source.checkedAt}</small></li>)}</ul></section></section>
+  return <section className="methodology-page"><header className="page-intro"><p className="eyebrow">{shellCopy[locale].sectionEyebrows.methodology}</p><h1>{copy.title}</h1><p>{copy.intro}</p></header><div className="methodology-sections">{copy.sections.map(([title, body], index) => <section key={title}><span className="section-number">0{index + 1}</span><div><h2>{title}</h2><p>{body}</p></div></section>)}</div><section className="source-register"><h2>{locale === 'en' ? 'Source register' : 'Kaynak kaydı'}</h2><ul>{catalog.sources.map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /><small>{locale === 'en' ? 'Checked' : 'Kontrol edildi'}: {source.checkedAt}</small></li>)}</ul></section></section>
 }

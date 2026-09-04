@@ -4,6 +4,7 @@ import { catalog } from '../../content/catalog'
 import { ThreatIndex } from './ThreatIndex'
 import { ThreatToolbar } from './ThreatToolbar'
 import { readThreatFilters } from './threat-state'
+import { shellCopy } from '../../i18n/copy'
 
 export function ThreatsPage({ locale }: { locale: Locale }) {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -17,7 +18,7 @@ export function ThreatsPage({ locale }: { locale: Locale }) {
   }
   return (
     <section className="threats-page">
-      <header className="page-intro"><p className="eyebrow">SEC / 03 / THREAT MAP</p><h1>{locale === 'en' ? 'Threats, located at the boundary they exploit' : 'İstismar ettikleri sınıra yerleştirilmiş tehditler'}</h1><p>{locale === 'en' ? 'Each family records prerequisites, mechanism, consequence, observable signals, and mapped controls.' : 'Her aile ön koşulları, mekanizmayı, sonucu, gözlenebilir sinyalleri ve eşlenen kontrolleri kaydeder.'}</p></header>
+      <header className="page-intro"><p className="eyebrow">{shellCopy[locale].sectionEyebrows.threats}</p><h1>{locale === 'en' ? 'Threats, located at the boundary they exploit' : 'İstismar ettikleri sınıra yerleştirilmiş tehditler'}</h1><p>{locale === 'en' ? 'Each family records prerequisites, mechanism, consequence, observable signals, and mapped controls.' : 'Her aile ön koşulları, mekanizmayı, sonucu, gözlenebilir sinyalleri ve eşlenen kontrolleri kaydeder.'}</p></header>
       <ThreatToolbar locale={locale} filters={filters} onNodeChange={setNode} onClear={() => setSearchParams({})} />
       <p className="result-count">{threats.length} / {catalog.threats.length} {locale === 'en' ? 'threat families' : 'tehdit ailesi'}</p>
       <ThreatIndex threats={threats} locale={locale} />

@@ -13,7 +13,7 @@ export function TrustNodeDetail({ node, threats, controls, locale }: { node: Tru
   return (
     <article className="trust-detail" aria-labelledby={`node-${node.id}-title`}>
       <header>
-        <p className="eyebrow">{String(node.order).padStart(2, '0')} / {node.id}</p>
+        <p className="eyebrow">{String(node.order).padStart(2, '0')} / {localize(node.title, locale)}</p>
         <h2 id={`node-${node.id}-title`}>{localize(node.title, locale)}</h2>
         <p className="detail-purpose">{localize(node.purpose, locale)}</p>
       </header>

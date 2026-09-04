@@ -9,8 +9,15 @@ export function AppShell({ locale }: { locale: Locale }) {
   const copy = shellCopy[locale]
   useEffect(() => {
     document.documentElement.lang = locale
-    document.title = `SEC — ${copy.descriptor}`
-  }, [copy.descriptor, locale])
+    document.title = `SEC - ${copy.pageTitle}`
+    let description = document.querySelector<HTMLMetaElement>('meta[name="description"]')
+    if (!description) {
+      description = document.createElement('meta')
+      description.name = 'description'
+      document.head.append(description)
+    }
+    description.content = copy.metaDescription
+  }, [copy.metaDescription, copy.pageTitle, locale])
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : 'İçeriğe geç'}</a>

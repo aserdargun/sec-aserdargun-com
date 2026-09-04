@@ -5,12 +5,12 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
     "publishedAt": "2026-05-18",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-publication",
     "access": "available",
     "summary": {
       "en": "NIST AI 800-5 summarizes ecosystem agreement that agent systems create novel threats and require adaptations to established cybersecurity practices.",
-      "tr": "NIST AI 800-5, agent sistemlerinin yeni tehditler oluşturduğu ve yerleşik siber güvenlik uygulamalarının uyarlanması gerektiği yönündeki ekosistem görüşlerini özetler."
+      "tr": "NIST AI 800-5, yapay zekâ ajanı sistemlerinin yeni tehditler oluşturduğu ve yerleşik siber güvenlik uygulamalarının uyarlanması gerektiği yönündeki ekosistem görüşlerini özetler."
     }
   },
   {
@@ -19,12 +19,12 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
     "publishedAt": "2026-02-17",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-publication",
     "access": "available",
     "summary": {
       "en": "NIST frames agent authentication, identity infrastructure, secure interoperability, and security evaluations as active standards and research priorities.",
-      "tr": "NIST; agent kimlik doğrulaması, kimlik altyapısı, güvenli birlikte çalışabilirlik ve güvenlik değerlendirmelerini aktif standart ve araştırma öncelikleri olarak ele alır."
+      "tr": "NIST; ajan kimlik doğrulamasını, kimlik altyapısını, güvenli birlikte çalışabilirliği ve güvenlik değerlendirmelerini etkin standart ve araştırma öncelikleri olarak ele alır."
     }
   },
   {
@@ -33,12 +33,12 @@
     "publisher": "NIST National Cybersecurity Center of Excellence",
     "url": "https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization",
     "publishedAt": "2026-02-05",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-publication",
     "access": "available",
     "summary": {
-      "en": "The NCCoE project examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents.",
-      "tr": "NCCoE projesi agentlar için standart-temelli kimlik, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve prompt injection kontrollerini inceler."
+      "en": "The NCCoE project, now reviewing public comments, examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents.",
+      "tr": "Kamusal yorumları inceleme aşamasındaki NCCoE projesi; ajanlar için standart temelli tanımlama, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve istem enjeksiyonu kontrollerini ele alır."
     }
   },
   {
@@ -47,12 +47,12 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
     "publishedAt": "2026-08-27",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-publication",
     "access": "available",
     "summary": {
       "en": "NIST describes first-class agent identities, dynamic and audience-restricted credentials, least privilege, hardened local harnesses, and the consent-fatigue limits of human approval.",
-      "tr": "NIST; birinci sınıf agent kimliklerini, dinamik ve hedef-kısıtlı kimlik bilgilerini, en az ayrıcalığı, sertleştirilmiş yerel harness'leri ve insan onayındaki onay yorgunluğu sınırlarını açıklar."
+      "tr": "NIST; birinci sınıf ajan kimliklerini, dinamik ve hedefe kısıtlı kimlik bilgilerini, en az ayrıcalığı, sertleştirilmiş yerel çalışma katmanlarını ve insan onayındaki onay yorgunluğu sınırlarını açıklar."
     }
   },
   {
@@ -61,12 +61,12 @@
     "publisher": "Model Context Protocol",
     "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
       "en": "The MCP release introduces a stateless core, routable method/tool headers, an extensions model, and authorization hardening including issuer validation changes.",
-      "tr": "MCP sürümü stateless bir çekirdek, yönlendirilebilir method/tool başlıkları, extension modeli ve issuer doğrulamasını içeren yetkilendirme sertleştirmeleri getirir."
+      "tr": "MCP sürümü durumsuz bir çekirdek, yönlendirilebilir yöntem/araç başlıkları, uzantı modeli ve sağlayıcı doğrulamasını içeren yetkilendirme sertleştirmeleri getirir."
     }
   },
   {
@@ -75,26 +75,40 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
     "publishedAt": "2025-12-09",
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-framework",
     "access": "available",
     "summary": {
       "en": "A peer-reviewed framework for critical risks affecting autonomous and agentic applications that plan, act, and make decisions across workflows.",
-      "tr": "İş akışlarında planlayan, eyleme geçen ve karar veren otonom/agentic uygulamaları etkileyen kritik riskler için hakemli bir çerçeve."
+      "tr": "İş akışlarında planlayan, eyleme geçen ve karar veren otonom, ajan tabanlı uygulamaları etkileyen kritik riskler için hakemli bir çerçeve."
     }
   },
   {
     "id": "mitre-atlas",
-    "title": "MITRE ATLAS",
-    "publisher": "MITRE",
-    "url": "https://atlas.mitre.org/",
-    "publishedAt": null,
-    "checkedAt": "2026-09-02",
+    "title": "MITRE ATLAS Data v2026.08",
+    "publisher": "MITRE ATLAS Project",
+    "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.08",
+    "publishedAt": "2026-08-31",
+    "checkedAt": "2026-09-04",
     "kind": "official-framework",
     "access": "available",
     "summary": {
-      "en": "MITRE ATLAS provides adversarial tactics and techniques for AI-enabled systems, including prompt injection and agent tool/context poisoning techniques.",
-      "tr": "MITRE ATLAS, prompt injection ile agent araç/bağlam zehirleme teknikleri dahil AI destekli sistemlere yönelik saldırı taktik ve tekniklerini sunar."
+      "en": "MITRE ATLAS v2026.08 adds autonomous-agent techniques plus mitigations for agent authority expansion and scope drift to its living knowledge base.",
+      "tr": "MITRE ATLAS v2026.08, yaşayan bilgi tabanına otonom ajan tekniklerinin yanı sıra ajan yetkisinin genişlemesi ve kapsam sapması için azaltımlar ekler."
+    }
+  },
+  {
+    "id": "owasp-agent-control-standard",
+    "title": "Agent Control Standard (ACS)",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
+    "publishedAt": "2026-09-01",
+    "checkedAt": "2026-09-04",
+    "kind": "official-framework",
+    "access": "available",
+    "summary": {
+      "en": "The v0.1 public preview defines middleware hooks, portable declarative policies, and observability requirements for runtime agent control.",
+      "tr": "v0.1 kamusal ön izlemesi, çalışma zamanında ajan denetimi için ara yazılım kancaları, taşınabilir bildirimsel politikalar ve gözlemlenebilirlik gereksinimleri tanımlar."
     }
   },
   {
@@ -103,12 +117,12 @@
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
     "publishedAt": null,
-    "checkedAt": "2026-09-02",
+    "checkedAt": "2026-09-04",
     "kind": "official-regulation",
     "access": "available",
     "summary": {
-      "en": "The Commission explains which enforcement powers and obligations apply from 2 August 2026 and which high-risk provisions begin later.",
-      "tr": "Komisyon, 2 Ağustos 2026'dan itibaren hangi uygulama yetkileri ve yükümlülüklerin geçerli olduğunu, yüksek riskli hükümlerin hangilerinin daha sonra başlayacağını açıklar."
+      "en": "The Commission states that certain enforcement powers, transparency duties, and GPAI rules apply from 2 August 2026; Annex III high-risk rules apply from 2 December 2027 and regulated-product rules from 2 August 2028.",
+      "tr": "Komisyon; bazı uygulama yetkileri, şeffaflık yükümlülükleri ve genel amaçlı yapay zekâ kurallarının 2 Ağustos 2026'da, Ek III kapsamındaki yüksek risk kurallarının 2 Aralık 2027'de ve düzenlemeye tabi ürün kurallarının 2 Ağustos 2028'de uygulanacağını belirtir."
     }
   }
 ]

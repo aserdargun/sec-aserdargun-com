@@ -12,4 +12,15 @@ describe('LanguageSwitch', () => {
       '/tr/scenarios?scenario=remote-mcp',
     )
   })
+
+  it('shows Turkish as the current language on Turkish routes', async () => {
+    window.history.pushState({}, '', '/tr/scenarios?scenario=remote-mcp')
+    const { container } = render(<App />)
+
+    expect(await screen.findByRole('link', { name: 'EN' })).toHaveAttribute(
+      'href',
+      '/en/scenarios?scenario=remote-mcp',
+    )
+    expect(container.querySelector('.language-switch [aria-current="true"]')).toHaveTextContent('TR')
+  })
 })

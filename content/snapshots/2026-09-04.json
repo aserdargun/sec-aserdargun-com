@@ -1,0 +1,28 @@
+{
+  "id": "security-brief-2026-09-04",
+  "cutoffDate": "2026-09-04",
+  "headline": {
+    "en": "Identity is becoming the control plane for agent authority",
+    "tr": "Kimlik, ajan yetkisinin kontrol düzlemine dönüşüyor"
+  },
+  "summary": {
+    "en": "Identity remains the strongest control-plane signal. MITRE ATLAS v2026.08 and the OWASP Agent Control Standard public preview add concrete momentum around authority-expansion controls, scope-drift detection, portable runtime policy hooks, and traceable action evidence.",
+    "tr": "Kimlik, kontrol düzlemindeki en güçlü sinyal olmayı sürdürüyor. MITRE ATLAS v2026.08 ile OWASP Agent Control Standard kamusal ön izlemesi; yetki genişlemesi kontrolleri, kapsam sapması algılama, taşınabilir çalışma zamanı politika kancaları ve izlenebilir eylem kanıtı yönünde somut ivme sağlıyor."
+  },
+  "mostImportantClaimId": "agent-first-class-identity",
+  "watchSignalClaimIds": ["continuous-authority-watch", "ai-act-enforcement-is-staged"],
+  "correctionNotes": [
+    {
+      "en": "MITRE ATLAS is now pinned to v2026.08; the prior snapshot referenced only the live knowledge base.",
+      "tr": "MITRE ATLAS artık v2026.08 sürümüne sabitlendi; önceki anlık görüntü yalnız yaşayan bilgi tabanına gönderme yapıyordu."
+    },
+    {
+      "en": "The OWASP Agent Control Standard is a v0.1 public preview, not a mature interoperability standard.",
+      "tr": "OWASP Agent Control Standard v0.1 kamusal ön izlemedir; olgun bir birlikte çalışabilirlik standardı değildir."
+    },
+    {
+      "en": "EU AI Act dates describe the Commission's staged enforcement timeline and are not legal advice or a compliance determination.",
+      "tr": "AB Yapay Zekâ Yasası tarihleri Komisyonun aşamalı uygulama takvimini aktarır; hukuki tavsiye veya uyum kararı değildir."
+    }
+  ]
+}

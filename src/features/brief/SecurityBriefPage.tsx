@@ -1,20 +1,22 @@
 import { Link } from 'react-router-dom'
 import type { Locale } from '../../content/schema'
-import { catalog } from '../../content/catalog'
+import { catalog, latestSnapshot } from '../../content/catalog'
 import { localize } from '../../content/selectors'
 import { routePath } from '../../i18n/locale'
+import { shellCopy } from '../../i18n/copy'
 import { SignalRail } from './SignalRail'
 import { SourceLink } from '../../components/SourceLink'
 
 export function SecurityBriefPage({ locale }: { locale: Locale }) {
-  const snapshot = catalog.snapshots[0]
+  const snapshot = latestSnapshot
+  const copy = shellCopy[locale]
   const featuredIds = [snapshot.mostImportantClaimId, ...snapshot.watchSignalClaimIds, 'trust-is-evidence-chain']
   const featured = featuredIds.map((id) => catalog.claimsById.get(id)!).filter(Boolean)
   return (
     <section className="brief-page">
       <header className="brief-hero">
         <div>
-          <p className="eyebrow">SEC / 01 / SECURITY BRIEF</p>
+          <p className="eyebrow">{copy.sectionEyebrows.brief}</p>
           <h1>{localize(snapshot.headline, locale)}</h1>
           <p className="hero-summary">{localize(snapshot.summary, locale)}</p>
           <div className="hero-actions">
@@ -23,7 +25,10 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
           </div>
         </div>
         <aside className="loop-rail" aria-label={locale === 'en' ? 'SEC operating loop' : 'SEC çalışma döngüsü'}>
-          <span>Map</span><span>Constrain</span><span>Enforce</span><span>Observe</span><span>Prove</span><span>Recover</span>
+          {(locale === 'en'
+            ? ['Map', 'Constrain', 'Enforce', 'Observe', 'Prove', 'Recover']
+            : ['Haritala', 'Sınırla', 'Uygula', 'Gözle', 'Kanıtla', 'Kurtar']
+          ).map((label) => <span key={label}>{label}</span>)}
         </aside>
       </header>
       <div className="brief-meta">
@@ -32,12 +37,12 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
         <span>{catalog.threats.length} {locale === 'en' ? 'threat families' : 'tehdit ailesi'}</span>
       </div>
       <section className="brief-signals" aria-labelledby="current-signals">
-        <header><p className="eyebrow">01A / CURRENT SIGNALS</p><h2 id="current-signals">{locale === 'en' ? 'What changed, what holds, what remains open' : 'Ne değişti, ne geçerli, ne açık kaldı'}</h2></header>
+        <header><p className="eyebrow">{locale === 'en' ? '01A / CURRENT SIGNALS' : '01A / GÜNCEL SİNYALLER'}</p><h2 id="current-signals">{locale === 'en' ? 'What changed, what holds, what remains open' : 'Ne değişti, ne geçerli, ne açık kaldı'}</h2></header>
         <SignalRail claims={featured} locale={locale} />
       </section>
       <section className="brief-sources" aria-labelledby="brief-sources">
         <h2 id="brief-sources">{locale === 'en' ? 'Primary sources in this cut' : 'Bu kesitteki birincil kaynaklar'}</h2>
-        <ul>{catalog.sources.slice(0, 6).map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /></li>)}</ul>
+        <ul>{catalog.sources.map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /></li>)}</ul>
       </section>
     </section>
   )

@@ -1,22 +1,22 @@
 [
   {
     "id": "first-class-agent-identity",
-    "title": { "en": "First-class agent identity", "tr": "Birinci sınıf agent kimliği" },
-    "objective": { "en": "Give each agent a unique identity and bind it to the user or system on whose behalf it operates.", "tr": "Her agenta benzersiz kimlik ver ve onu adına çalıştığı kullanıcı veya sisteme bağla." },
+    "title": { "en": "First-class agent identity", "tr": "Birinci sınıf ajan kimliği" },
+    "objective": { "en": "Give each agent a unique identity and bind it to the user or system on whose behalf it operates.", "tr": "Her ajana benzersiz bir kimlik ver ve onu adına çalıştığı kullanıcıya veya sisteme bağla." },
     "type": "prevent", "assurance": "enforced",
     "nodeIds": ["identity", "audit"],
     "threatIds": ["identity-privilege-abuse", "audit-nonrepudiation-failure"],
-    "implementation": { "en": "Use a distinct workload/agent principal instead of inherited personal credentials.", "tr": "Miras alınan kişisel kimlik bilgileri yerine ayrı bir workload/agent principal kullan." },
-    "tradeoffs": { "en": "Identity lifecycle and binding metadata require operational ownership.", "tr": "Kimlik yaşam döngüsü ve bağlama metadatası operasyonel sahiplik gerektirir." },
-    "requiredEvidence": [{ "en": "Agent identity registry entry bound to an owner and workload.", "tr": "Sahip ve workload'a bağlı agent kimlik kayıt girdisi." }],
+    "implementation": { "en": "Use a distinct workload/agent principal instead of inherited personal credentials.", "tr": "Miras alınan kişisel kimlik bilgileri yerine ayrı bir iş yükü/ajan sorumlusu kullan." },
+    "tradeoffs": { "en": "Identity lifecycle and binding metadata require operational ownership.", "tr": "Kimlik yaşam döngüsü ve bağlama üst verisi operasyonel sahiplik gerektirir." },
+    "requiredEvidence": [{ "en": "Agent identity registry entry bound to an owner and workload.", "tr": "Bir sahibe ve iş yüküne bağlı ajan kimliği kayıt girdisi." }],
     "claimIds": ["agent-first-class-identity"],
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "short-lived-credentials",
     "title": { "en": "Short-lived credentials", "tr": "Kısa ömürlü kimlik bilgileri" },
-    "objective": { "en": "Make credential lifetime match the agent task and reduce replay value.", "tr": "Kimlik bilgisi ömrünü agent göreviyle eşleştir ve tekrar kullanım değerini azalt." },
+    "objective": { "en": "Make credential lifetime match the agent task and reduce replay value.", "tr": "Kimlik bilgisi ömrünü ajan göreviyle eşleştir ve tekrar kullanım değerini azalt." },
     "type": "prevent", "assurance": "enforced",
     "nodeIds": ["credential"],
     "threatIds": ["identity-privilege-abuse"],
@@ -25,21 +25,21 @@
     "requiredEvidence": [{ "en": "Issued-at, expiry, rotation, and revocation events.", "tr": "Verilme, süre sonu, rotasyon ve iptal olayları." }],
     "claimIds": ["dynamic-restricted-credentials"],
     "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "audience-restricted-tokens",
-    "title": { "en": "Audience-restricted tokens", "tr": "Hedef-kısıtlı tokenlar" },
-    "objective": { "en": "Bind every token to its intended resource server and reject token passthrough.", "tr": "Her tokenı amaçlanan kaynak sunucusuna bağla ve token passthrough'u reddet." },
+    "title": { "en": "Audience-restricted tokens", "tr": "Hedefle sınırlandırılmış belirteçler" },
+    "objective": { "en": "Bind every token to its intended resource server and reject token passthrough.", "tr": "Her belirteci amaçlanan kaynak sunucusuna bağla ve belirteç aktarımını reddet." },
     "type": "prevent", "assurance": "enforced",
     "nodeIds": ["credential", "authorization"],
     "threatIds": ["identity-privilege-abuse", "delegated-rights-drift"],
-    "implementation": { "en": "Request and validate resource/audience binding at authorization and resource boundaries.", "tr": "Yetkilendirme ve kaynak sınırlarında resource/audience bağlamasını iste ve doğrula." },
+    "implementation": { "en": "Request and validate resource/audience binding at authorization and resource boundaries.", "tr": "Yetkilendirme ve kaynak sınırlarında kaynak/hedef kitle bağlamasını zorunlu tut ve doğrula." },
     "tradeoffs": { "en": "Strict checks can expose legacy cross-service assumptions during rollout.", "tr": "Sıkı kontroller geçiş sırasında eski çapraz-servis varsayımlarını ortaya çıkarabilir." },
-    "requiredEvidence": [{ "en": "Denied wrong-audience token test and accepted intended-audience trace.", "tr": "Yanlış hedef tokenı reddetme testi ve amaçlanan hedef iz kaydı." }],
+    "requiredEvidence": [{ "en": "Denied wrong-audience token test and accepted intended-audience trace.", "tr": "Yanlış hedef belirtecini reddetme testi ve amaçlanan hedefin iz kaydı." }],
     "claimIds": ["dynamic-restricted-credentials", "mcp-authorization-hardening"],
     "sourceIds": ["mcp-spec-2026-07-28", "nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "least-privilege-policy",
@@ -50,14 +50,14 @@
     "threatIds": ["identity-privilege-abuse", "delegated-rights-drift", "human-agent-trust-exploitation"],
     "implementation": { "en": "Evaluate an external policy decision with subject, resource, action, purpose, and expiry.", "tr": "Özne, kaynak, eylem, amaç ve süre sonuyla harici politika kararı değerlendir." },
     "tradeoffs": { "en": "Granular policy requires reliable resource classification and ownership.", "tr": "Ayrıntılı politika güvenilir kaynak sınıflandırması ve sahiplik gerektirir." },
-    "requiredEvidence": [{ "en": "Policy input, decision, reason, and enforced result linked by trace ID.", "tr": "Trace ID ile bağlanan politika girdisi, kararı, nedeni ve uygulanan sonucu." }],
+    "requiredEvidence": [{ "en": "Policy input, decision, reason, and enforced result linked by trace ID.", "tr": "İz kimliğiyle bağlanan politika girdisi, kararı, nedeni ve uygulanan sonucu." }],
     "claimIds": ["least-privilege-remains-hard", "identity-is-not-authority"],
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "instruction-boundary",
-    "title": { "en": "Instruction provenance boundary", "tr": "Talimat provenance sınırı" },
+    "title": { "en": "Instruction provenance boundary", "tr": "Talimat kökeni sınırı" },
     "objective": { "en": "Separate trusted authority from untrusted data before planning and tool selection.", "tr": "Planlama ve araç seçimi öncesinde güvenilir yetkiyi güvenilmeyen veriden ayır." },
     "type": "prevent", "assurance": "declared",
     "nodeIds": ["model", "agent", "data"],
@@ -67,7 +67,7 @@
     "requiredEvidence": [{ "en": "Adversarial-content test showing instructions remain data.", "tr": "Talimatların veri olarak kaldığını gösteren saldırgan içerik testi." }],
     "claimIds": ["atlas-agent-techniques", "agent-security-needs-adaptation"],
     "sourceIds": ["mitre-atlas", "nist-ai-800-5"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "explicit-tool-allowlist",
@@ -80,40 +80,40 @@
     "tradeoffs": { "en": "Capability discovery becomes slower and requires review of legitimate additions.", "tr": "Yetenek keşfi yavaşlar ve meşru eklemelerin incelenmesini gerektirir." },
     "requiredEvidence": [{ "en": "Denied-call test for a tool outside the scenario allowlist.", "tr": "Senaryo izin listesi dışındaki araç için reddedilen çağrı testi." }],
     "claimIds": ["owasp-agentic-risk-baseline", "atlas-agent-techniques"],
-    "sourceIds": ["owasp-agentic-top10-2026", "mitre-atlas"],
-    "reviewedAt": "2026-09-02"
+    "sourceIds": ["owasp-agentic-top10-2026", "mitre-atlas", "owasp-agent-control-standard"],
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "sandbox-containment",
-    "title": { "en": "Checkout-scoped sandbox", "tr": "Checkout-sınırlı sandbox" },
+    "title": { "en": "Checkout-scoped sandbox", "tr": "Çalışma kopyasıyla sınırlı yalıtılmış ortam" },
     "objective": { "en": "Constrain code, processes, filesystem, and network reach to the authorized task boundary.", "tr": "Kod, süreç, dosya sistemi ve ağ erişimini yetkilendirilmiş görev sınırıyla kısıtla." },
     "type": "contain", "assurance": "observed",
     "nodeIds": ["sandbox", "action"],
     "threatIds": ["unexpected-code-execution", "agentic-supply-chain"],
-    "implementation": { "en": "Use isolated cwd/mounts, restricted process launch, and explicit network/resource policies.", "tr": "İzole cwd/mount, kısıtlı süreç başlatma ve açık ağ/kaynak politikaları kullan." },
-    "tradeoffs": { "en": "Isolation can block legitimate build tooling and requires scoped exceptions.", "tr": "İzolasyon meşru build araçlarını engelleyebilir ve kapsamlı istisnalar gerektirir." },
-    "requiredEvidence": [{ "en": "Isolation trace and refused out-of-bound file/network tests.", "tr": "İzolasyon izi ve reddedilen sınır dışı dosya/ağ testleri." }],
+    "implementation": { "en": "Use isolated cwd/mounts, restricted process launch, and explicit network/resource policies.", "tr": "Yalıtılmış çalışma dizinleri ve bağlama noktaları, kısıtlı süreç başlatma ve açık ağ/kaynak politikaları kullan." },
+    "tradeoffs": { "en": "Isolation can block legitimate build tooling and requires scoped exceptions.", "tr": "Yalıtım, meşru derleme araçlarını engelleyebilir ve kapsamı belirli istisnalar gerektirir." },
+    "requiredEvidence": [{ "en": "Isolation trace and refused out-of-bound file/network tests.", "tr": "Yalıtım izi ve reddedilen sınır dışı dosya/ağ testleri." }],
     "claimIds": ["agent-security-needs-adaptation", "owasp-agentic-risk-baseline"],
     "sourceIds": ["nist-agent-identity-blog-2026-08-27", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "data-provenance-gate",
-    "title": { "en": "Data provenance gate", "tr": "Veri provenance kapısı" },
+    "title": { "en": "Data provenance gate", "tr": "Veri kökeni kapısı" },
     "objective": { "en": "Record source authority and review untrusted data before it influences consequential planning.", "tr": "Kaynak yetkisini kaydet ve güvenilmeyen veriyi sonuç doğuran planlamayı etkilemeden önce incele." },
     "type": "detect", "assurance": "observed",
     "nodeIds": ["model", "data"],
     "threatIds": ["data-context-poisoning", "agentic-supply-chain"],
-    "implementation": { "en": "Attach source, publisher, checked date, integrity metadata, and trust class to context inputs.", "tr": "Bağlam girdilerine kaynak, yayıncı, kontrol tarihi, bütünlük metadatası ve güven sınıfı ekle." },
-    "tradeoffs": { "en": "Provenance does not prove truth and can be incomplete across derived data.", "tr": "Provenance doğruluğu kanıtlamaz ve türetilmiş veride eksik kalabilir." },
+    "implementation": { "en": "Attach source, publisher, checked date, integrity metadata, and trust class to context inputs.", "tr": "Bağlam girdilerine kaynak, yayıncı, kontrol tarihi, bütünlük üst verisi ve güven sınıfı ekle." },
+    "tradeoffs": { "en": "Provenance does not prove truth and can be incomplete across derived data.", "tr": "Köken bilgisi doğruluğu kanıtlamaz ve türetilmiş veride eksik kalabilir." },
     "requiredEvidence": [{ "en": "Context record linking each influential item to its source and trust class.", "tr": "Her etkili öğeyi kaynağı ve güven sınıfına bağlayan bağlam kaydı." }],
     "claimIds": ["atlas-agent-techniques"],
     "sourceIds": ["mitre-atlas"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "data-minimization",
-    "title": { "en": "Data minimization boundary", "tr": "Veri minimizasyon sınırı" },
+    "title": { "en": "Data minimization boundary", "tr": "Veri en aza indirme sınırı" },
     "objective": { "en": "Expose only the data fields and time window required by the authorized task.", "tr": "Yalnız yetkilendirilmiş görevin gerektirdiği veri alanlarını ve zaman aralığını sun." },
     "type": "prevent", "assurance": "enforced",
     "nodeIds": ["data"],
@@ -123,7 +123,7 @@
     "requiredEvidence": [{ "en": "Field-level access trace and denied query outside the approved projection.", "tr": "Alan seviyesinde erişim izi ve onaylı projeksiyon dışı reddedilen sorgu." }],
     "claimIds": ["least-privilege-remains-hard"],
     "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "human-approval-boundaries",
@@ -137,21 +137,21 @@
     "requiredEvidence": [{ "en": "Approval record binding person, resource, action, consequence, and expiry.", "tr": "Kişi, kaynak, eylem, sonuç ve süre sonunu bağlayan onay kaydı." }],
     "claimIds": ["hitl-consent-fatigue", "identity-is-not-authority"],
     "sourceIds": ["nist-agent-identity-blog-2026-08-27", "nist-agent-identity"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "tamper-evident-action-log",
-    "title": { "en": "Tamper-evident action log", "tr": "Kurcalama-belirgin eylem günlüğü" },
+    "title": { "en": "Tamper-evident action log", "tr": "Kurcalandığı anlaşılabilen eylem günlüğü" },
     "objective": { "en": "Connect authority, policy, tool input, action, and outcome in a verifiable event chain.", "tr": "Yetki, politika, araç girdisi, eylem ve sonucu doğrulanabilir olay zincirinde bağla." },
     "type": "detect", "assurance": "declared",
     "nodeIds": ["action", "audit", "incident"],
     "threatIds": ["goal-instruction-integrity", "delegated-rights-drift", "tool-misuse", "unexpected-code-execution", "audit-nonrepudiation-failure", "human-agent-trust-exploitation", "cascading-failure-recovery"],
-    "implementation": { "en": "Use stable trace IDs, synchronized timestamps, integrity protection, and append-only correction records.", "tr": "Kararlı trace ID, eşzamanlı zaman damgası, bütünlük koruması ve yalnız eklenen düzeltme kayıtları kullan." },
-    "tradeoffs": { "en": "High-fidelity logs increase storage, privacy, and redaction obligations.", "tr": "Yüksek doğruluklu loglar depolama, gizlilik ve redaksiyon yükümlülüklerini artırır." },
+    "implementation": { "en": "Use stable trace IDs, synchronized timestamps, integrity protection, and append-only correction records.", "tr": "Kararlı iz kimlikleri, eşzamanlı zaman damgaları, bütünlük koruması ve yalnızca eklemeye açık düzeltme kayıtları kullan." },
+    "tradeoffs": { "en": "High-fidelity logs increase storage, privacy, and redaction obligations.", "tr": "Yüksek ayrıntılı günlükler; depolama, gizlilik ve maskeleme yükümlülüklerini artırır." },
     "requiredEvidence": [{ "en": "Reconstructable chain from human authorization to final outcome.", "tr": "İnsan yetkisinden nihai sonuca yeniden oluşturulabilir zincir." }],
     "claimIds": ["agent-first-class-identity", "identity-is-not-authority"],
-    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-02"
+    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard"],
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "continuous-authority-check",
@@ -161,25 +161,25 @@
     "nodeIds": ["authorization", "tool", "action"],
     "threatIds": ["delegated-rights-drift"],
     "implementation": { "en": "Carry authorization context across calls and obtain a new decision at material boundary changes.", "tr": "Yetkilendirme bağlamını çağrılar arasında taşı ve önemli sınır değişimlerinde yeni karar al." },
-    "tradeoffs": { "en": "Interoperable cross-service patterns are still evolving and can add latency.", "tr": "Birlikte çalışabilir çapraz-servis örüntüleri gelişmektedir ve gecikme ekleyebilir." },
+    "tradeoffs": { "en": "Interoperable cross-service patterns are still evolving and can add latency.", "tr": "Birlikte çalışabilir hizmetler arası örüntüler hâlâ gelişmektedir ve gecikme ekleyebilir." },
     "requiredEvidence": [{ "en": "Trace proving re-authorization when resource or consequence changes.", "tr": "Kaynak veya sonuç değiştiğinde yeniden yetkilendirmeyi kanıtlayan iz." }],
     "claimIds": ["continuous-authority-watch", "identity-is-not-authority"],
-    "sourceIds": ["nist-agent-standards", "nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28"],
-    "reviewedAt": "2026-09-02"
+    "sourceIds": ["nist-agent-standards", "nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mitre-atlas", "owasp-agent-control-standard"],
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "incident-revocation",
     "title": { "en": "Incident revocation boundary", "tr": "Olay iptal sınırı" },
-    "objective": { "en": "Stop the active agent path, revoke credentials, and prevent queued downstream actions.", "tr": "Aktif agent yolunu durdur, kimlik bilgilerini iptal et ve sıradaki aşağı akış eylemlerini engelle." },
+    "objective": { "en": "Stop the active agent path, revoke credentials, and prevent queued downstream actions.", "tr": "Etkin ajan yolunu durdur, kimlik bilgilerini iptal et ve sıradaki aşağı akış eylemlerini engelle." },
     "type": "contain", "assurance": "enforced",
     "nodeIds": ["action", "incident"],
     "threatIds": ["cascading-failure-recovery"],
-    "implementation": { "en": "Link kill, token revocation, queue cancellation, and tool disablement to one incident action.", "tr": "Durdurma, token iptali, kuyruk iptali ve araç devre dışı bırakmayı tek olay eylemine bağla." },
+    "implementation": { "en": "Link kill, token revocation, queue cancellation, and tool disablement to one incident action.", "tr": "Durdurma, belirteç iptali, kuyruk iptali ve aracı devre dışı bırakmayı tek bir olay eylemine bağla." },
     "tradeoffs": { "en": "Distributed propagation can be delayed and partial actions may require compensation.", "tr": "Dağıtık yayılım gecikebilir ve kısmi eylemler telafi gerektirebilir." },
     "requiredEvidence": [{ "en": "Timed containment test showing no new action after revocation cutoff.", "tr": "İptal kesiminden sonra yeni eylem olmadığını gösteren zamanlı sınırlama testi." }],
     "claimIds": ["agent-security-needs-adaptation", "owasp-agentic-risk-baseline"],
     "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   },
   {
     "id": "recovery-replay-test",
@@ -188,11 +188,11 @@
     "type": "recover", "assurance": "proven",
     "nodeIds": ["audit", "incident"],
     "threatIds": ["audit-nonrepudiation-failure", "cascading-failure-recovery"],
-    "implementation": { "en": "Replay signed event metadata in an isolated environment and reconcile every side effect.", "tr": "İmzalı olay metadatasını izole ortamda yeniden oynat ve her yan etkiyi uzlaştır." },
+    "implementation": { "en": "Replay signed event metadata in an isolated environment and reconcile every side effect.", "tr": "İmzalı olay üst verisini yalıtılmış ortamda yeniden oynat ve her yan etkiyi uzlaştır." },
     "tradeoffs": { "en": "Faithful replay needs deterministic records and safe substitutes for external actions.", "tr": "Doğru yeniden oynatma deterministik kayıtlar ve harici eylemler için güvenli ikameler gerektirir." },
     "requiredEvidence": [{ "en": "Reconciled action inventory with owner, status, and compensation result.", "tr": "Sahip, durum ve telafi sonucuyla uzlaştırılmış eylem envanteri." }],
     "claimIds": ["trust-is-evidence-chain"],
     "sourceIds": ["nist-agent-identity", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-02"
+    "reviewedAt": "2026-09-04"
   }
 ]

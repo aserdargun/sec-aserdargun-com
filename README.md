@@ -20,7 +20,7 @@ sh scripts/npm22.sh run validate:codex
 sh scripts/npm22.sh run preview:stop
 ```
 
-Local preview binds only to `http://127.0.0.1:4174`. Stop refuses to terminate a listener owned by another checkout.
+Local preview binds to `http://127.0.0.1:4174` by default. Stop refuses to terminate a listener owned by another checkout. When that port is already in use, the whole validation chain can use a checkout-specific port, for example `SEC_PREVIEW_PORT=43123 npm run validate:codex`.
 
 ## Content contract
 

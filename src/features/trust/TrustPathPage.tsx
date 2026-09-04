@@ -1,6 +1,6 @@
 import { useSearchParams } from 'react-router-dom'
 import type { Locale } from '../../content/schema'
-import { catalog } from '../../content/catalog'
+import { catalog, latestSnapshot } from '../../content/catalog'
 import { getControlsForNode, getThreatsForNode } from '../../content/selectors'
 import { TrustPath } from './TrustPath'
 import { TrustNodeDetail } from './TrustNodeDetail'
@@ -17,7 +17,7 @@ export function TrustPathPage({ locale }: { locale: Locale }) {
       <header className="page-intro">
         <h1>{title}</h1>
         <p>{locale === 'en' ? 'Trace delegated intent from model capability to auditable action.' : 'Devredilen niyeti model yeteneğinden denetlenebilir eyleme kadar izle.'}</p>
-        <p className="review-line">{locale === 'en' ? 'Reviewed 02 Sep 2026' : 'İncelendi 02 Eyl 2026'}</p>
+        <p className="review-line">{locale === 'en' ? 'Reviewed' : 'İncelendi'} {latestSnapshot.cutoffDate}</p>
       </header>
       <div className="trust-workbench">
         <TrustPath

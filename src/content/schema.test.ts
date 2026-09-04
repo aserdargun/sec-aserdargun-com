@@ -38,7 +38,7 @@ describe('SEC catalog schema', () => {
 
   it('rejects a review date later than the current snapshot cutoff', () => {
     const invalid = structuredClone(rawCatalog)
-    invalid.controls[0].reviewedAt = '2026-09-03'
+    invalid.controls[0].reviewedAt = '2026-09-05'
 
     expect(() => parseCatalog(invalid)).toThrow(/after snapshot cutoff/i)
   })

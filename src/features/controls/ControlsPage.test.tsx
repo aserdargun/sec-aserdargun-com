@@ -22,4 +22,18 @@ describe('Control matrix', () => {
     expect(await screen.findAllByText('Explicit tool allowlist')).not.toHaveLength(0)
     expect(screen.queryByText('Short-lived credentials')).not.toBeInTheDocument()
   })
+
+  it('localizes Turkish control and assurance values', async () => {
+    window.history.pushState({}, '', '/tr/controls')
+    render(<App />)
+
+    expect(await screen.findByRole('option', { name: 'Önle' })).toHaveValue('prevent')
+    expect(screen.getByRole('option', { name: 'Algıla' })).toHaveValue('detect')
+    expect(screen.getByRole('option', { name: 'Sınırla' })).toHaveValue('contain')
+    expect(screen.getByRole('option', { name: 'Kurtar' })).toHaveValue('recover')
+    expect(screen.getByRole('option', { name: 'Beyan' })).toHaveValue('declared')
+    expect(screen.getByRole('option', { name: 'Uygulandı' })).toHaveValue('enforced')
+    expect(screen.getByRole('option', { name: 'Gözlendi' })).toHaveValue('observed')
+    expect(screen.getByRole('option', { name: 'Kanıtlandı' })).toHaveValue('proven')
+  })
 })
