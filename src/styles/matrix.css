@@ -53,3 +53,20 @@ dd { margin: 0; }
 .source-register { padding: clamp(2rem, 4vw, 4rem); border-top: 1px solid var(--line); }
 .source-register ul { display: grid; grid-template-columns: repeat(2, 1fr); gap: .75rem 2rem; padding-left: 1.2rem; }
 .source-register li { display: flex; flex-direction: column; }
+
+/* Evidence and detail surfaces share one readable layout at every width. */
+.record-evidence { margin-block: .8rem; border-top: 1px solid var(--line); }
+.record-evidence summary { min-height: 44px; padding-block: .65rem; color: var(--cobalt); cursor: pointer; font-weight: 500; }
+.record-evidence ul { padding-left: 1.2rem; }
+.record-evidence li + li { margin-top: .75rem; }
+.record-evidence .claim-evidence > li { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+.record-evidence .claim-evidence p { margin-block: .65rem; }
+.assurance-note { color: var(--muted); font-size: .9rem; }
+.page-note { margin: 0; padding: 0 clamp(1.25rem, 4vw, 4rem) 1.5rem; max-width: 95ch; }
+.control-detail { padding: clamp(1.5rem, 4vw, 4rem); border-block: 3px solid var(--cobalt); background: var(--paper-raised); scroll-margin-top: 1rem; }
+.control-detail h2 { font-size: clamp(1.6rem, 3vw, 2.8rem); }
+.control-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem 2rem; }
+.control-detail-grid section { padding-top: 1rem; border-top: 1px solid var(--line); }
+.control-matrix td > div + div { margin-top: .65rem; }
+.signal-rail .record-evidence li { display: list-item; padding: 0; border: 0; }
+.signal-rail .claim-confidence { margin-top: .65rem; color: var(--muted); font-size: .85rem; }

@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test'
 
-const previewPort = Number.parseInt(process.env.SEC_PREVIEW_PORT ?? '4174', 10)
+const previewPort = Number(process.env.SEC_PREVIEW_PORT ?? '4174')
 if (!Number.isInteger(previewPort) || previewPort < 1 || previewPort > 65535) {
   throw new Error(`Invalid SEC preview port: ${process.env.SEC_PREVIEW_PORT ?? ''}`)
 }
@@ -9,6 +9,7 @@ const previewOrigin = `http://127.0.0.1:${previewPort}`
 export default defineConfig({
   testDir: './tests/e2e',
   fullyParallel: false,
+  workers: 2,
   retries: process.env.CI ? 2 : 0,
   reporter: process.env.CI ? [['list'], ['html', { open: 'never' }]] : 'list',
   use: {

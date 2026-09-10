@@ -1,5 +1,5 @@
-import { useEffect } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { useEffect, useRef } from 'react'
+import { NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom'
 import type { Locale } from '../content/schema'
 import { routePath } from '../i18n/locale'
 import { sections, shellCopy } from '../i18n/copy'
@@ -7,9 +7,32 @@ import { GlobalHeader } from './GlobalHeader'
 
 export function AppShell({ locale }: { locale: Locale }) {
   const copy = shellCopy[locale]
+  const { pathname, hash, key } = useLocation()
+  const navigationType = useNavigationType()
+  const previousPath = useRef(pathname)
+  const section = sections.find((item) => pathname.replace(/\/$/, '') === routePath(locale, item))
+  const pageTitle = section === 'brief'
+    ? `SEC - ${copy.pageTitle}`
+    : `${section ? copy.sections[section] : copy.notFound} | SEC - ${copy.pageTitle}`
+
+  useEffect(() => {
+    const changedPage = previousPath.current !== pathname
+    previousPath.current = pathname
+    if (hash) {
+      let id: string
+      try { id = decodeURIComponent(hash.slice(1)) } catch { return }
+      const target = document.getElementById(id)
+      target?.scrollIntoView?.({ behavior: 'instant', block: 'start' })
+      target?.focus({ preventScroll: true })
+    } else if (changedPage) {
+      if (navigationType !== 'POP') window.scrollTo({ top: 0, behavior: 'instant' })
+      document.getElementById('main-content')?.focus({ preventScroll: true })
+    }
+  }, [pathname, hash, key, navigationType])
+
   useEffect(() => {
     document.documentElement.lang = locale
-    document.title = `SEC - ${copy.pageTitle}`
+    document.title = pageTitle
     let description = document.querySelector<HTMLMetaElement>('meta[name="description"]')
     if (!description) {
       description = document.createElement('meta')
@@ -17,7 +40,7 @@ export function AppShell({ locale }: { locale: Locale }) {
       document.head.append(description)
     }
     description.content = copy.metaDescription
-  }, [copy.metaDescription, copy.pageTitle, locale])
+  }, [copy.metaDescription, pageTitle, locale])
   return (
     <div className="app-shell">
       <a className="skip-link" href="#main-content">{locale === 'en' ? 'Skip to content' : 'İçeriğe geç'}</a>
@@ -29,7 +52,7 @@ export function AppShell({ locale }: { locale: Locale }) {
           </NavLink>
         ))}
       </nav>
-      <main id="main-content" className="main-content">
+      <main id="main-content" tabIndex={-1} className="main-content">
         <Outlet />
       </main>
       <footer className="global-footer">

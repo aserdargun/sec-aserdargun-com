@@ -21,7 +21,7 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
           <p className="hero-summary">{localize(snapshot.summary, locale)}</p>
           <div className="hero-actions">
             <Link className="primary-action" to={routePath(locale, 'trust-path')}>{locale === 'en' ? 'Inspect the trust path' : 'Güven zincirini incele'}</Link>
-            <Link to={`${routePath(locale, 'scenarios')}?scenario=remote-mcp`}>{locale === 'en' ? 'Run a scenario trace' : 'Senaryo izini çalıştır'}</Link>
+            <Link to={`${routePath(locale, 'scenarios')}?scenario=remote-mcp`}>{locale === 'en' ? 'Explore a scenario trace' : 'Senaryo izini incele'}</Link>
           </div>
         </div>
         <aside className="loop-rail" aria-label={locale === 'en' ? 'SEC operating loop' : 'SEC çalışma döngüsü'}>
@@ -40,6 +40,7 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
         <header><p className="eyebrow">{locale === 'en' ? '01A / CURRENT SIGNALS' : '01A / GÜNCEL SİNYALLER'}</p><h2 id="current-signals">{locale === 'en' ? 'What changed, what holds, what remains open' : 'Ne değişti, ne geçerli, ne açık kaldı'}</h2></header>
         <SignalRail claims={featured} locale={locale} />
       </section>
+      <section className="brief-sources" aria-labelledby="correction-notes"><h2 id="correction-notes">{locale === 'en' ? 'Snapshot notes' : 'Araştırma notları'}</h2><ul>{snapshot.correctionNotes.map((note, index) => <li key={index}>{localize(note, locale)}</li>)}</ul></section>
       <section className="brief-sources" aria-labelledby="brief-sources">
         <h2 id="brief-sources">{locale === 'en' ? 'Primary sources in this cut' : 'Bu kesitteki birincil kaynaklar'}</h2>
         <ul>{catalog.sources.map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /></li>)}</ul>

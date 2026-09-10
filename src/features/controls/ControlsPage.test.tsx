@@ -11,7 +11,7 @@ describe('Control matrix', () => {
     expect(screen.getAllByText('Proven')).not.toHaveLength(0)
     expect(screen.queryByText(/security score|trust score|\d+%/i)).not.toBeInTheDocument()
     expect(screen.getAllByRole('columnheader').map((item) => item.textContent)).toEqual(
-      expect.arrayContaining(['Node', 'Threat', 'Control', 'Type', 'Assurance', 'Required evidence', 'Reviewed']),
+      expect.arrayContaining(['Node', 'Threat', 'Control', 'Type', 'Assurance target', 'Required evidence', 'Reviewed']),
     )
   })
 
@@ -36,4 +36,13 @@ describe('Control matrix', () => {
     expect(screen.getByRole('option', { name: 'Gözlendi' })).toHaveValue('observed')
     expect(screen.getByRole('option', { name: 'Kanıtlandı' })).toHaveValue('proven')
   })
+})
+
+it('opens a complete, source-backed control record from a direct URL', () => {
+  window.history.pushState({}, '', '/en/controls?control=first-class-agent-identity')
+  render(<App />)
+  expect(screen.getByRole('article', { name: 'First-class agent identity' })).toHaveTextContent('Identity lifecycle and binding metadata require operational ownership.')
+  expect(screen.getByRole('heading', { name: 'Implementation' })).toBeVisible()
+  expect(screen.getByRole('heading', { name: 'Tradeoffs' })).toBeVisible()
+  expect(screen.getByRole('article', { name: 'First-class agent identity' })).toHaveTextContent('not measured results')
 })

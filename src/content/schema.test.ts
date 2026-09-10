@@ -43,3 +43,35 @@ describe('SEC catalog schema', () => {
     expect(() => parseCatalog(invalid)).toThrow(/after snapshot cutoff/i)
   })
 })
+
+describe('catalog evidence integrity', () => {
+  it.each(['2026-02-30', '2026-13-01', 'not-a-date'])('rejects impossible review date %s', (date) => {
+    const invalid = structuredClone(rawCatalog)
+    invalid.controls[0].reviewedAt = date
+    expect(() => parseCatalog(invalid)).toThrow()
+  })
+
+  it.each(['javascript:alert(1)', 'data:text/html,test', 'http://example.com'])('rejects non-HTTPS source %s', (url) => {
+    const invalid = structuredClone(rawCatalog)
+    invalid.sources[0].url = url
+    expect(() => parseCatalog(invalid)).toThrow()
+  })
+
+  it('rejects an unknown claim subject', () => {
+    const invalid = structuredClone(rawCatalog)
+    invalid.claims[0].subjectIds.push('missing-subject')
+    expect(() => parseCatalog(invalid)).toThrow(/missing-subject/)
+  })
+
+  it('rejects a source checked after the snapshot cutoff', () => {
+    const invalid = structuredClone(rawCatalog)
+    invalid.sources[0].checkedAt = '2026-09-05'
+    expect(() => parseCatalog(invalid)).toThrow(/checked date is after snapshot cutoff/)
+  })
+
+  it('rejects a source checked before publication', () => {
+    const invalid = structuredClone(rawCatalog)
+    invalid.sources[0].publishedAt = '2026-09-05'
+    expect(() => parseCatalog(invalid)).toThrow(/checked before publication/)
+  })
+})

@@ -1,3 +1,6 @@
+import { Link } from 'react-router-dom'
+import { RecordEvidence } from '../../components/RecordEvidence'
+import { assuranceNote } from '../../i18n/domain'
 import type { Locale, TrustNode } from '../../content/schema'
 import type { Control, Threat } from '../../content/schema'
 import { localize } from '../../content/selectors'
@@ -24,8 +27,10 @@ export function TrustNodeDetail({ node, threats, controls, locale }: { node: Tru
       </div>
       <section className="detail-block"><h3>{copy.assumptions}</h3><ul>{node.assumptions.map((item, index) => <li key={index}>{localize(item, locale)}</li>)}</ul></section>
       <section className="detail-block" role="region" aria-label={copy.evidence}><h3>{copy.evidence}</h3><ul>{node.requiredEvidence.map((item, index) => <li key={index}>{localize(item, locale)}</li>)}</ul></section>
-      <section className="detail-block" role="region" aria-label={copy.threats}><h3>{copy.threats}</h3><ul>{threats.map((threat) => <li key={threat.id}><span className="threat-mark">T</span>{localize(threat.title, locale)}</li>)}</ul></section>
-      <section className="detail-block" role="region" aria-label={copy.controls}><h3>{copy.controls}</h3><ul>{controls.map((control) => <li key={control.id}><StatusMark value={control.assurance} locale={locale} /> {localize(control.title, locale)}</li>)}</ul></section>
+      <section className="detail-block" role="region" aria-label={copy.threats}><h3>{copy.threats}</h3><ul>{threats.map((threat) => <li key={threat.id}><span className="threat-mark">T</span><Link to={`/${locale}/threats?family=${threat.family}`}>{localize(threat.title, locale)}</Link></li>)}</ul></section>
+      <p className="assurance-note detail-block">{assuranceNote[locale]}</p>
+      <section className="detail-block" role="region" aria-label={copy.controls}><h3>{copy.controls}</h3><ul>{controls.map((control) => <li key={control.id}><StatusMark value={control.assurance} locale={locale} /> <Link to={`/${locale}/controls?control=${control.id}#control-detail`}>{localize(control.title, locale)}</Link></li>)}</ul></section>
+      <section className="detail-block"><RecordEvidence sourceIds={node.sourceIds} locale={locale} /><small>{locale === 'en' ? 'Reviewed' : 'İncelendi'}: {node.reviewedAt}</small></section>
     </article>
   )
 }

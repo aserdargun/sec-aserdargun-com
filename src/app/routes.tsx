@@ -35,7 +35,13 @@ function SectionPage({ locale, section }: { locale: Locale; section: Section }) 
 function LocalizedRoutes() {
   const params = useParams()
   const locale = resolveLocale(params.locale)
-  if (!locale) return <LocalizedNotFound locale="en" />
+  if (!locale) return (
+    <Routes>
+      <Route element={<AppShell locale="en" />}>
+        <Route path="*" element={<LocalizedNotFound locale="en" />} />
+      </Route>
+    </Routes>
+  )
 
   return (
     <Routes>

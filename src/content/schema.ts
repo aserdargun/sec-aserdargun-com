@@ -9,7 +9,7 @@ export const LocaleTextSchema = z.object({
 })
 export type LocaleText = z.infer<typeof LocaleTextSchema>
 
-const DateSchema = z.string().regex(/^\d{4}-\d{2}-\d{2}$/)
+const DateSchema = z.iso.date()
 const IdSchema = z.string().regex(/^[a-z0-9-]+$/)
 
 export const trustNodeIds = [
@@ -42,7 +42,7 @@ const SourceSchema = z.object({
   id: IdSchema,
   title: z.string().trim().min(1),
   publisher: z.string().trim().min(1),
-  url: z.string().url(),
+  url: z.url({ protocol: /^https$/ }),
   publishedAt: DateSchema.nullable(),
   checkedAt: DateSchema,
   kind: z.enum(['official-publication', 'official-documentation', 'official-framework', 'official-regulation']),
@@ -79,9 +79,7 @@ const TrustNodeSchema = z.object({
 })
 export type TrustNode = z.infer<typeof TrustNodeSchema>
 
-const ThreatSchema = z.object({
-  id: IdSchema,
-  family: z.enum([
+export const ThreatFamilySchema = z.enum([
     'instruction-goal-integrity',
     'identity-credential-abuse',
     'authorization-delegation-abuse',
@@ -92,7 +90,12 @@ const ThreatSchema = z.object({
     'audit-accountability',
     'human-agent-trust',
     'containment-recovery',
-  ]),
+  ])
+export type ThreatFamily = z.infer<typeof ThreatFamilySchema>
+
+const ThreatSchema = z.object({
+  id: IdSchema,
+  family: ThreatFamilySchema,
   title: LocaleTextSchema,
   summary: LocaleTextSchema,
   prerequisites: LocaleTextSchema,
@@ -200,7 +203,7 @@ const RawCatalogSchema = z
     const nodeIds = uniqueIds('trust node', value.trustNodes.map((item) => item.id))
     const threatIds = uniqueIds('threat', value.threats.map((item) => item.id))
     const controlIds = uniqueIds('control', value.controls.map((item) => item.id))
-    uniqueIds('scenario', value.scenarios.map((item) => item.id))
+    const scenarioIds = uniqueIds('scenario', value.scenarios.map((item) => item.id))
     uniqueIds('framework mapping', value.frameworkMappings.map((item) => item.id))
     uniqueIds('snapshot', value.snapshots.map((item) => item.id))
 
@@ -223,6 +226,7 @@ const RawCatalogSchema = z
         context.addIssue({ code: 'custom', message: `Evidence claim ${claim.id} requires at least one source` })
       }
       requireIds(`Claim ${claim.id}`, claim.sourceIds, sourceIds)
+      requireIds(`Claim ${claim.id} subjects`, claim.subjectIds, new Set([...nodeIds, ...threatIds, ...controlIds, ...scenarioIds]))
     }
 
     for (const node of value.trustNodes) {
@@ -267,6 +271,10 @@ const RawCatalogSchema = z
     }
 
     const cutoff = value.snapshots.reduce((latest, snapshot) => (snapshot.cutoffDate > latest ? snapshot.cutoffDate : latest), '')
+    for (const source of value.sources) {
+      if (source.checkedAt > cutoff) context.addIssue({ code: 'custom', message: `Source ${source.id} checked date is after snapshot cutoff ${cutoff}` })
+      if (source.publishedAt && source.publishedAt > source.checkedAt) context.addIssue({ code: 'custom', message: `Source ${source.id} was checked before publication` })
+    }
     const reviewedRecords = [...value.claims, ...value.trustNodes, ...value.threats, ...value.controls, ...value.scenarios, ...value.frameworkMappings]
     for (const record of reviewedRecords) {
       if (record.reviewedAt > cutoff) context.addIssue({ code: 'custom', message: `${record.id} review date is after snapshot cutoff ${cutoff}` })

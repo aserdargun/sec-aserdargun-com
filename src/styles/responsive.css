@@ -78,3 +78,18 @@
   .detail-grid { display: block; }
   .global-footer { padding-inline: .7rem; }
 }
+
+@media (max-width: 760px) {
+  .control-detail-grid { grid-template-columns: 1fr; }
+  .mobile-control-records dl div { grid-template-columns: minmax(0, .65fr) minmax(0, 1fr); gap: .75rem; }
+  .filter-toolbar label { min-width: 0; }
+  .filter-toolbar select { min-width: 0; max-width: 100%; width: 100%; }
+  .threat-controls > span { display: flex; align-items: flex-start; }
+  .threat-controls > span > a { min-width: 0; }
+}
+@media (min-width: 761px) and (max-width: 1200px) {
+  .trust-workbench { grid-template-columns: 1fr; }
+  .trust-path { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 1rem .5rem; min-height: 280px; }
+  .trust-path::before { display: none; }
+  .trust-detail { border-left: 0; border-top: 1px solid var(--line); }
+}

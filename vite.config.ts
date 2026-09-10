@@ -14,6 +14,9 @@ export default defineConfig({
     strictPort: true,
   },
   test: {
+    // Keep DOM-heavy suites bounded on shared developer machines.
+    maxWorkers: 1,
+    testTimeout: 15_000,
     include: ['src/**/*.test.{ts,tsx}'],
     environment: 'jsdom',
     setupFiles: ['./src/test/setup.ts'],

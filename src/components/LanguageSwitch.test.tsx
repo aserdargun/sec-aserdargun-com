@@ -24,3 +24,15 @@ describe('LanguageSwitch', () => {
     expect(container.querySelector('.language-switch [aria-current="true"]')).toHaveTextContent('TR')
   })
 })
+
+it('preserves control detail query and anchor across languages', () => {
+  window.history.pushState({}, '', '/en/controls?control=explicit-tool-allowlist#control-detail')
+  render(<App />)
+  expect(screen.getByRole('link', { name: 'TR' })).toHaveAttribute('href', '/tr/controls?control=explicit-tool-allowlist#control-detail')
+})
+
+it('recovers an unsupported locale through a valid language link', () => {
+  window.history.pushState({}, '', '/fr/controls')
+  render(<App />)
+  expect(screen.getByRole('link', { name: 'TR' })).toHaveAttribute('href', '/tr')
+})

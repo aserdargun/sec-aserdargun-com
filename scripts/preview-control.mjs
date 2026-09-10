@@ -4,8 +4,8 @@ import path from 'node:path'
 import process from 'node:process'
 
 const root = await realpath(process.cwd())
-const port = Number.parseInt(process.env.SEC_PREVIEW_PORT ?? '4174', 10)
-const stateFile = process.env.SEC_PREVIEW_STATE_FILE ?? path.join(root, '.codex/runtime/preview.json')
+const port = Number(process.env.SEC_PREVIEW_PORT ?? '4174')
+const stateFile = process.env.SEC_PREVIEW_STATE_FILE ?? path.join(root, `.codex/runtime/preview-${port}.json`)
 
 if (!Number.isInteger(port) || port < 1 || port > 65535) {
   console.error(`Invalid SEC preview port: ${process.env.SEC_PREVIEW_PORT ?? ''}`)
@@ -91,12 +91,8 @@ async function start() {
   if (existing.length > 0) await stop()
   if (process.exitCode) return
 
-  try {
-    await realpath(path.join(root, 'dist'))
-  } catch {
-    const build = spawnSync('npm', ['run', 'build'], { cwd: root, stdio: 'inherit' })
-    if (build.status !== 0) process.exit(build.status ?? 1)
-  }
+  const build = spawnSync('npm', ['run', 'build'], { cwd: root, stdio: 'inherit' })
+  if (build.status !== 0) process.exit(build.status ?? 1)
 
   await mkdir(path.dirname(stateFile), { recursive: true })
   const child = spawn('npm', ['run', 'preview:serve', '--', '--port', String(port)], {

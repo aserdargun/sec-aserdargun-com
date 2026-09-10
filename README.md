@@ -20,17 +20,17 @@ sh scripts/npm22.sh run validate:codex
 sh scripts/npm22.sh run preview:stop
 ```
 
-Local preview binds to `http://127.0.0.1:4174` by default. Stop refuses to terminate a listener owned by another checkout. When that port is already in use, the whole validation chain can use a checkout-specific port, for example `SEC_PREVIEW_PORT=43123 npm run validate:codex`.
+Local preview binds to `http://127.0.0.1:4174` by default. Each preview start builds the current checkout; state is kept separately per port. Stop refuses to terminate a listener owned by another checkout. When that port is already in use, the whole validation chain can use a checkout-specific port, for example `SEC_PREVIEW_PORT=43123 npm run validate:codex`.
 
 ## Content contract
 
 Research records live under `content/` and are parsed fail-closed with Zod. Every public record carries complete English and Turkish text, explicit sources, stable IDs, and a review date no later than the active snapshot cutoff.
 
-Assurance is recorded per control as `declared`, `enforced`, `observed`, or `proven`; SEC never calculates an aggregate trust score. Claims are labeled `evidence`, `synthesis`, or `watch-signal`.
+The `assurance` field records an implementation evidence target per control as `declared`, `enforced`, `observed`, or `proven`; These labels are requirements, not measured deployment results or executed test artifacts. SEC never calculates an aggregate trust score. Control records expose implementation guidance, tradeoffs, all mapped nodes and threats, and linked evidence in both desktop and mobile views. Claims are labeled `evidence`, `synthesis`, or `watch-signal`.
 
 ## Validation
 
-`npm run validate:codex` runs lifecycle ownership tests, content validation, TypeScript, ESLint, component tests, a production build, artifact checks, and desktop/mobile Playwright plus axe checks. A valid `dist/` contains hashed JS/CSS, local fonts, `staticwebapp.config.json`, and `release.json` with the exact Git SHA.
+`npm run validate:codex` runs lifecycle ownership tests, content validation, TypeScript, ESLint, component tests, a production build, artifact checks, and desktop/mobile Playwright plus axe checks. A valid `dist/` contains hashed JS/CSS, local fonts, `staticwebapp.config.json`, and `release.json` with the exact checkout Git SHA, a local-change flag, and the configuration checksum. CI refuses to stamp a dirty checkout. Artifact validation checks the source configuration against its deployed copy and verifies HTML asset references.
 
 ## Publication
 

@@ -17,7 +17,7 @@ ul, ol { margin-top: 0; }
 .eyebrow, .result-count, .brief-meta, small { color: var(--muted); font-family: var(--mono); font-size: .72rem; letter-spacing: .055em; text-transform: uppercase; }
 .page-intro { max-width: 980px; padding: clamp(2.5rem, 7vw, 7rem) clamp(1.25rem, 5vw, 5rem) clamp(2rem, 5vw, 4rem); }
 .page-intro > p:last-child { max-width: 67ch; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.25rem); }
-.status-mark, .mapping-mark { display: inline-flex; align-items: center; min-height: 24px; padding: .15rem .48rem; border: 1px solid var(--line-strong); font-family: var(--mono); font-size: .65rem; line-height: 1; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
+.status-mark, .mapping-mark { display: inline-flex; align-items: center; min-height: 24px; gap: .3em; padding: .15rem .48rem; border: 1px solid var(--line-strong); font-family: var(--mono); font-size: .65rem; line-height: 1; letter-spacing: .04em; text-transform: uppercase; white-space: nowrap; }
 .status-evidence, .status-observed { color: var(--cobalt); border-color: var(--cobalt); background: var(--cobalt-soft); }
 .status-synthesis, .status-declared { color: var(--muted); }
 .status-watch-signal { color: var(--watch); border-color: #d9ae50; background: var(--watch-soft); }
@@ -26,3 +26,7 @@ ul, ol { margin-top: 0; }
 .threat-mark { display: inline-grid; width: 20px; height: 20px; margin-right: .5rem; place-items: center; color: white; background: var(--vermilion); border-radius: 50%; font: .65rem var(--mono); }
 .empty-state { padding: 2rem; border-block: 1px solid var(--line); color: var(--muted); }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; animation-iteration-count: 1 !important; } }
+
+main, article, section, dd, a, p, li { overflow-wrap: anywhere; }
+summary:focus-visible, [tabindex='0']:focus-visible { outline: 3px solid var(--cobalt); outline-offset: 3px; }
+.record-evidence a, .control-detail a, .mobile-control-records h2 a { display: inline-block; padding-block: .35rem; }

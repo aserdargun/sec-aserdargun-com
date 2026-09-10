@@ -113,3 +113,9 @@ test('stop succeeds when the configured port is already free', async () => {
   assert.equal(result.status, 0, result.stderr)
   assert.match(result.stdout, /already free/)
 })
+
+test('invalid port suffix is rejected before inspecting or stopping listeners', () => {
+  const result = runControl('stop', '43123oops', '/tmp/sec-unused-preview-state.json')
+  assert.equal(result.status, 1)
+  assert.match(result.stderr, /Invalid SEC preview port/)
+})
