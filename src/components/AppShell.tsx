@@ -58,6 +58,7 @@ export function AppShell({ locale }: { locale: Locale }) {
       <footer className="global-footer">
         <span>SEC / {copy.descriptor}</span>
         <span>{locale === 'en' ? 'Static research instrument' : 'Statik araştırma aracı'}</span>
+        <a href={locale === 'tr' ? 'https://aserdargun.com/tr/' : 'https://aserdargun.com/'}>aserdargun.com ↗</a>
       </footer>
     </div>
   )

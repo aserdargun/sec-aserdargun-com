@@ -6,6 +6,7 @@ import { routePath } from '../../i18n/locale'
 import { shellCopy } from '../../i18n/copy'
 import { SignalRail } from './SignalRail'
 import { SourceLink } from '../../components/SourceLink'
+import { PortfolioContext } from '../../components/PortfolioContext'
 
 export function SecurityBriefPage({ locale }: { locale: Locale }) {
   const snapshot = latestSnapshot
@@ -41,6 +42,7 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
         <SignalRail claims={featured} locale={locale} />
       </section>
       <section className="brief-sources" aria-labelledby="correction-notes"><h2 id="correction-notes">{locale === 'en' ? 'Snapshot notes' : 'Araştırma notları'}</h2><ul>{snapshot.correctionNotes.map((note, index) => <li key={index}>{localize(note, locale)}</li>)}</ul></section>
+      <PortfolioContext locale={locale} />
       <section className="brief-sources" aria-labelledby="brief-sources">
         <h2 id="brief-sources">{locale === 'en' ? 'Primary sources in this cut' : 'Bu kesitteki birincil kaynaklar'}</h2>
         <ul>{catalog.sources.map((source) => <li key={source.id}><SourceLink source={source} locale={locale} /></li>)}</ul>

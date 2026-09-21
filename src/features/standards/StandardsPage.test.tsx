@@ -12,14 +12,14 @@ describe('Standards crosswalk', () => {
     expect(screen.queryByText(/certified|compliant score/i)).not.toBeInTheDocument()
   })
 
-  it('shows the current MITRE release and OWASP runtime-control preview', async () => {
+  it('shows the current MITRE release and pinned OWASP runtime-control specification', async () => {
     window.history.pushState({}, '', '/en/standards')
     render(<App />)
 
     expect(await screen.findByRole('heading', { name: 'MITRE ATLAS' })).toBeVisible()
-    expect(screen.getByText('v2026.08 · 2026-08-31')).toBeVisible()
+    expect(screen.getByText('v2026.08 · 2026-09-01')).toBeVisible()
     expect(screen.getByRole('heading', { name: 'OWASP Agent Control Standard' })).toBeVisible()
-    expect(screen.getByText('v0.1 · 2026-09-01')).toBeVisible()
+    expect(screen.getByText('v0.1.0 · bfdb898')).toBeVisible()
   })
 
   it('localizes the Turkish section label and framework terminology', async () => {

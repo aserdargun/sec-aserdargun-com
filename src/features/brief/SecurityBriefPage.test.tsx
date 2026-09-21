@@ -10,8 +10,8 @@ describe('Security Brief', () => {
     expect(await screen.findAllByText('Evidence')).not.toHaveLength(0)
     expect(screen.getAllByText('Synthesis')).not.toHaveLength(0)
     expect(screen.getAllByText('Watch signal')).not.toHaveLength(0)
-    expect(screen.getByText('Research cutoff: 2026-09-04')).toBeVisible()
-    expect(screen.getByText('9 authoritative sources')).toBeVisible()
+    expect(screen.getByText('Research cutoff: 2026-09-21')).toBeVisible()
+    expect(screen.getByText('11 authoritative sources')).toBeVisible()
   })
 
   it('localizes the Turkish signal section marker', async () => {

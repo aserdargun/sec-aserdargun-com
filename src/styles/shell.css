@@ -29,3 +29,11 @@
 .signal-rail p { margin: 0; }
 .brief-sources ul { columns: 2; padding-left: 1.15rem; }
 .brief-sources li { margin-bottom: .7rem; break-inside: avoid; }
+.portfolio-context { padding: clamp(2rem, 4vw, 4rem); border-block: 1px solid var(--line); }
+.portfolio-context > p { max-width: 80ch; }
+.portfolio-context ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr)); gap: 0 2rem; margin-block: 1.5rem; padding: 0; list-style: none; }
+.portfolio-context li { padding-block: 1rem; border-top: 1px solid var(--line); }
+.portfolio-context li a, .portfolio-journey, .global-footer a { display: inline-flex; min-height: 44px; align-items: center; }
+.portfolio-context li a { gap: .5rem; font: 600 1rem var(--mono); }
+.portfolio-context li p { margin: .4rem 0 0; }
+.portfolio-boundary { color: var(--muted); }

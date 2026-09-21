@@ -28,6 +28,14 @@ Research records live under `content/` and are parsed fail-closed with Zod. Ever
 
 The `assurance` field records an implementation evidence target per control as `declared`, `enforced`, `observed`, or `proven`; These labels are requirements, not measured deployment results or executed test artifacts. SEC never calculates an aggregate trust score. Control records expose implementation guidance, tradeoffs, all mapped nodes and threats, and linked evidence in both desktop and mobile views. Claims are labeled `evidence`, `synthesis`, or `watch-signal`.
 
+The active research cutoff is **2026-09-21**: 11 sources, 13 claims, 11 trust nodes, 10 threats, 14 controls, four illustrative scenarios, and seven framework mappings. The ACS reference disclosure is pinned to Git revision `bfdb898be4a9bcaedd90529b480ae5b62e94f29a`; it is source-reported evidence, not a SEC execution result. MCP token requirements link to the versioned authorization specification. Snapshot notes retain editorial history; prior snapshots do not freeze copies of the entire catalog.
+
+## Portfolio context
+
+The Security Brief connects HNS architecture questions, CTX context and memory boundaries, and EVL evaluation questions to SEC’s control evidence requirements. LCL and CLD carry those questions into local and cloud deployment choices. These are learning relationships, not runtime integrations, deployment approvals, or security assessments of the portfolio. Editorial links live in `src/content/portfolio.ts` and are validated alongside the research catalog.
+
+The root site's published application metadata is maintained separately in `aserdargun-com/data/living-system.json`. Its release SHA and research cutoff describe the verified public release; local research updates must not be represented as already deployed.
+
 ## Validation
 
 `npm run validate:codex` runs lifecycle ownership tests, content validation, TypeScript, ESLint, component tests, a production build, artifact checks, and desktop/mobile Playwright plus axe checks. A valid `dist/` contains hashed JS/CSS, local fonts, `staticwebapp.config.json`, and `release.json` with the exact checkout Git SHA, a local-change flag, and the configuration checksum. CI refuses to stamp a dirty checkout. Artifact validation checks the source configuration against its deployed copy and verifies HTML asset references.

@@ -1,44 +1,44 @@
 [
   {
     "id": "nist-agent-identity-mapping", "framework": "NIST NCCoE Agent Identity and Authorization", "version": "2026-02-05", "referenceId": "identity-and-authorization",
-    "entityType": "control", "entityIds": ["first-class-agent-identity", "short-lived-credentials", "least-privilege-policy", "tamper-evident-action-log"], "mappingType": "direct",
-    "rationale": { "en": "These controls implement the project's explicit identity, authorization, lifecycle, and accountability concerns.", "tr": "Bu kontroller projenin açık kimlik, yetkilendirme, yaşam döngüsü ve hesap verebilirlik kaygılarını uygular." },
-    "sourceIds": ["nist-agent-identity"], "reviewedAt": "2026-09-04"
+    "entityType": "control", "entityIds": ["first-class-agent-identity", "short-lived-credentials", "least-privilege-policy", "tamper-evident-action-log"], "mappingType": "partial",
+    "rationale": {"en": "The concept project motivates identity, authorization, and accountability. SEC’s specific control designs are editorial interpretations, not NIST implementation requirements.", "tr": "Kavramsal proje kimlik, yetkilendirme ve hesap verebilirliğe dayanak sağlar. SEC’nin belirli kontrol tasarımları editoryal yorumlardır; NIST uygulama gereksinimleri değildir."},
+    "sourceIds": ["nist-agent-identity"], "reviewedAt": "2026-09-21"
   },
   {
-    "id": "nist-ai-800-5-mapping", "framework": "NIST AI 800-5", "version": "IPD · 2026-05-18", "referenceId": "agent-security-considerations",
+    "id": "nist-ai-800-5-mapping", "framework": "NIST AI 800-5", "version": "2026-05-18", "referenceId": "agent-security-considerations",
     "entityType": "threat", "entityIds": ["goal-instruction-integrity", "data-context-poisoning", "unexpected-code-execution", "cascading-failure-recovery"], "mappingType": "partial",
-    "rationale": { "en": "SEC decomposes the draft's agent security concerns into operational trust-path records.", "tr": "SEC, taslağın ajan güvenliği kaygılarını operasyonel güven zinciri kayıtlarına ayırır." },
-    "sourceIds": ["nist-ai-800-5"], "reviewedAt": "2026-09-04"
+    "rationale": {"en": "SEC organizes concerns reported in NIST’s RFI response analysis into trust-path records; the report is not an implementation standard.", "tr": "SEC, NIST’nin bilgi talebine verilen yanıt analizinde bildirilen kaygıları güven zinciri kayıtlarına ayırır; rapor bir uygulama standardı değildir."},
+    "sourceIds": ["nist-ai-800-5"], "reviewedAt": "2026-09-21"
   },
   {
     "id": "owasp-agentic-mapping", "framework": "OWASP Top 10 for Agentic Applications", "version": "2026", "referenceId": "agentic-top-10",
     "entityType": "threat", "entityIds": ["goal-instruction-integrity", "identity-privilege-abuse", "delegated-rights-drift", "tool-misuse", "data-context-poisoning", "unexpected-code-execution", "agentic-supply-chain", "audit-nonrepudiation-failure", "human-agent-trust-exploitation", "cascading-failure-recovery"], "mappingType": "synthesis",
     "rationale": { "en": "SEC groups OWASP agentic risk themes by the trust boundary where evidence should exist.", "tr": "SEC, OWASP'ın ajan tabanlı risk temalarını kanıtın bulunması gereken güven sınırına göre gruplar." },
-    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-09-21"
   },
   {
-    "id": "mitre-atlas-mapping", "framework": "MITRE ATLAS", "version": "v2026.08 · 2026-08-31", "referenceId": "agent-techniques",
+    "id": "mitre-atlas-mapping", "framework": "MITRE ATLAS", "version": "v2026.08 · 2026-09-01", "referenceId": "agent-techniques",
     "entityType": "threat", "entityIds": ["goal-instruction-integrity", "data-context-poisoning", "agentic-supply-chain"], "mappingType": "partial",
     "rationale": { "en": "ATLAS provides adversary-technique evidence and now names agent authority-expansion and scope-drift mitigations; SEC adds system-boundary and control-evidence context.", "tr": "ATLAS saldırgan teknik kanıtı sağlar ve artık ajan yetkisi genişlemesi ile kapsam sapması azaltımlarını adlandırır; SEC ise sistem sınırı ve kontrol kanıtı bağlamı ekler." },
-    "sourceIds": ["mitre-atlas"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["mitre-atlas"], "reviewedAt": "2026-09-21"
   },
   {
-    "id": "owasp-acs-mapping", "framework": "OWASP Agent Control Standard", "version": "v0.1 · 2026-09-01", "referenceId": "runtime-agent-control",
+    "id": "owasp-acs-mapping", "framework": "OWASP Agent Control Standard", "version": "v0.1.0 · bfdb898", "referenceId": "runtime-agent-control",
     "entityType": "control", "entityIds": ["explicit-tool-allowlist", "continuous-authority-check", "tamper-evident-action-log", "incident-revocation"], "mappingType": "partial",
-    "rationale": { "en": "The public preview defines portable runtime policy hooks and observability requirements; several deny, modify, and protocol integrations remain roadmap items.", "tr": "Kamusal ön izleme, taşınabilir çalışma zamanı politika kancaları ile gözlemlenebilirlik gereksinimlerini tanımlar; bazı reddetme, değiştirme ve protokol bütünleştirmeleri yol haritasında kalır." },
-    "sourceIds": ["owasp-agent-control-standard"], "reviewedAt": "2026-09-04"
+    "rationale": {"en": "ACS defines runtime decision hooks. The pinned reference documents fail-open defaults and missing wire authentication; this correspondence does not establish effective enforcement or production readiness.", "tr": "ACS, çalışma zamanı karar kancalarını tanımlar. Sabitlenmiş referans, hata durumunda devam etme varsayılanını ve eksik iletişim kimlik doğrulamasını belgeler; bu karşılık, etkin denetim veya üretime hazır olma kanıtı değildir."},
+    "sourceIds": ["owasp-agent-control-standard", "owasp-acs-reference-2026-09-10"], "reviewedAt": "2026-09-21"
   },
   {
     "id": "mcp-authorization-mapping", "framework": "Model Context Protocol Authorization", "version": "2026-07-28", "referenceId": "oauth-resource-hardening",
-    "entityType": "control", "entityIds": ["audience-restricted-tokens", "least-privilege-policy", "continuous-authority-check"], "mappingType": "direct",
-    "rationale": { "en": "The MCP release directly supports resource-bound authorization and rejects token passthrough assumptions.", "tr": "MCP sürümü kaynağa bağlı yetkilendirmeyi doğrudan destekler ve erişim belirtecinin doğrudan aktarılabileceği varsayımını reddeder." },
-    "sourceIds": ["mcp-spec-2026-07-28"], "reviewedAt": "2026-09-04"
+    "entityType": "control", "entityIds": ["audience-restricted-tokens", "least-privilege-policy", "continuous-authority-check"], "mappingType": "partial",
+    "rationale": {"en": "HTTP authorization directly requires resource/audience validation and defines scope challenges. SEC’s task-level least privilege and continuous authority checks extend beyond transport authorization.", "tr": "HTTP yetkilendirmesi doğrudan kaynak/hedef doğrulamasını zorunlu tutar ve kapsam taleplerini tanımlar. SEC’nin görev düzeyinde en az ayrıcalık ve sürekli yetki kontrolleri, taşıma katmanı yetkilendirmesinin ötesine uzanır."},
+    "sourceIds": ["mcp-authorization-2026-07-28"], "reviewedAt": "2026-09-21"
   },
   {
-    "id": "eu-ai-act-mapping", "framework": "EU AI Act", "version": "2026-09-04", "referenceId": "staged-enforcement",
+    "id": "eu-ai-act-mapping", "framework": "EU AI Act", "version": "2026-09-21", "referenceId": "staged-enforcement",
     "entityType": "trust-node", "entityIds": ["audit", "incident"], "mappingType": "partial",
     "rationale": { "en": "The mapping marks regulatory timing and evidence readiness, not a compliance determination.", "tr": "Eşleme düzenleyici zamanlamayı ve kanıt hazırlığını işaretler; uyum kararı değildir." },
-    "sourceIds": ["eu-ai-act-enforcement"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["eu-ai-act-enforcement"], "reviewedAt": "2026-09-21"
   }
 ]

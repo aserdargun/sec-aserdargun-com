@@ -8,7 +8,7 @@
     },
     "sourceIds": ["nist-ai-800-5"],
     "subjectIds": ["agent", "action", "incident"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct NIST publication finding.", "tr": "Doğrudan NIST yayın bulgusu." }
   },
   {
@@ -20,7 +20,7 @@
     },
     "sourceIds": ["nist-agent-identity-blog-2026-08-27", "nist-agent-identity"],
     "subjectIds": ["identity", "credential", "authorization"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct NIST guidance and project framing.", "tr": "Doğrudan NIST rehberliği ve proje çerçevesi." }
   },
   {
@@ -32,7 +32,7 @@
     },
     "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28"],
     "subjectIds": ["credential", "authorization"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Supported by current NIST analysis and MCP authorization direction.", "tr": "Güncel NIST analizi ve MCP yetkilendirme yönüyle desteklenir." }
   },
   {
@@ -44,7 +44,7 @@
     },
     "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
     "subjectIds": ["authorization", "tool", "action"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct NIST analysis.", "tr": "Doğrudan NIST analizi." }
   },
   {
@@ -56,7 +56,7 @@
     },
     "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
     "subjectIds": ["authorization", "action"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct NIST analysis with an explicit usability caveat.", "tr": "Açık kullanılabilirlik uyarısı içeren doğrudan NIST analizi." }
   },
   {
@@ -68,7 +68,7 @@
     },
     "sourceIds": ["mcp-spec-2026-07-28"],
     "subjectIds": ["authorization", "tool"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct protocol release statement.", "tr": "Doğrudan protokol sürüm açıklaması." }
   },
   {
@@ -80,7 +80,7 @@
     },
     "sourceIds": ["owasp-agentic-top10-2026"],
     "subjectIds": ["agent", "identity", "tool", "action", "incident"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct framework scope; individual SEC mappings remain synthesis.", "tr": "Doğrudan çerçeve kapsamı; tekil SEC eşlemeleri sentezdir." }
   },
   {
@@ -92,20 +92,17 @@
     },
     "sourceIds": ["mitre-atlas"],
     "subjectIds": ["agent", "authorization", "tool", "action"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "Direct v2026.08 release observation.", "tr": "Doğrudan v2026.08 sürüm gözlemi." }
   },
   {
     "id": "ai-act-enforcement-is-staged",
     "kind": "evidence",
-    "text": {
-      "en": "EU AI Act enforcement is staged: certain powers, transparency duties, and GPAI rules apply from 2 August 2026; Annex III high-risk rules apply from 2 December 2027 and regulated-product rules from 2 August 2028.",
-      "tr": "AB Yapay Zekâ Yasası aşamalı uygulanır: bazı yetkiler, şeffaflık yükümlülükleri ve genel amaçlı yapay zekâ kuralları 2 Ağustos 2026'da; Ek III kapsamındaki yüksek risk kuralları 2 Aralık 2027'de, düzenlemeye tabi ürün kuralları ise 2 Ağustos 2028'de uygulanır."
-    },
+    "text": {"en": "The Commission FAQ distinguishes enforcement powers from application dates: transparency duties are enforceable from 2 August 2026, with an Article 50(2) transition for earlier systems until 2 December 2026. Annex III high-risk rules apply from 2 December 2027; high-risk rules for regulated products apply from 2 August 2028.", "tr": "Komisyonun SSS sayfası, yaptırım yetkileri ile uygulama tarihlerini ayırır: şeffaflık yükümlülükleri 2 Ağustos 2026’dan itibaren uygulanabilir; daha önce piyasaya sunulan sistemler için Madde 50(2) kapsamında 2 Aralık 2026’ya kadar geçiş süresi vardır. Ek III yüksek risk kuralları 2 Aralık 2027’de; düzenlemeye tabi ürünlerin yüksek risk kuralları 2 Ağustos 2028’de uygulanır."},
     "sourceIds": ["eu-ai-act-enforcement"],
     "subjectIds": ["audit", "incident"],
-    "reviewedAt": "2026-09-04",
-    "confidence": { "en": "Direct Commission timeline; not legal advice.", "tr": "Doğrudan Komisyon takvimi; hukuki tavsiye değildir." }
+    "reviewedAt": "2026-09-21",
+    "confidence": {"en": "Commission FAQ checked on 21 September 2026; category and transitional provisions matter. Not a legal or compliance determination.", "tr": "21 Eylül 2026’da kontrol edilen Komisyon SSS sayfası; kategori ve geçiş hükümleri önemlidir. Hukuki değerlendirme veya uyum kararı değildir."}
   },
   {
     "id": "trust-is-evidence-chain",
@@ -116,7 +113,7 @@
     },
     "sourceIds": ["nist-ai-800-5", "nist-agent-identity", "mcp-spec-2026-07-28", "owasp-agentic-top10-2026"],
     "subjectIds": ["identity", "authorization", "action", "audit", "incident"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "SEC synthesis across named authoritative sources.", "tr": "Adı verilen yetkili kaynaklar üzerinden SEC sentezi." }
   },
   {
@@ -128,19 +125,37 @@
     },
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"],
     "subjectIds": ["identity", "authorization", "action", "audit"],
-    "reviewedAt": "2026-09-04",
+    "reviewedAt": "2026-09-21",
     "confidence": { "en": "SEC synthesis from NIST identity and authorization questions.", "tr": "NIST kimlik ve yetkilendirme sorularından SEC sentezi." }
   },
   {
     "id": "continuous-authority-watch",
     "kind": "watch-signal",
-    "text": {
-      "en": "MITRE ATLAS v2026.08 now names authority-expansion and scope-drift mitigations, while OWASP ACS v0.1 previews portable runtime enforcement hooks; preferred interoperable patterns remain unsettled.",
-      "tr": "MITRE ATLAS v2026.08 artık yetki genişlemesi ve kapsam sapması azaltımlarını adlandırıyor; OWASP ACS v0.1 ise taşınabilir çalışma zamanı uygulama kancalarını ön izlemeye açıyor. Buna karşın tercih edilen birlikte çalışabilir örüntüler henüz yerleşmiş değil."
-    },
-    "sourceIds": ["nist-agent-standards", "nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mitre-atlas", "owasp-agent-control-standard"],
+    "text": {"en": "ATLAS names authority-expansion and scope-drift mitigations. ACS v0.1.0 specifies runtime decisions, but its pinned reference implementation documents enforcement and authentication gaps; deployment evidence remains necessary.", "tr": "ATLAS, yetki genişlemesi ve kapsam sapması azaltımlarını adlandırır. ACS v0.1.0 çalışma zamanı kararlarını tanımlar; ancak sabitlenmiş referans uygulama, denetim ve kimlik doğrulama eksiklerini belgeler. Dağıtıma özgü kanıt hâlâ gereklidir."},
+    "sourceIds": ["mitre-atlas", "owasp-acs-reference-2026-09-10"],
     "subjectIds": ["authorization", "tool", "action", "audit"],
-    "reviewedAt": "2026-09-04",
-    "confidence": { "en": "Current framework direction; ACS remains a public preview and implementation consensus is incomplete.", "tr": "Güncel çerçeve yönü; ACS hâlâ kamusal ön izlemededir ve uygulama uzlaşısı tamamlanmış değildir." }
+    "reviewedAt": "2026-09-21",
+    "confidence": {"en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.", "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."}
+  },
+  {
+    "id": "acs-specification-is-not-enforcement",
+    "kind": "evidence",
+    "text": {
+      "en": "The ACS reference README at revision bfdb898 reports default fail-open behavior, missing envelope authentication, and live evaluation of only two hook methods. Specification conformance cannot be inferred from that demonstration.",
+      "tr": "bfdb898 revizyonundaki ACS referans README’si, hata durumunda varsayılan olarak devam edildiğini, ileti kimlik doğrulamasının eksik olduğunu ve yalnızca iki kanca yönteminin canlı değerlendirildiğini bildirir. Bu gösterimden şartnameye uygunluk sonucu çıkarılamaz."
+    },
+    "sourceIds": [
+      "owasp-acs-reference-2026-09-10"
+    ],
+    "subjectIds": [
+      "authorization",
+      "tool",
+      "audit"
+    ],
+    "reviewedAt": "2026-09-21",
+    "confidence": {
+      "en": "Maintainer-reported limits at a pinned revision; not a test run or an audit by SEC.",
+      "tr": "Sabitlenmiş revizyonda geliştiricinin bildirdiği sınırlar; SEC tarafından yapılmış test veya denetim değildir."
+    }
   }
 ]

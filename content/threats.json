@@ -12,7 +12,7 @@
     "controlIds": ["instruction-boundary", "human-approval-boundaries", "tamper-evident-action-log"],
     "claimIds": ["agent-security-needs-adaptation", "atlas-agent-techniques"],
     "sourceIds": ["nist-ai-800-5", "mitre-atlas", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "identity-privilege-abuse",
@@ -27,7 +27,7 @@
     "controlIds": ["first-class-agent-identity", "short-lived-credentials", "audience-restricted-tokens", "least-privilege-policy"],
     "claimIds": ["agent-first-class-identity", "dynamic-restricted-credentials"],
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "delegated-rights-drift",
@@ -42,7 +42,7 @@
     "controlIds": ["least-privilege-policy", "audience-restricted-tokens", "continuous-authority-check", "tamper-evident-action-log"],
     "claimIds": ["least-privilege-remains-hard", "continuous-authority-watch", "identity-is-not-authority"],
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mitre-atlas"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "tool-misuse",
@@ -57,7 +57,7 @@
     "controlIds": ["explicit-tool-allowlist", "human-approval-boundaries", "tamper-evident-action-log"],
     "claimIds": ["owasp-agentic-risk-baseline", "least-privilege-remains-hard"],
     "sourceIds": ["owasp-agentic-top10-2026", "nist-agent-identity-blog-2026-08-27", "mitre-atlas", "owasp-agent-control-standard"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "data-context-poisoning",
@@ -72,7 +72,7 @@
     "controlIds": ["instruction-boundary", "data-provenance-gate", "data-minimization"],
     "claimIds": ["atlas-agent-techniques", "agent-security-needs-adaptation"],
     "sourceIds": ["mitre-atlas", "nist-ai-800-5", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "unexpected-code-execution",
@@ -87,7 +87,7 @@
     "controlIds": ["explicit-tool-allowlist", "sandbox-containment", "tamper-evident-action-log"],
     "claimIds": ["owasp-agentic-risk-baseline", "agent-security-needs-adaptation"],
     "sourceIds": ["owasp-agentic-top10-2026", "nist-agent-identity-blog-2026-08-27"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "agentic-supply-chain",
@@ -102,7 +102,7 @@
     "controlIds": ["data-provenance-gate", "explicit-tool-allowlist", "sandbox-containment"],
     "claimIds": ["owasp-agentic-risk-baseline", "atlas-agent-techniques"],
     "sourceIds": ["owasp-agentic-top10-2026", "mitre-atlas"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "audit-nonrepudiation-failure",
@@ -117,7 +117,7 @@
     "controlIds": ["first-class-agent-identity", "tamper-evident-action-log", "recovery-replay-test"],
     "claimIds": ["agent-first-class-identity", "identity-is-not-authority"],
     "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "human-agent-trust-exploitation",
@@ -132,7 +132,7 @@
     "controlIds": ["human-approval-boundaries", "least-privilege-policy", "tamper-evident-action-log"],
     "claimIds": ["hitl-consent-fatigue", "owasp-agentic-risk-baseline"],
     "sourceIds": ["nist-agent-identity-blog-2026-08-27", "owasp-agentic-top10-2026"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   },
   {
     "id": "cascading-failure-recovery",
@@ -147,6 +147,6 @@
     "controlIds": ["incident-revocation", "recovery-replay-test", "tamper-evident-action-log"],
     "claimIds": ["owasp-agentic-risk-baseline", "agent-security-needs-adaptation"],
     "sourceIds": ["owasp-agentic-top10-2026", "nist-ai-800-5"],
-    "reviewedAt": "2026-09-04"
+    "reviewedAt": "2026-09-21"
   }
 ]

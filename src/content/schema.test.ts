@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { rawCatalog } from './catalog'
+import { latestSnapshot, rawCatalog } from './catalog'
 import { parseCatalog, trustNodeIds } from './schema'
 
 describe('SEC catalog schema', () => {
@@ -38,7 +38,7 @@ describe('SEC catalog schema', () => {
 
   it('rejects a review date later than the current snapshot cutoff', () => {
     const invalid = structuredClone(rawCatalog)
-    invalid.controls[0].reviewedAt = '2026-09-05'
+    invalid.controls[0].reviewedAt = new Date(Date.parse(latestSnapshot.cutoffDate) + 86_400_000).toISOString().slice(0, 10)
 
     expect(() => parseCatalog(invalid)).toThrow(/after snapshot cutoff/i)
   })
@@ -65,13 +65,13 @@ describe('catalog evidence integrity', () => {
 
   it('rejects a source checked after the snapshot cutoff', () => {
     const invalid = structuredClone(rawCatalog)
-    invalid.sources[0].checkedAt = '2026-09-05'
+    invalid.sources[0].checkedAt = new Date(Date.parse(latestSnapshot.cutoffDate) + 86_400_000).toISOString().slice(0, 10)
     expect(() => parseCatalog(invalid)).toThrow(/checked date is after snapshot cutoff/)
   })
 
   it('rejects a source checked before publication', () => {
     const invalid = structuredClone(rawCatalog)
-    invalid.sources[0].publishedAt = '2026-09-05'
+    invalid.sources[0].publishedAt = new Date(Date.parse(latestSnapshot.cutoffDate) + 86_400_000).toISOString().slice(0, 10)
     expect(() => parseCatalog(invalid)).toThrow(/checked before publication/)
   })
 })

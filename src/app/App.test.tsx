@@ -24,7 +24,7 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: /Identity is becoming the control plane/i })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: /Identity anchors authority/i })).toBeVisible()
     expect(window.location.pathname).toBe('/en')
   })
 

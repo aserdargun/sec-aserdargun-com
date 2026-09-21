@@ -11,7 +11,7 @@ const content = {
     sections: [
       ['Evidence classes', 'Evidence records are directly supported by cited authoritative sources. Synthesis records connect multiple sources through an explicit editorial judgment. Watch signals identify an important direction that is not yet stable enough to present as settled.'],
       ['Assurance vocabulary', 'Declared means a control is documented. Enforced means a technical boundary applies it. Observed means the effect appears in operating evidence. Proven means a focused verification test demonstrates the intended result. These levels are never averaged.'],
-      ['Editorial cycle', 'Every record carries a reviewed date, source IDs, and bilingual copy. A snapshot establishes the research cutoff. New evidence is appended through a reviewed change and correction notes remain visible.'],
+      ['Editorial cycle', 'Every record carries a reviewed date, source IDs, and bilingual copy. A snapshot establishes the research cutoff. Reviewed changes update the active catalog; dated snapshot notes preserve editorial history, not immutable copies of every earlier record. Source review dates do not imply that an implementation was tested.'],
       ['Limits', 'A mapping is not certification. A control labeled proven requires a focused verification result before an implementation can claim that level. This catalog contains requirements, not executed test artifacts. Unknown or unavailable evidence remains unknown.'],
     ],
   },
@@ -21,7 +21,7 @@ const content = {
     sections: [
       ['Kanıt sınıfları', 'Kanıt kayıtları atıf verilen yetkili kaynaklarla doğrudan desteklenir. Sentez kayıtları açık bir editoryal yargıyla birden çok kaynağı bağlar. İzleme sinyalleri henüz yerleşik kabul edilemeyecek önemli yönleri gösterir.'],
       ['Güvence sözlüğü', 'Beyan, kontrolün dokümante edildiği; uygulandı, teknik sınırın devrede olduğu; gözlendi, etkinin operasyonel kanıtta görüldüğü; kanıtlandı ise odaklı doğrulama testinin amaçlanan sonucu gösterdiği anlamına gelir. Bu seviyeler ortalamaya dönüştürülmez.'],
-      ['Editoryal döngü', 'Her kayıt inceleme tarihi, kaynak kimlikleri ve iki dilli metin taşır. Anlık görüntü araştırma kesim tarihini belirler. Yeni kanıt incelenmiş değişiklikle eklenir ve düzeltme notları görünür kalır.'],
+      ['Editoryal döngü', 'Her kayıt inceleme tarihi, kaynak kimlikleri ve iki dilli metin taşır. Anlık görüntü araştırma kesim tarihini belirler. İncelenmiş değişiklikler etkin kataloğu günceller; tarihli araştırma notları editoryal geçmişi korur, önceki tüm kayıtların değişmez kopyalarını değil. Kaynak inceleme tarihleri, bir uygulamanın test edildiği anlamına gelmez.'],
       ['Sınırlar', 'Eşleme sertifikasyon değildir. Kanıtlandı etiketli kontrol, bir uygulamanın bu seviyeyi iddia edebilmesi için odaklı bir doğrulama sonucu gerektirir. Bu katalog gereksinimleri içerir; yürütülmüş test kanıtlarını içermez. Bilinmeyen ya da erişilemeyen kanıt bilinmeyen kalır.'],
     ],
   },

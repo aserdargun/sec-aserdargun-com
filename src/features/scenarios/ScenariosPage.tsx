@@ -12,7 +12,7 @@ export function ScenariosPage({ locale }: { locale: Locale }) {
   const scenario = catalog.scenariosById.get(selectedId)!
   return (
     <section className="scenarios-page">
-      <header className="page-intro"><p className="eyebrow">{shellCopy[locale].sectionEyebrows.scenarios}</p><h1>{locale === 'en' ? 'Trace authority through a real operating context' : 'Yetkiyi gerçek bir çalışma bağlamında izle'}</h1><p>{locale === 'en' ? 'Scenario traces turn abstract controls into actors, credentials, decisions, actions, evidence, and recovery tests.' : 'Senaryo izleri soyut kontrolleri aktörlere, kimlik bilgilerine, kararlara, eylemlere, kanıta ve kurtarma testlerine dönüştürür.'}</p></header>
+      <header className="page-intro"><p className="eyebrow">{shellCopy[locale].sectionEyebrows.scenarios}</p><h1>{locale === 'en' ? 'Trace authority through an illustrative scenario' : 'Yetkiyi açıklayıcı bir senaryoda izle'}</h1><p>{locale === 'en' ? 'These four illustrative scenarios describe assumed actors, boundaries, and proposed verification experiments. SEC does not execute them or report measured outcomes.' : 'Bu dört açıklayıcı senaryo; varsayılan aktörleri, sınırları ve önerilen doğrulama deneylerini tanımlar. SEC bunları yürütmez veya ölçülmüş sonuç bildirmez.'}</p></header>
       <ScenarioPicker locale={locale} selected={selectedId} onSelect={(id) => setSearchParams({ scenario: id })} />
       <ScenarioTrace scenario={scenario} locale={locale} />
     </section>

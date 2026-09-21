@@ -1,0 +1,35 @@
+{
+  "id": "security-brief-2026-09-21",
+  "cutoffDate": "2026-09-21",
+  "headline": {
+    "en": "Identity anchors authority; enforcement needs evidence",
+    "tr": "Kimlik yetkiye dayanak olur; denetim kanıt gerektirir"
+  },
+  "summary": {
+    "en": "This review connects agent identity and scoped authorization to observable control behavior. Updated ACS material exposes the gap between a specification and its reference implementation; MCP requirements clarify the transport boundary. SEC carries these questions into the aserdargun.com learning system.",
+    "tr": "Bu inceleme, ajan kimliğini ve kapsamı belirli yetkilendirmeyi gözlemlenebilir kontrol davranışına bağlar. Güncel ACS içeriği, şartname ile referans uygulama arasındaki farkı görünür kılar; MCP gereksinimleri taşıma katmanı sınırını netleştirir. SEC bu soruları aserdargun.com öğrenme sistemine taşır."
+  },
+  "mostImportantClaimId": "acs-specification-is-not-enforcement",
+  "watchSignalClaimIds": [
+    "continuous-authority-watch",
+    "ai-act-enforcement-is-staged"
+  ],
+  "correctionNotes": [
+    {
+      "en": "All catalog records were reviewed for this cut. ACS implementation observations are pinned to bfdb898; source review is not an executed security test.",
+      "tr": "Bu kesit için tüm katalog kayıtları incelendi. ACS uygulama gözlemleri bfdb898 revizyonuna sabitlendi; kaynak incelemesi, yürütülmüş güvenlik testi değildir."
+    },
+    {
+      "en": "MCP and NCCoE mappings are partial: transport requirements and concept-project concerns do not directly prescribe every SEC control.",
+      "tr": "MCP ve NCCoE eşlemeleri kısmidir: taşıma katmanı gereksinimleri ve kavramsal proje konuları, her SEC kontrolünü doğrudan öngörmez."
+    },
+    {
+      "en": "ATLAS v2026.08 was published on 1 September 2026 UTC. Its previous 31 August date has been corrected.",
+      "tr": "ATLAS v2026.08, UTC’ye göre 1 Eylül 2026’da yayımlandı. Önceki 31 Ağustos tarihi düzeltildi."
+    },
+    {
+      "en": "The AI Act entry distinguishes enforcement and application, including the Article 50(2) transition. Scenario experiments are illustrative proposals, not measured results.",
+      "tr": "Yapay Zekâ Yasası kaydı, Madde 50(2) geçişi dahil yaptırım ile uygulamayı ayırır. Senaryo deneyleri açıklayıcı önerilerdir; ölçülmüş sonuçlar değildir."
+    }
+  ]
+}

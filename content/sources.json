@@ -5,7 +5,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
     "publishedAt": "2026-05-18",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -19,7 +19,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
     "publishedAt": "2026-02-17",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -33,7 +33,7 @@
     "publisher": "NIST National Cybersecurity Center of Excellence",
     "url": "https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization",
     "publishedAt": "2026-02-05",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -47,7 +47,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
     "publishedAt": "2026-08-27",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -61,7 +61,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
@@ -75,7 +75,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
     "publishedAt": "2025-12-09",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -88,8 +88,8 @@
     "title": "MITRE ATLAS Data v2026.08",
     "publisher": "MITRE ATLAS Project",
     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.08",
-    "publishedAt": "2026-08-31",
-    "checkedAt": "2026-09-04",
+    "publishedAt": "2026-09-01",
+    "checkedAt": "2026-09-21",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -103,13 +103,10 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
     "publishedAt": "2026-09-01",
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-framework",
     "access": "available",
-    "summary": {
-      "en": "The v0.1 public preview defines middleware hooks, portable declarative policies, and observability requirements for runtime agent control.",
-      "tr": "v0.1 kamusal ön izlemesi, çalışma zamanında ajan denetimi için ara yazılım kancaları, taşınabilir bildirimsel politikalar ve gözlemlenebilirlik gereksinimleri tanımlar."
-    }
+    "summary": {"en": "OWASP introduces ACS as a runtime control initiative. Versioned specification and reference-implementation limits are tracked separately in the pinned repository source.", "tr": "OWASP, ACS’yi çalışma zamanı denetimi girişimi olarak tanıtır. Sürümlü şartname ve referans uygulamanın sınırları, sabitlenmiş depo kaynağında ayrıca izlenir."}
   },
   {
     "id": "eu-ai-act-enforcement",
@@ -117,12 +114,37 @@
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
     "publishedAt": null,
-    "checkedAt": "2026-09-04",
+    "checkedAt": "2026-09-21",
     "kind": "official-regulation",
     "access": "available",
+    "summary": {"en": "Commission FAQ on staged enforcement, including the Article 50(2) transition for earlier systems and later dates for high-risk categories; applicability requires a system-specific assessment.", "tr": "Daha önce piyasaya sunulan sistemler için Madde 50(2) geçişini ve yüksek risk kategorilerinin sonraki tarihlerini içeren, aşamalı yaptırıma ilişkin Komisyon SSS sayfası; uygulanabilirlik sistem özelinde değerlendirme gerektirir."}
+  },
+  {
+    "id": "owasp-acs-reference-2026-09-10",
+    "title": "ACS specification v0.1.0 and reference implementation — revision bfdb898",
+    "publisher": "OWASP GenAI Security Project",
+    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/bfdb898be4a9bcaedd90529b480ae5b62e94f29a/README.md",
+    "publishedAt": "2026-09-10",
+    "checkedAt": "2026-09-21",
+    "kind": "official-documentation",
+    "access": "available",
     "summary": {
-      "en": "The Commission states that certain enforcement powers, transparency duties, and GPAI rules apply from 2 August 2026; Annex III high-risk rules apply from 2 December 2027 and regulated-product rules from 2 August 2028.",
-      "tr": "Komisyon; bazı uygulama yetkileri, şeffaflık yükümlülükleri ve genel amaçlı yapay zekâ kurallarının 2 Ağustos 2026'da, Ek III kapsamındaki yüksek risk kurallarının 2 Aralık 2027'de ve düzenlemeye tabi ürün kurallarının 2 Ağustos 2028'de uygulanacağını belirtir."
+      "en": "This pinned revision distinguishes ACS v0.1.0 from its reference implementation: default fail-open behavior, missing wire authentication, and limited live hook coverage remain documented gaps.",
+      "tr": "Bu sabitlenmiş revizyon, ACS v0.1.0 ile referans uygulamayı ayırır: hata durumunda varsayılan olarak devam etme, iletişim kimlik doğrulamasının eksikliği ve sınırlı canlı kanca kapsamı belgelenmiş açıklar olarak kalır."
+    }
+  },
+  {
+    "id": "mcp-authorization-2026-07-28",
+    "title": "MCP Authorization — specification 2026-07-28",
+    "publisher": "Model Context Protocol",
+    "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
+    "publishedAt": "2026-07-28",
+    "checkedAt": "2026-09-21",
+    "kind": "official-documentation",
+    "access": "available",
+    "summary": {
+      "en": "For HTTP authorization, MCP specifies resource-bound tokens, audience validation, and scope challenges. These transport requirements do not certify an agent’s task-level authority.",
+      "tr": "MCP, HTTP yetkilendirmesi için kaynağa bağlı belirteçleri, hedef doğrulamasını ve kapsam taleplerini tanımlar. Bu taşıma katmanı gereksinimleri, ajanın görev düzeyindeki yetkisini belgelemez."
     }
   }
 ]

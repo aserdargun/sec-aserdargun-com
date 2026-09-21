@@ -7,8 +7,8 @@ import { getScenarioTrace, localize } from '../../content/selectors'
 import { StatusMark } from '../../components/StatusMark'
 
 const labels = {
-  en: { boundary: 'System boundary', authority: 'Authority chain', credential: 'Credential constraints', actors: 'Actors', tools: 'Tools', data: 'Data', actions: 'Actions', humans: 'Human decisions', proof: 'Expected evidence', threats: 'Threats in this path', controls: 'Controls in this path', experiment: 'Verification experiment' },
-  tr: { boundary: 'Sistem sınırı', authority: 'Yetki zinciri', credential: 'Kimlik bilgisi kısıtları', actors: 'Aktörler', tools: 'Araçlar', data: 'Veri', actions: 'Eylemler', humans: 'İnsan kararları', proof: 'Beklenen kanıt', threats: 'Bu yoldaki tehditler', controls: 'Bu yoldaki kontroller', experiment: 'Doğrulama deneyi' },
+  en: { boundary: 'System boundary', authority: 'Authority chain', credential: 'Credential constraints', actors: 'Actors', tools: 'Tools', data: 'Data', actions: 'Actions', humans: 'Human decisions', proof: 'Expected evidence', threats: 'Threats in this path', controls: 'Controls in this path', experiment: 'Proposed verification experiment' },
+  tr: { boundary: 'Sistem sınırı', authority: 'Yetki zinciri', credential: 'Kimlik bilgisi kısıtları', actors: 'Aktörler', tools: 'Araçlar', data: 'Veri', actions: 'Eylemler', humans: 'İnsan kararları', proof: 'Beklenen kanıt', threats: 'Bu yoldaki tehditler', controls: 'Bu yoldaki kontroller', experiment: 'Önerilen doğrulama deneyi' },
 } as const
 
 function TextList({ values, locale }: { values: Scenario['actors']; locale: Locale }) {

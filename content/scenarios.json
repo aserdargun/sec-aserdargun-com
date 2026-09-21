@@ -16,7 +16,7 @@
     "nodeIds": ["model", "agent", "identity", "credential", "authorization", "tool", "sandbox", "data", "action", "audit", "incident"],
     "threatIds": ["goal-instruction-integrity", "identity-privilege-abuse", "tool-misuse", "unexpected-code-execution", "agentic-supply-chain", "audit-nonrepudiation-failure", "cascading-failure-recovery"],
     "controlIds": ["first-class-agent-identity", "short-lived-credentials", "least-privilege-policy", "instruction-boundary", "explicit-tool-allowlist", "sandbox-containment", "data-provenance-gate", "human-approval-boundaries", "tamper-evident-action-log", "incident-revocation", "recovery-replay-test"],
-    "sourceIds": ["nist-agent-identity", "owasp-agentic-top10-2026", "mitre-atlas"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["nist-agent-identity", "owasp-agentic-top10-2026", "mitre-atlas"], "reviewedAt": "2026-09-21"
   },
   {
     "id": "remote-mcp",
@@ -35,7 +35,7 @@
     "nodeIds": ["agent", "identity", "credential", "authorization", "tool", "data", "action", "audit", "incident"],
     "threatIds": ["identity-privilege-abuse", "delegated-rights-drift", "tool-misuse", "data-context-poisoning", "audit-nonrepudiation-failure", "human-agent-trust-exploitation", "cascading-failure-recovery"],
     "controlIds": ["first-class-agent-identity", "short-lived-credentials", "audience-restricted-tokens", "least-privilege-policy", "explicit-tool-allowlist", "data-provenance-gate", "data-minimization", "human-approval-boundaries", "tamper-evident-action-log", "continuous-authority-check", "incident-revocation", "recovery-replay-test"],
-    "sourceIds": ["mcp-spec-2026-07-28", "nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["mcp-spec-2026-07-28", "nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-09-21"
   },
   {
     "id": "enterprise-research",
@@ -54,7 +54,7 @@
     "nodeIds": ["model", "agent", "identity", "credential", "authorization", "tool", "data", "action", "audit", "incident"],
     "threatIds": ["goal-instruction-integrity", "identity-privilege-abuse", "delegated-rights-drift", "data-context-poisoning", "human-agent-trust-exploitation", "audit-nonrepudiation-failure"],
     "controlIds": ["first-class-agent-identity", "short-lived-credentials", "least-privilege-policy", "instruction-boundary", "explicit-tool-allowlist", "data-provenance-gate", "data-minimization", "human-approval-boundaries", "tamper-evident-action-log", "continuous-authority-check"],
-    "sourceIds": ["nist-ai-800-5", "mitre-atlas", "nist-agent-identity"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["nist-ai-800-5", "mitre-atlas", "nist-agent-identity"], "reviewedAt": "2026-09-21"
   },
   {
     "id": "local-autonomous",
@@ -73,6 +73,6 @@
     "nodeIds": ["model", "agent", "identity", "credential", "authorization", "tool", "sandbox", "data", "action", "audit", "incident"],
     "threatIds": ["goal-instruction-integrity", "identity-privilege-abuse", "tool-misuse", "unexpected-code-execution", "agentic-supply-chain", "audit-nonrepudiation-failure", "cascading-failure-recovery"],
     "controlIds": ["first-class-agent-identity", "short-lived-credentials", "least-privilege-policy", "instruction-boundary", "explicit-tool-allowlist", "sandbox-containment", "data-provenance-gate", "data-minimization", "human-approval-boundaries", "tamper-evident-action-log", "incident-revocation", "recovery-replay-test"],
-    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026", "nist-agent-identity"], "reviewedAt": "2026-09-04"
+    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026", "nist-agent-identity"], "reviewedAt": "2026-09-21"
   }
 ]

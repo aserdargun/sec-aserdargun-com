@@ -1,4 +1,5 @@
 import { catalog } from '../src/content/catalog'
+import '../src/content/portfolio'
 
 const latestSnapshot = [...catalog.snapshots].sort((a, b) => b.cutoffDate.localeCompare(a.cutoffDate))[0]
 

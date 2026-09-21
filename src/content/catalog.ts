@@ -6,7 +6,8 @@ import controls from '../../content/controls.json'
 import scenarios from '../../content/scenarios.json'
 import frameworkMappings from '../../content/framework-mappings.json'
 import snapshot from '../../content/snapshots/2026-09-02.json'
-import currentSnapshot from '../../content/snapshots/2026-09-04.json'
+import september4Snapshot from '../../content/snapshots/2026-09-04.json'
+import currentSnapshot from '../../content/snapshots/2026-09-21.json'
 import { parseCatalog, type RawCatalog } from './schema'
 
 export const rawCatalog = {
@@ -17,7 +18,7 @@ export const rawCatalog = {
   controls,
   scenarios,
   frameworkMappings,
-  snapshots: [snapshot, currentSnapshot],
+  snapshots: [snapshot, september4Snapshot, currentSnapshot],
 } as RawCatalog
 
 export const catalog = parseCatalog(rawCatalog)
