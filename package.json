@@ -24,7 +24,8 @@
     "preview:stop": "node scripts/preview-control.mjs stop",
     "artifact:check": "node scripts/validate-artifact.mjs",
     "check": "npm run content:check && npm run typecheck && npm run lint && npm run test:run && npm run build",
-    "validate:codex": "npm run preview:stop && npm run test:lifecycle && npm run check && npm run artifact:check && npm run test:e2e && git diff --check"
+    "validate:codex": "npm run preview:stop && npm run test:lifecycle && npm run check && npm run artifact:check && npm run test:e2e && git diff --check",
+    "sync:portfolio": "node scripts/sync-portfolio-lock.mjs"
   },
   "dependencies": {
     "@fontsource/ibm-plex-mono": "^5.3.0",

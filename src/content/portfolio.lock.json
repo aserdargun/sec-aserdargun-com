@@ -1,0 +1,27 @@
+{
+  "source": "aserdargun-com/data/living-system.json",
+  "reviewedAtSource": "max(lastVerified) across the referenced codes",
+  "reviewedAt": "2026-09-21",
+  "applications": [
+    {
+      "code": "hns",
+      "address": "https://hns.aserdargun.com/"
+    },
+    {
+      "code": "ctx",
+      "address": "https://ctx.aserdargun.com/"
+    },
+    {
+      "code": "evl",
+      "address": "https://evl.aserdargun.com/"
+    },
+    {
+      "code": "lcl",
+      "address": "https://lcl.aserdargun.com/"
+    },
+    {
+      "code": "cld",
+      "address": "https://cld.aserdargun.com/"
+    }
+  ]
+}

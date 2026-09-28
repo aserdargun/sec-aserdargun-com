@@ -28,6 +28,8 @@ Research records live under `content/` and are parsed fail-closed with Zod. Ever
 
 The `assurance` field records an implementation evidence target per control as `declared`, `enforced`, `observed`, or `proven`; These labels are requirements, not measured deployment results or executed test artifacts. SEC never calculates an aggregate trust score. Control records expose implementation guidance, tradeoffs, all mapped nodes and threats, and linked evidence in both desktop and mobile views. Claims are labeled `evidence`, `synthesis`, or `watch-signal`.
 
+Portfolio identities and the portfolio review date are not hand-copied. `npm run sync:portfolio` regenerates `src/content/portfolio.lock.json` from the canonical manifest in the sibling `aserdargun-com` repo (`../aserdargun-com/data/living-system.json`; override with `ASERDARGUN_LIVING_SYSTEM=<path>`), and `src/content/portfolio.sync.test.ts` fails on drift. If the script reports a review date newer than the active cutoff, cut a new snapshot instead of editing `reviewedAt`.
+
 The active research cutoff is **2026-09-21**: 11 sources, 13 claims, 11 trust nodes, 10 threats, 14 controls, four illustrative scenarios, and seven framework mappings. The ACS reference disclosure is pinned to Git revision `bfdb898be4a9bcaedd90529b480ae5b62e94f29a`; it is source-reported evidence, not a SEC execution result. MCP token requirements link to the versioned authorization specification. Snapshot notes retain editorial history; prior snapshots do not freeze copies of the entire catalog.
 
 ## Portfolio context
