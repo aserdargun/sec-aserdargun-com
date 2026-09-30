@@ -35,6 +35,8 @@ export function SecurityBriefPage({ locale }: { locale: Locale }) {
       <div className="brief-meta">
         <span>{locale === 'en' ? 'Research cutoff' : 'Araştırma kesimi'}: {snapshot.cutoffDate}</span>
         <span>{catalog.sources.length} {locale === 'en' ? 'authoritative sources' : 'yetkili kaynak'}</span>
+        <span>{catalog.claims.length} {locale === 'en' ? 'recorded claims' : 'kayıtlı iddia'}</span>
+        <span>{catalog.controls.length} {locale === 'en' ? 'controls' : 'kontrol'}</span>
         <span>{catalog.threats.length} {locale === 'en' ? 'threat families' : 'tehdit ailesi'}</span>
       </div>
       <section className="brief-signals" aria-labelledby="current-signals">
