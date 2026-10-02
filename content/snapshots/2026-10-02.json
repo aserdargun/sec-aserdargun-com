@@ -1,0 +1,51 @@
+{
+  "id": "security-brief-2026-10-02",
+  "cutoffDate": "2026-10-02",
+  "headline": {
+    "en": "ATLAS now moves monthly; the ACS gap statement is now specific",
+    "tr": "ATLAS artık aylık ilerliyor; ACS açık ifadesi artık somut"
+  },
+  "summary": {
+    "en": "This cut re-read every catalog source on 2 October 2026. Three things moved. MITRE ATLAS published v2026.09 on 14 September and switched to a monthly YYYY.MM content cadence with its Knowledge Base content versioned separately from the ATLAS Data Format, so the agent technique and mitigation evidence SEC cites is now on a faster clock. The pinned ACS reference implementation advanced from bfdb898 to 27799c2c, where the README states the gap more precisely: the wire is unauthenticated because ACS-Core requires a baseline HMAC-SHA256 envelope signature that the reference Guardian does not implement, the default failure posture is fail-open, and two of nineteen hook methods are evaluated live. The NIST NCCoE project is now titled “Software and SI Agent Identity and Authorization” and its canonical address uses the si slug. The EU AI Act entry was rewritten from the Commission FAQ itself, which adds the 2 December 2026 prohibitions to the staged timeline. MCP 2026-07-28 was re-checked and is still the current stable specification, so those two records are unchanged.",
+    "tr": "Bu kesit tüm katalog kaynaklarını 2 Ekim 2026’da yeniden okudu. Üç şey ilerledi. MITRE ATLAS, 14 Eylül’de v2026.09’u yayımladı ve YYYY.MM içerik temposuna geçti; Bilgi Tabanı içeriğini ATLAS Veri Biçimi’nden ayrı sürümlüyor. SEC’in dayandığı ajan teknik ve azaltma kanıtı artık daha hızlı bir saat üzerinde. Sabitlenmiş ACS referans uygulaması bfdb898’den 27799c2c’ye ilerledi; README açığı daha kesin biçimde bildiriyor: ACS-Core her zarf için taban HMAC-SHA256 imzası gerektiriyor, referans Guardian bunu uygulamıyor, dolayısıyla ileti kimlik doğrulanmıyor; hata durumunda varsayılan tutum fail-open; on dokuz kanca yönteminden yalnızca ikisi canlı değerlendiriliyor. NIST NCCoE projesi artık “Software and SI Agent Identity and Authorization” adını taşıyor ve kanonik adresi si slug’ını kullanıyor. AB Yapay Zekâ Yasası kaydı doğrudan Komisyon SSS sayfasından yeniden yazıldı; aşamalı takvime 2 Aralık 2026 yasakları da eklendi. MCP 2026-07-28 yeniden kontrol edildi ve hâlâ güncel kararlı şartname; o iki kayıt değişmedi."
+  },
+  "mostImportantClaimId": "acs-specification-is-not-enforcement",
+  "watchSignalClaimIds": [
+    "continuous-authority-watch",
+    "ai-act-enforcement-is-staged"
+  ],
+  "correctionNotes": [
+    {
+      "en": "ATLAS moved to v2026.09, published 14 September 2026, adding six top-level techniques, five sub-techniques, one mitigation and one case study over v2026.08. The previous snapshot cited v2026.08 and its 1 September date.",
+      "tr": "ATLAS, v2026.08’e göre altı üst-düzey teknik, beş alt-teknik, bir azaltma ve bir vaka çalışması ekleyen v2026.09 sürümüne, 14 Eylül 2026’da yayımlandı. Önceki kesit v2026.08’i ve 1 Eylül tarihini dayanak alıyordu."
+    },
+    {
+      "en": "ATLAS now releases content monthly under a YYYY.MM scheme and splits ATLAS Knowledge Base content versioning from ATLAS Data Format versioning. The agent-technique row in this catalog should be expected to move more often than the other framework rows.",
+      "tr": "ATLAS artık YYYY.MM düzeniyle aylık içerik yayımlıyor ve ATLAS Bilgi Tabanı içerik sürümlemesini ATLAS Veri Biçimi sürümlemesinden ayırıyor. Bu katalogdaki ajan teknik satırının diğer çerçeve satırlarından daha sık ilerlemesi beklenmelidir."
+    },
+    {
+      "en": "The pinned ACS reference revision advanced from bfdb898 (10 September 2026) to 27799c2c (22 September 2026), and the record id was renamed to owasp-acs-reference-2026-09-22 to match. The ACS specification version is still v0.1.0 at that revision; the repository also tags v0.1.1 and v0.1.2, which carry no new specification schemas.",
+      "tr": "Sabitlenmiş ACS referans revizyonu bfdb898’den (10 Eylül 2026) 27799c2c’ye (22 Eylül 2026) ilerledi ve kayıt kimliği buna uymak için owasp-acs-reference-2026-09-22 olarak yeniden adlandırıldı. ACS şartname sürümü bu revizyonda hâlâ v0.1.0; depo ayrıca v0.1.1 ve v0.1.2 etiketlerini taşıyor ve bunlar yeni şartname şeması getirmiyor."
+    },
+    {
+      "en": "The ACS gap statement is now specific rather than general: the README at 27799c2c names the missing baseline HMAC-SHA256 envelope signature on an unauthenticated wire, the fail-open default, and the two of nineteen hook methods evaluated live — steps/toolCallRequest and steps/toolCallResult. SEC still has not executed ACS.",
+      "tr": "ACS açık ifadesi artık genel değil somut: 27799c2c’deki README, kimlik doğrulanmayan iletide eksik olan taban HMAC-SHA256 zarf imzasını, fail-open varsayılanını ve canlı değerlendirilen on dokuz kancadan ikisini — steps/toolCallRequest ve steps/toolCallResult — adlandırıyor. SEC yine ACS’yi çalıştırmadı."
+    },
+    {
+      "en": "The NIST NCCoE project is now titled “Software and SI Agent Identity and Authorization” and its canonical address uses the si slug. The earlier ai slug still redirects there, so the record points at the canonical address and the rename is recorded rather than hidden.",
+      "tr": "NIST NCCoE projesi artık “Software and SI Agent Identity and Authorization” adını taşıyor ve kanonik adresi si slug’ını kullanıyor. Önceki ai slug’ı hâlâ buraya yönleniyor; bu nedenle kayıt kanonik adrese işaret ediyor ve yeniden adlandırma saklanmak yerine kaydediliyor."
+    },
+    {
+      "en": "The EU AI Act entry was rewritten from the Commission FAQ. It now also carries the 2 December 2026 date for the new prohibitions on non-consensual intimate material and child sexual abuse material, and the confirmation that enforcement powers began on 2 August 2026. The page carries no publication date, so publishedAt stays null rather than being filled with a guessed value.",
+      "tr": "AB Yapay Zekâ Yasası kaydı Komisyon SSS sayfasından yeniden yazıldı. Artık rızasız özel içerik ve çocuk cinsel istismarı içeriğine ilişkin yeni yasaklar için 2 Aralık 2026 tarihini ve yaptırım yetkilerinin 2 Ağustos 2026’da başladığının teyidini de taşıyor. Sayfada yayın tarihi bulunmadığından publishedAt tahmini bir değerle doldurulmak yerine null bırakıldı."
+    },
+    {
+      "en": "MCP specification 2026-07-28 and MCP Authorization 2026-07-28 were re-checked and remain the current stable revision. No content change was made to those two records; they are re-dated only because the whole catalog was re-read for this cut.",
+      "tr": "MCP şartnamesi 2026-07-28 ve MCP Authorization 2026-07-28 yeniden kontrol edildi ve güncel kararlı revizyon olmayı sürdürüyor. Bu iki kayda içerik değişikliği yapılmadı; yalnızca tüm katalog bu kesit için yeniden okunduğu için tarihleri ilerletildi."
+    },
+    {
+      "en": "The two genai.owasp.org resource pages sit behind an interactive human-verification challenge and were not machine-verified in this cut. Their authoritative upstream, the GenAI-Security-Project/agent-control-standard repository, was read directly instead. The remaining nine sources were fetched and confirmed in this cut.",
+      "tr": "İki genai.owasp.org kaynak sayfası etkileşimli insan doğrulama meydan okumasının arkasında ve bu kesitte makineyle doğrulanmadı. Bunların yetkili kaynağı olan GenAI-Security-Project/agent-control-standard deposu doğrudan okundu. Kalan dokuz kaynak bu kesitte getirilip teyit edildi."
+    }
+  ]
+}

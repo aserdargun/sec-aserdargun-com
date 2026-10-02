@@ -5,7 +5,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
     "publishedAt": "2026-05-18",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -19,7 +19,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
     "publishedAt": "2026-02-17",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -29,16 +29,16 @@
   },
   {
     "id": "nist-agent-identity",
-    "title": "Software and AI Agent Identity and Authorization",
+    "title": "Software and SI Agent Identity and Authorization",
     "publisher": "NIST National Cybersecurity Center of Excellence",
-    "url": "https://www.nccoe.nist.gov/projects/software-and-ai-agent-identity-and-authorization",
+    "url": "https://www.nccoe.nist.gov/projects/software-and-si-agent-identity-and-authorization",
     "publishedAt": "2026-02-05",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-publication",
     "access": "available",
     "summary": {
-      "en": "The NCCoE project, now reviewing public comments, examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents.",
-      "tr": "Kamusal yorumları inceleme aşamasındaki NCCoE projesi; ajanlar için standart temelli tanımlama, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve istem enjeksiyonu kontrollerini ele alır."
+      "en": "The NCCoE project, now reviewing public comments, examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents. The project is now titled “Software and SI Agent Identity and Authorization” and the canonical address uses the si slug; the earlier ai slug redirects here.",
+      "tr": "Kamusal yorumları inceleme aşamasındaki NCCoE projesi; ajanlar için standart temelli tanımlama, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve istem enjeksiyonu kontrollerini ele alır. Proje artık “Software and SI Agent Identity and Authorization” adını taşıyor ve kanonik adres si slug’ını kullanıyor; önceki ai slug’ı buraya yönlenir."
     }
   },
   {
@@ -47,7 +47,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
     "publishedAt": "2026-08-27",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -61,7 +61,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
@@ -75,7 +75,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
     "publishedAt": "2025-12-09",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -85,16 +85,16 @@
   },
   {
     "id": "mitre-atlas",
-    "title": "MITRE ATLAS Data v2026.08",
+    "title": "MITRE ATLAS Data v2026.09",
     "publisher": "MITRE ATLAS Project",
-    "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.08",
-    "publishedAt": "2026-09-01",
-    "checkedAt": "2026-09-21",
+    "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
+    "publishedAt": "2026-09-14",
+    "checkedAt": "2026-10-02",
     "kind": "official-framework",
     "access": "available",
     "summary": {
-      "en": "MITRE ATLAS v2026.08 adds autonomous-agent techniques plus mitigations for agent authority expansion and scope drift to its living knowledge base.",
-      "tr": "MITRE ATLAS v2026.08, yaşayan bilgi tabanına otonom ajan tekniklerinin yanı sıra ajan yetkisinin genişlemesi ve kapsam sapması için azaltımlar ekler."
+      "en": "MITRE ATLAS v2026.09 carries 16 tactics, 120 techniques, 88 sub-techniques, 40 mitigations and 73 case studies. It adds six top-level techniques, five sub-techniques, one mitigation and one case study over v2026.08, and moves ATLAS to a monthly YYYY.MM content cadence with ATLAS Knowledge Base content versioned separately from the ATLAS Data Format.",
+      "tr": "MITRE ATLAS v2026.09; 16 taktik, 120 teknik, 88 alt-teknik, 40 azaltma ve 73 vaka çalışması taşır. v2026.08’e göre altı üst-düzey teknik, beş alt-teknik, bir azaltma ve bir vaka çalışması ekler; ATLAS’ı aylık YYYY.MM içerik temposuna geçirir ve ATLAS Bilgi Tabanı içeriğini ATLAS Veri Biçimi’nden ayrı sürümler."
     }
   },
   {
@@ -103,7 +103,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
     "publishedAt": "2026-09-01",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-framework",
     "access": "available",
     "summary": {"en": "OWASP introduces ACS as a runtime control initiative. Versioned specification and reference-implementation limits are tracked separately in the pinned repository source.", "tr": "OWASP, ACS’yi çalışma zamanı denetimi girişimi olarak tanıtır. Sürümlü şartname ve referans uygulamanın sınırları, sabitlenmiş depo kaynağında ayrıca izlenir."}
@@ -114,23 +114,23 @@
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
     "publishedAt": null,
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-regulation",
     "access": "available",
-    "summary": {"en": "Commission FAQ on staged enforcement, including the Article 50(2) transition for earlier systems and later dates for high-risk categories; applicability requires a system-specific assessment.", "tr": "Daha önce piyasaya sunulan sistemler için Madde 50(2) geçişini ve yüksek risk kategorilerinin sonraki tarihlerini içeren, aşamalı yaptırıma ilişkin Komisyon SSS sayfası; uygulanabilirlik sistem özelinde değerlendirme gerektirir."}
+    "summary": {"en": "Commission FAQ on staged enforcement, restated for this review: the AI Office and Member State authorities gained enforcement powers on 2 August 2026; Article 50 transparency obligations became applicable and enforceable on the same date, with a transition to 2 December 2026 for the Article 50(2) marking and detection duty on systems already on the market; the new prohibitions on non-consensual intimate material and child sexual abuse material apply from 2 December 2026; Annex III high-risk rules apply from 2 December 2027 and Annex I embedded high-risk rules from 2 August 2028. The page carries no publication date, and applicability still requires a system-specific assessment.", "tr": "Bu inceleme için yeniden yazılan, aşamalı yaptırıma ilişkin Komisyon SSS sayfası: AI Bürosu ve Üye Devlet makamlarının yaptırım yetkileri 2 Ağustos 2026’da başladı; Madde 50 şeffaflık yükümlülükleri aynı tarihte uygulamaya girdi ve yaptırılabilir hâle geldi, hâlihazırda piyasada bulunan sistemler için Madde 50(2) işaretleme ve saptama yükümlülüğüne 2 Aralık 2026’ya kadar geçiş tanındı; rızasız özel içerik ve çocuk cinsel istismarı içeriği üretimi ya da manipülasyonu yasağı 2 Aralık 2026’dan itibaren uygulanır; Annex III yüksek risk kuralları 2 Aralık 2027’den, Annex I gömülü yüksek risk kuralları 2 Ağustos 2028’den itibaren uygulanır. Sayfada yayın tarihi bulunmaz ve uygulanabilirlik yine sistem özelinde değerlendirme gerektirir."}
   },
   {
-    "id": "owasp-acs-reference-2026-09-10",
-    "title": "ACS specification v0.1.0 and reference implementation — revision bfdb898",
+    "id": "owasp-acs-reference-2026-09-22",
+    "title": "ACS specification v0.1.0 and reference implementation — revision 27799c2c",
     "publisher": "OWASP GenAI Security Project",
-    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/bfdb898be4a9bcaedd90529b480ae5b62e94f29a/README.md",
-    "publishedAt": "2026-09-10",
-    "checkedAt": "2026-09-21",
+    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/27799c2c27414a483a4a043b957bfd2997d53231/README.md",
+    "publishedAt": "2026-09-22",
+    "checkedAt": "2026-10-02",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
-      "en": "This pinned revision distinguishes ACS v0.1.0 from its reference implementation: default fail-open behavior, missing wire authentication, and limited live hook coverage remain documented gaps.",
-      "tr": "Bu sabitlenmiş revizyon, ACS v0.1.0 ile referans uygulamayı ayırır: hata durumunda varsayılan olarak devam etme, iletişim kimlik doğrulamasının eksikliği ve sınırlı canlı kanca kapsamı belgelenmiş açıklar olarak kalır."
+      "en": "This pinned revision distinguishes ACS v0.1.0 from its reference implementation: default fail-open behavior, missing wire authentication, and limited live hook coverage remain documented gaps. The specification version is still v0.1.0 at this revision; the repository has also tagged v0.1.1 and v0.1.2, which carry no new specification schemas.",
+      "tr": "Bu sabitlenmiş revizyon, ACS v0.1.0 ile referans uygulamayı ayırır: hata durumunda varsayılan olarak devam etme, iletişim kimlik doğrulamasının eksikliği ve sınırlı canlı kanca kapsamı belgelenmiş açıklar olarak kalır. Şartname sürümü bu revizyonda hâlâ v0.1.0’dur; depo ayrıca v0.1.1 ve v0.1.2 etiketlerini taşır ve bunlar yeni şartname şemaları getirmez."
     }
   },
   {
@@ -139,7 +139,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-09-21",
+    "checkedAt": "2026-10-02",
     "kind": "official-documentation",
     "access": "available",
     "summary": {

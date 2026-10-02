@@ -17,9 +17,9 @@ describe('Standards crosswalk', () => {
     render(<App />)
 
     expect(await screen.findByRole('heading', { name: 'MITRE ATLAS' })).toBeVisible()
-    expect(screen.getByText('v2026.08 · 2026-09-01')).toBeVisible()
+    expect(screen.getByText('v2026.09 · 2026-09-14')).toBeVisible()
     expect(screen.getByRole('heading', { name: 'OWASP Agent Control Standard' })).toBeVisible()
-    expect(screen.getByText('v0.1.0 · bfdb898')).toBeVisible()
+    expect(screen.getByText('v0.1.0 · 27799c2c')).toBeVisible()
   })
 
   it('localizes the Turkish section label and framework terminology', async () => {

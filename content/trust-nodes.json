@@ -10,7 +10,7 @@
     "requiredEvidence": [{ "en": "Model, version, system instruction, and context provenance", "tr": "Model, sürüm, sistem talimatı ve bağlam kökeni kaydı" }],
     "threatIds": ["goal-instruction-integrity", "data-context-poisoning", "agentic-supply-chain"],
     "controlIds": ["instruction-boundary", "data-provenance-gate"],
-    "sourceIds": ["nist-ai-800-5", "mitre-atlas"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-ai-800-5", "mitre-atlas"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "agent", "order": 2,
@@ -23,7 +23,7 @@
     "requiredEvidence": [{ "en": "Stable task and agent identifiers with plan revisions", "tr": "Kararlı görev ve ajan kimlikleri ile plan revizyonları" }],
     "threatIds": ["goal-instruction-integrity", "data-context-poisoning", "agentic-supply-chain"],
     "controlIds": ["instruction-boundary"],
-    "sourceIds": ["nist-ai-800-5", "nist-agent-identity"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-ai-800-5", "nist-agent-identity"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "identity", "order": 3,
@@ -36,7 +36,7 @@
     "requiredEvidence": [{ "en": "Unique agent identity bound to owner and workload", "tr": "Sahibe ve iş yüküne bağlı benzersiz ajan kimliği" }],
     "threatIds": ["identity-privilege-abuse"],
     "controlIds": ["first-class-agent-identity"],
-    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "credential", "order": 4,
@@ -49,7 +49,7 @@
     "requiredEvidence": [{ "en": "Issuance, audience, expiry, rotation, and revocation trace", "tr": "Verilme, hedef, süre sonu, rotasyon ve iptal izi" }],
     "threatIds": ["identity-privilege-abuse"],
     "controlIds": ["short-lived-credentials", "audience-restricted-tokens"],
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "authorization", "order": 5,
@@ -62,7 +62,7 @@
     "requiredEvidence": [{ "en": "Policy input, decision, reason, and enforced result", "tr": "Politika girdisi, kararı, nedeni ve uygulanan sonuç" }],
     "threatIds": ["identity-privilege-abuse", "delegated-rights-drift", "human-agent-trust-exploitation"],
     "controlIds": ["audience-restricted-tokens", "least-privilege-policy", "human-approval-boundaries", "continuous-authority-check"],
-    "sourceIds": ["nist-agent-identity", "mcp-spec-2026-07-28", "mitre-atlas", "owasp-agent-control-standard", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-agent-identity", "mcp-spec-2026-07-28", "mitre-atlas", "owasp-agent-control-standard", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "tool", "order": 6,
@@ -75,7 +75,7 @@
     "requiredEvidence": [{ "en": "Resolved tool identity, version, publisher, and allowlist result", "tr": "Çözümlenmiş araç kimliği, sürümü, yayıncısı ve izin listesi sonucu" }],
     "threatIds": ["delegated-rights-drift", "tool-misuse", "unexpected-code-execution", "agentic-supply-chain"],
     "controlIds": ["least-privilege-policy", "explicit-tool-allowlist", "continuous-authority-check"],
-    "sourceIds": ["owasp-agentic-top10-2026", "mcp-spec-2026-07-28", "owasp-agent-control-standard"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["owasp-agentic-top10-2026", "mcp-spec-2026-07-28", "owasp-agent-control-standard"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "sandbox", "order": 7,
@@ -88,7 +88,7 @@
     "requiredEvidence": [{ "en": "Isolation policy and refused boundary tests", "tr": "Yalıtım politikası ve reddedilen sınır testleri" }],
     "threatIds": ["unexpected-code-execution", "agentic-supply-chain"],
     "controlIds": ["explicit-tool-allowlist", "sandbox-containment"],
-    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "data", "order": 8,
@@ -101,7 +101,7 @@
     "requiredEvidence": [{ "en": "Field-level access and source provenance trace", "tr": "Alan düzeyinde erişim ve kaynak kökeni izi" }],
     "threatIds": ["goal-instruction-integrity", "data-context-poisoning"],
     "controlIds": ["instruction-boundary", "data-provenance-gate", "data-minimization"],
-    "sourceIds": ["mitre-atlas", "nist-ai-800-5"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["mitre-atlas", "nist-ai-800-5"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "action", "order": 9,
@@ -114,7 +114,7 @@
     "requiredEvidence": [{ "en": "Bound request, authorization, execution, and outcome", "tr": "Bağlanmış istek, yetkilendirme, yürütme ve sonuç" }],
     "threatIds": ["goal-instruction-integrity", "delegated-rights-drift", "tool-misuse", "unexpected-code-execution", "audit-nonrepudiation-failure", "human-agent-trust-exploitation", "cascading-failure-recovery"],
     "controlIds": ["least-privilege-policy", "sandbox-containment", "human-approval-boundaries", "tamper-evident-action-log", "continuous-authority-check", "incident-revocation"],
-    "sourceIds": ["owasp-agentic-top10-2026", "nist-agent-identity"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["owasp-agentic-top10-2026", "nist-agent-identity"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "audit", "order": 10,
@@ -127,7 +127,7 @@
     "requiredEvidence": [{ "en": "Tamper-evident end-to-end action chain", "tr": "Kurcalamayı belli eden uçtan uca eylem zinciri" }],
     "threatIds": ["delegated-rights-drift", "audit-nonrepudiation-failure", "cascading-failure-recovery"],
     "controlIds": ["first-class-agent-identity", "tamper-evident-action-log", "recovery-replay-test"],
-    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27", "owasp-agent-control-standard"], "reviewedAt": "2026-10-02"
   },
   {
     "id": "incident", "order": 11,
@@ -140,6 +140,6 @@
     "requiredEvidence": [{ "en": "Containment cutoff and reconciled recovery inventory", "tr": "Sınırlama kesimi ve uzlaştırılmış kurtarma envanteri" }],
     "threatIds": ["audit-nonrepudiation-failure", "cascading-failure-recovery"],
     "controlIds": ["tamper-evident-action-log", "incident-revocation", "recovery-replay-test"],
-    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026"], "reviewedAt": "2026-09-21"
+    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026"], "reviewedAt": "2026-10-02"
   }
 ]
