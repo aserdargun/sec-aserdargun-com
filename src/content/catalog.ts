@@ -8,7 +8,8 @@ import frameworkMappings from '../../content/framework-mappings.json'
 import snapshot from '../../content/snapshots/2026-09-02.json'
 import september4Snapshot from '../../content/snapshots/2026-09-04.json'
 import september21Snapshot from '../../content/snapshots/2026-09-21.json'
-import currentSnapshot from '../../content/snapshots/2026-10-02.json'
+import october2Snapshot from '../../content/snapshots/2026-10-02.json'
+import currentSnapshot from '../../content/snapshots/2026-10-04.json'
 import { parseCatalog, type RawCatalog } from './schema'
 
 export const rawCatalog = {
@@ -19,7 +20,7 @@ export const rawCatalog = {
   controls,
   scenarios,
   frameworkMappings,
-  snapshots: [snapshot, september4Snapshot, september21Snapshot, currentSnapshot],
+  snapshots: [snapshot, september4Snapshot, september21Snapshot, october2Snapshot, currentSnapshot],
 } as RawCatalog
 
 export const catalog = parseCatalog(rawCatalog)
