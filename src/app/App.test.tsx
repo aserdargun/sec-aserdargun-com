@@ -24,7 +24,7 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: /ATLAS v2026\.09 release was published on 15 September 2026/i })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: /reference repository advanced from revision 27799c2c to 1937537/i })).toBeVisible()
     expect(window.location.pathname).toBe('/en')
   })
 

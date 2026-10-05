@@ -132,27 +132,27 @@
     "id": "continuous-authority-watch",
     "kind": "watch-signal",
     "text": {"en": "ATLAS names authority-expansion and scope-drift mitigations and now publishes them monthly. ACS v0.1.0 specifies runtime decisions, but its pinned reference implementation documents enforcement and authentication gaps; deployment evidence remains necessary.", "tr": "ATLAS, yetki genişlemesi ve kapsam sapması azaltımlarını adlandırır ve artık bunları aylık yayımlar. ACS v0.1.0 çalışma zamanı kararlarını tanımlar; ancak sabitlenmiş referans uygulama, denetim ve kimlik doğrulama eksiklerini belgeler. Dağıtıma özgü kanıt hâlâ gereklidir."},
-    "sourceIds": ["mitre-atlas", "owasp-acs-reference-2026-09-22"],
+    "sourceIds": ["mitre-atlas", "owasp-acs-reference-2026-10-04"],
     "subjectIds": ["authorization", "tool", "action", "audit"],
-    "reviewedAt": "2026-10-04",
+    "reviewedAt": "2026-10-05",
     "confidence": {"en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.", "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."}
   },
   {
     "id": "acs-specification-is-not-enforcement",
     "kind": "evidence",
     "text": {
-      "en": "The ACS reference README at revision 27799c2c reports that the wire is unauthenticated — ACS-Core requires a baseline HMAC-SHA256 signature on every envelope and the reference Guardian implements none of it — that the default failure posture is fail-open, and that two of ACS's nineteen hook methods, steps/toolCallRequest and steps/toolCallResult, are evaluated live. Specification conformance cannot be inferred from that demonstration.",
-      "tr": "27799c2c revizyonundaki ACS referans README’si, iletiyin kimlik doğrulanmadığını — ACS-Core her zarf için taban HMAC-SHA256 imzası gerektiriyor ve referans Guardian bunun hiçbirini uygulamıyor — hata durumunda varsayılan tutumun fail-open olduğunu ve ACS’nin on dokuz kanca yönteminden yalnızca ikisinin, steps/toolCallRequest ve steps/toolCallResult, canlı değerlendirildiğini bildirir. Bu gösterimden şartnameye uygunluk sonucu çıkarılamaz."
+      "en": "The ACS reference README at revision 1937537 reports that the wire is unauthenticated — ACS-Core requires a baseline HMAC-SHA256 signature on every envelope and the reference Guardian implements none of it — that the default failure posture is fail-open, and that two of ACS's nineteen hook methods, steps/toolCallRequest and steps/toolCallResult, are evaluated live. Specification conformance cannot be inferred from that demonstration.",
+      "tr": "1937537 revizyonundaki ACS referans README’si, iletiyin kimlik doğrulanmadığını — ACS-Core her zarf için taban HMAC-SHA256 imzası gerektiriyor ve referans Guardian bunun hiçbirini uygulamıyor — hata durumunda varsayılan tutumun fail-open olduğunu ve ACS’nin on dokuz kanca yönteminden yalnızca ikisinin, steps/toolCallRequest ve steps/toolCallResult, canlı değerlendirildiğini bildirir. Bu gösterimden şartnameye uygunluk sonucu çıkarılamaz."
     },
     "sourceIds": [
-      "owasp-acs-reference-2026-09-22"
+      "owasp-acs-reference-2026-10-04"
     ],
     "subjectIds": [
       "authorization",
       "tool",
       "audit"
     ],
-    "reviewedAt": "2026-10-04",
+    "reviewedAt": "2026-10-05",
     "confidence": {
       "en": "Maintainer-reported limits at a pinned revision; not a test run or an audit by SEC.",
       "tr": "Sabitlenmiş revizyonda geliştiricinin bildirdiği sınırlar; SEC tarafından yapılmış test veya denetim değildir."

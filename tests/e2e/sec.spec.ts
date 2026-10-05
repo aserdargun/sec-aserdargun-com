@@ -4,7 +4,7 @@ test('Security Brief opens the selected trust boundary', async ({ page }) => {
   const errors: string[] = []
   page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()) })
   await page.goto('/en')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(/ATLAS v2026\.09 release was published on 15 September 2026|ATLAS v2026.09 sürümü 15 Eylül 2026'da yayımlandı/)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/reference repository advanced from revision 27799c2c to 1937537|referans deposu 4 Ekim’de 27799c2c revizyonundan 1937537 revizyonuna ilerledi/)
   await page.getByRole('link', { name: 'Inspect the trust path' }).click()
   await page.getByRole('button', { name: /^05 Authorization/i }).click()
   await expect(page).toHaveURL(/\/en\/trust-path\?node=authorization$/)

@@ -24,10 +24,10 @@
     "sourceIds": ["mitre-atlas"], "reviewedAt": "2026-10-04"
   },
   {
-    "id": "owasp-acs-mapping", "framework": "OWASP Agent Control Standard", "version": "v0.1.0 · 27799c2c", "referenceId": "runtime-agent-control",
+    "id": "owasp-acs-mapping", "framework": "OWASP Agent Control Standard", "version": "v0.1.0 · 1937537", "referenceId": "runtime-agent-control",
     "entityType": "control", "entityIds": ["explicit-tool-allowlist", "continuous-authority-check", "tamper-evident-action-log", "incident-revocation"], "mappingType": "partial",
-    "rationale": {"en": "ACS defines runtime decision hooks. The pinned reference documents fail-open defaults and missing wire authentication; this correspondence does not establish effective enforcement or production readiness. The specification version is still v0.1.0 at this revision.", "tr": "ACS, çalışma zamanı karar kancalarını tanımlar. Sabitlenmiş referans, hata durumunda devam etme varsayılanını ve eksik iletişim kimlik doğrulamasını belgeler; bu karşılık, etkin denetim veya üretime hazır olma kanıtı değildir. Şartname sürümü bu revizyonda hâlâ v0.1.0’dur."},
-    "sourceIds": ["owasp-agent-control-standard", "owasp-acs-reference-2026-09-22"], "reviewedAt": "2026-10-04"
+    "rationale": {"en": "ACS defines runtime decision hooks. The pinned reference documents fail-open defaults and missing wire authentication; this correspondence does not establish effective enforcement or production readiness. The specification version is still v0.1.0 at this revision, which states that v0.2.0 targets March 2027 and that no v1.0 date has been set.", "tr": "ACS, çalışma zamanı karar kancalarını tanımlar. Sabitlenmiş referans, hata durumunda devam etme varsayılanını ve eksik iletişim kimlik doğrulamasını belgeler; bu karşılık, etkin denetim veya üretime hazır olma kanıtı değildir. Şartname sürümü bu revizyonda hâlâ v0.1.0’dur; bu revizyon v0.2.0’nin 2027 Mart’ı hedeflediğini ve v1.0 tarihinin belirlenmediğini belirtiyor."},
+    "sourceIds": ["owasp-agent-control-standard", "owasp-acs-reference-2026-10-04"], "reviewedAt": "2026-10-05"
   },
   {
     "id": "mcp-authorization-mapping", "framework": "Model Context Protocol Authorization", "version": "2026-07-28", "referenceId": "oauth-resource-hardening",

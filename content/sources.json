@@ -33,12 +33,12 @@
     "publisher": "NIST National Cybersecurity Center of Excellence",
     "url": "https://www.nccoe.nist.gov/projects/software-and-si-agent-identity-and-authorization",
     "publishedAt": "2026-02-05",
-    "checkedAt": "2026-10-02",
+    "checkedAt": "2026-10-05",
     "kind": "official-publication",
     "access": "available",
     "summary": {
-      "en": "The NCCoE project, now reviewing public comments, examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents. The project is now titled “Software and SI Agent Identity and Authorization” and the canonical address uses the si slug; the earlier ai slug redirects here.",
-      "tr": "Kamusal yorumları inceleme aşamasındaki NCCoE projesi; ajanlar için standart temelli tanımlama, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve istem enjeksiyonu kontrollerini ele alır. Proje artık “Software and SI Agent Identity and Authorization” adını taşıyor ve kanonik adres si slug’ını kullanıyor; önceki ai slug’ı buraya yönlenir."
+      "en": "The NCCoE project, now reviewing public comments, examines standards-based identification, authentication, authorization, auditing, non-repudiation, and prompt-injection controls for agents. The project is now titled “Software and SI Agent Identity and Authorization” and the canonical address uses the si slug; the earlier ai slug redirects here. The page was reachable again on 5 October 2026 after the 4 October Cloudflare HTTP 403; its title and canonical slug were re-confirmed on that read, while the 5 February 2026 project date sat outside the retrieved fragment and stays unverified.",
+      "tr": "Kamusal yorumları inceleme aşamasındaki NCCoE projesi; ajanlar için standart temelli tanımlama, kimlik doğrulama, yetkilendirme, denetim, inkâr edilememe ve istem enjeksiyonu kontrollerini ele alır. Proje artık “Software and SI Agent Identity and Authorization” adını taşıyor ve kanonik adres si slug’ını kullanıyor; önceki ai slug’ı buraya yönlenir. Sayfa 4 Ekim’deki Cloudflare HTTP 403’ün ardından 5 Ekim 2026’da yeniden erişilebilir hâle geldi; o okumada başlığı ve kanonik slug’ı yeniden doğrulandı, ancak 5 Şubat 2026 proje tarihi getirilen metin parçasının dışında kaldığı için doğrulanmamış olarak duruyor."
     }
   },
   {
@@ -120,12 +120,12 @@
     "summary": {"en": "Commission FAQ on staged enforcement, restated for this review: the AI Office and Member State authorities gained enforcement powers on 2 August 2026; Article 50 transparency obligations became applicable and enforceable on the same date, with a transition to 2 December 2026 for the Article 50(2) marking and detection duty on systems already on the market; the new prohibitions on non-consensual intimate material and child sexual abuse material apply from 2 December 2026; Annex III high-risk rules apply from 2 December 2027 and Annex I embedded high-risk rules from 2 August 2028. The page carries no publication date, and applicability still requires a system-specific assessment.", "tr": "Bu inceleme için yeniden yazılan, aşamalı yaptırıma ilişkin Komisyon SSS sayfası: AI Bürosu ve Üye Devlet makamlarının yaptırım yetkileri 2 Ağustos 2026’da başladı; Madde 50 şeffaflık yükümlülükleri aynı tarihte uygulamaya girdi ve yaptırılabilir hâle geldi, hâlihazırda piyasada bulunan sistemler için Madde 50(2) işaretleme ve saptama yükümlülüğüne 2 Aralık 2026’ya kadar geçiş tanındı; rızasız özel içerik ve çocuk cinsel istismarı içeriği üretimi ya da manipülasyonu yasağı 2 Aralık 2026’dan itibaren uygulanır; Annex III yüksek risk kuralları 2 Aralık 2027’den, Annex I gömülü yüksek risk kuralları 2 Ağustos 2028’den itibaren uygulanır. Sayfada yayın tarihi bulunmaz ve uygulanabilirlik yine sistem özelinde değerlendirme gerektirir."}
   },
   {
-    "id": "owasp-acs-reference-2026-09-22",
-    "title": "ACS specification v0.1.0 and reference implementation — revision 27799c2c",
+    "id": "owasp-acs-reference-2026-10-04",
+    "title": "ACS specification v0.1.0 and reference implementation — revision 1937537",
     "publisher": "OWASP GenAI Security Project",
-    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/27799c2c27414a483a4a043b957bfd2997d53231/README.md",
-    "publishedAt": "2026-09-22",
-    "checkedAt": "2026-10-04",
+    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/193753778977e88c6573adbf7f98e42eacd2c15a/README.md",
+    "publishedAt": "2026-10-04",
+    "checkedAt": "2026-10-05",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
