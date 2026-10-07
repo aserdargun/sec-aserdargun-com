@@ -11,7 +11,7 @@ import september21Snapshot from '../../content/snapshots/2026-09-21.json'
 import october2Snapshot from '../../content/snapshots/2026-10-02.json'
 import october4Snapshot from '../../content/snapshots/2026-10-04.json'
 import october5Snapshot from '../../content/snapshots/2026-10-05.json'
-import currentSnapshot from '../../content/snapshots/2026-10-06.json'
+import currentSnapshot from '../../content/snapshots/2026-10-07.json'
 import { parseCatalog, type RawCatalog } from './schema'
 
 export const rawCatalog = {

@@ -6,10 +6,19 @@
       "en": "Agent systems introduce security threats that require established cybersecurity principles to be adapted to agentic scale and autonomy.",
       "tr": "Yapay zekâ ajanı sistemleri, yerleşik siber güvenlik ilkelerinin ajan ölçeğine ve otonomisine uyarlanmasını gerektiren tehditler oluşturur."
     },
-    "sourceIds": ["nist-ai-800-5"],
-    "subjectIds": ["agent", "action", "incident"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct NIST publication finding.", "tr": "Doğrudan NIST yayın bulgusu." }
+    "sourceIds": [
+      "nist-ai-800-5"
+    ],
+    "subjectIds": [
+      "agent",
+      "action",
+      "incident"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct NIST publication finding.",
+      "tr": "Doğrudan NIST yayın bulgusu."
+    }
   },
   {
     "id": "agent-first-class-identity",
@@ -18,10 +27,20 @@
       "en": "Agents should be treated as first-class entities with unique identifiers, credentials, and entitlements bound to the user or system operating them.",
       "tr": "Ajanlar, kendilerini işleten kullanıcı veya sisteme bağlı benzersiz tanımlayıcıları, kimlik bilgileri ve yetkileri olan birinci sınıf varlıklar olarak ele alınmalıdır."
     },
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "nist-agent-identity"],
-    "subjectIds": ["identity", "credential", "authorization"],
+    "sourceIds": [
+      "nist-agent-identity-blog-2026-08-27",
+      "nist-agent-identity"
+    ],
+    "subjectIds": [
+      "identity",
+      "credential",
+      "authorization"
+    ],
     "reviewedAt": "2026-10-02",
-    "confidence": { "en": "Direct NIST guidance and project framing.", "tr": "Doğrudan NIST rehberliği ve proje çerçevesi." }
+    "confidence": {
+      "en": "Direct NIST guidance and project framing.",
+      "tr": "Doğrudan NIST rehberliği ve proje çerçevesi."
+    }
   },
   {
     "id": "dynamic-restricted-credentials",
@@ -30,10 +49,19 @@
       "en": "Dynamic, tightly scoped, audience-restricted credentials are available foundations for agentic identity and authorization.",
       "tr": "Dinamik, dar kapsamlı ve hedefe kısıtlı kimlik bilgileri, ajan kimliği ve yetkilendirmesi için kullanılabilir temellerdir."
     },
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28"],
-    "subjectIds": ["credential", "authorization"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Supported by current NIST analysis and MCP authorization direction.", "tr": "Güncel NIST analizi ve MCP yetkilendirme yönüyle desteklenir." }
+    "sourceIds": [
+      "nist-agent-identity-blog-2026-08-27",
+      "mcp-spec-2026-07-28"
+    ],
+    "subjectIds": [
+      "credential",
+      "authorization"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Supported by current NIST analysis and MCP authorization direction.",
+      "tr": "Güncel NIST analizi ve MCP yetkilendirme yönüyle desteklenir."
+    }
   },
   {
     "id": "least-privilege-remains-hard",
@@ -42,10 +70,19 @@
       "en": "Modern authorization protocols do not automatically produce least privilege; agent speed and path-finding amplify broadly scoped access.",
       "tr": "Modern yetkilendirme protokolleri otomatik olarak en az ayrıcalık sağlamaz; ajanın hızı ve yol bulma davranışı geniş kapsamlı erişimin etkisini büyütür."
     },
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
-    "subjectIds": ["authorization", "tool", "action"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct NIST analysis.", "tr": "Doğrudan NIST analizi." }
+    "sourceIds": [
+      "nist-agent-identity-blog-2026-08-27"
+    ],
+    "subjectIds": [
+      "authorization",
+      "tool",
+      "action"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct NIST analysis.",
+      "tr": "Doğrudan NIST analizi."
+    }
   },
   {
     "id": "hitl-consent-fatigue",
@@ -54,10 +91,18 @@
       "en": "Repeated human approval can create consent fatigue and weaken the accountability it is intended to provide.",
       "tr": "Tekrarlanan insan onayı, onay yorgunluğu yaratarak sağlaması amaçlanan hesap verebilirliği zayıflatabilir."
     },
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27"],
-    "subjectIds": ["authorization", "action"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct NIST analysis with an explicit usability caveat.", "tr": "Açık kullanılabilirlik uyarısı içeren doğrudan NIST analizi." }
+    "sourceIds": [
+      "nist-agent-identity-blog-2026-08-27"
+    ],
+    "subjectIds": [
+      "authorization",
+      "action"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct NIST analysis with an explicit usability caveat.",
+      "tr": "Açık kullanılabilirlik uyarısı içeren doğrudan NIST analizi."
+    }
   },
   {
     "id": "mcp-authorization-hardening",
@@ -66,10 +111,18 @@
       "en": "MCP 2026-07-28 hardens authorization and aligns deployments more closely with OAuth and OpenID Connect practice.",
       "tr": "MCP 2026-07-28 yetkilendirmeyi sertleştirir ve dağıtımları OAuth/OpenID Connect uygulamalarına daha yakın hizalar."
     },
-    "sourceIds": ["mcp-spec-2026-07-28"],
-    "subjectIds": ["authorization", "tool"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct protocol release statement.", "tr": "Doğrudan protokol sürüm açıklaması." }
+    "sourceIds": [
+      "mcp-spec-2026-07-28"
+    ],
+    "subjectIds": [
+      "authorization",
+      "tool"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct protocol release statement.",
+      "tr": "Doğrudan protokol sürüm açıklaması."
+    }
   },
   {
     "id": "owasp-agentic-risk-baseline",
@@ -78,10 +131,21 @@
       "en": "OWASP's 2026 agentic framework treats autonomous planning, tool use, identity, supply chain, and cascading behavior as operational security concerns.",
       "tr": "OWASP'ın 2026 ajan tabanlı uygulamalar çerçevesi; otonom planlamayı, araç kullanımını, kimliği, tedarik zincirini ve zincirleme davranışı operasyonel güvenlik konuları olarak ele alır."
     },
-    "sourceIds": ["owasp-agentic-top10-2026"],
-    "subjectIds": ["agent", "identity", "tool", "action", "incident"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct framework scope; individual SEC mappings remain synthesis.", "tr": "Doğrudan çerçeve kapsamı; tekil SEC eşlemeleri sentezdir." }
+    "sourceIds": [
+      "owasp-agentic-top10-2026"
+    ],
+    "subjectIds": [
+      "agent",
+      "identity",
+      "tool",
+      "action",
+      "incident"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct framework scope; individual SEC mappings remain synthesis.",
+      "tr": "Doğrudan çerçeve kapsamı; tekil SEC eşlemeleri sentezdir."
+    }
   },
   {
     "id": "atlas-agent-techniques",
@@ -90,19 +154,40 @@
       "en": "MITRE ATLAS v2026.09 adds autonomous-agent techniques and explicit mitigations for agent authority expansion and scope drift. Relative to v2026.08 it adds six top-level techniques, five sub-techniques, one mitigation and one case study, and ATLAS now releases content monthly.",
       "tr": "MITRE ATLAS v2026.09, otonom ajan teknikleri ile ajan yetkisinin genişlemesi ve kapsam sapmasına yönelik açık azaltımlar ekler. v2026.08’e göre altı üst-düzey teknik, beş alt-teknik, bir azaltma ve bir vaka çalışması ekler; ATLAS artık içerikleri aylık yayımlar."
     },
-    "sourceIds": ["mitre-atlas"],
-    "subjectIds": ["agent", "authorization", "tool", "action"],
-    "reviewedAt": "2026-10-06",
-    "confidence": { "en": "Direct v2026.09 release observation.", "tr": "Doğrudan v2026.09 sürüm gözlemi." }
+    "sourceIds": [
+      "mitre-atlas"
+    ],
+    "subjectIds": [
+      "agent",
+      "authorization",
+      "tool",
+      "action"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Direct v2026.09 release observation.",
+      "tr": "Doğrudan v2026.09 sürüm gözlemi."
+    }
   },
   {
     "id": "ai-act-enforcement-is-staged",
     "kind": "evidence",
-    "text": {"en": "The Commission FAQ distinguishes enforcement powers from application dates: enforcement powers began on 2 August 2026, and transparency duties are enforceable from that date, with an Article 50(2) transition for earlier systems until 2 December 2026. The new prohibitions on non-consensual intimate material and child sexual abuse material apply from 2 December 2026. Annex III high-risk rules apply from 2 December 2027; high-risk rules for regulated products apply from 2 August 2028.", "tr": "Komisyonun SSS sayfası, yaptırım yetkileri ile uygulama tarihlerini ayırır: yaptırım yetkileri 2 Ağustos 2026’da başladı ve şeffaflık yükümlülükleri bu tarihten itibaren uygulanabilir; daha önce piyasaya sunulan sistemler için Madde 50(2) kapsamında 2 Aralık 2026’ya kadar geçiş süresi vardır. Rızasız özel içerik ile çocuk cinsel istismarı içeriğinin üretimi veya manipülasyonuna ilişkin yeni yasaklar 2 Aralık 2026’dan itibaren uygulanır. Ek III yüksek risk kuralları 2 Aralık 2027’de; düzenlemeye tabi ürünlerin yüksek risk kuralları 2 Ağustos 2028’de uygulanır."},
-    "sourceIds": ["eu-ai-act-enforcement"],
-    "subjectIds": ["audit", "incident"],
-    "reviewedAt": "2026-10-06",
-    "confidence": {"en": "Commission FAQ re-read on 2 October 2026; category and transitional provisions matter. Not a legal or compliance determination.", "tr": "2 Ekim 2026’da yeniden okunan Komisyon SSS sayfası; kategori ve geçiş hükümleri önemlidir. Hukuki değerlendirme veya uyum kararı değildir."}
+    "text": {
+      "en": "The Commission FAQ distinguishes enforcement powers from application dates: enforcement powers began on 2 August 2026, and transparency duties are enforceable from that date, with an Article 50(2) transition for earlier systems until 2 December 2026. The new prohibitions on non-consensual intimate material and child sexual abuse material apply from 2 December 2026. Annex III high-risk rules apply from 2 December 2027; high-risk rules for regulated products apply from 2 August 2028.",
+      "tr": "Komisyonun SSS sayfası, yaptırım yetkileri ile uygulama tarihlerini ayırır: yaptırım yetkileri 2 Ağustos 2026’da başladı ve şeffaflık yükümlülükleri bu tarihten itibaren uygulanabilir; daha önce piyasaya sunulan sistemler için Madde 50(2) kapsamında 2 Aralık 2026’ya kadar geçiş süresi vardır. Rızasız özel içerik ile çocuk cinsel istismarı içeriğinin üretimi veya manipülasyonuna ilişkin yeni yasaklar 2 Aralık 2026’dan itibaren uygulanır. Ek III yüksek risk kuralları 2 Aralık 2027’de; düzenlemeye tabi ürünlerin yüksek risk kuralları 2 Ağustos 2028’de uygulanır."
+    },
+    "sourceIds": [
+      "eu-ai-act-enforcement"
+    ],
+    "subjectIds": [
+      "audit",
+      "incident"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Commission FAQ re-read on 2 October 2026; category and transitional provisions matter. Not a legal or compliance determination.",
+      "tr": "2 Ekim 2026’da yeniden okunan Komisyon SSS sayfası; kategori ve geçiş hükümleri önemlidir. Hukuki değerlendirme veya uyum kararı değildir."
+    }
   },
   {
     "id": "trust-is-evidence-chain",
@@ -111,10 +196,24 @@
       "en": "Agent trust is best examined as a chain connecting identity, delegated authority, constrained action, observation, and recoverability.",
       "tr": "Ajan güveni; kimlik, devredilen yetki, sınırlandırılmış eylem, gözlem ve kurtarılabilirliği bağlayan bir zincir olarak incelenmelidir."
     },
-    "sourceIds": ["nist-ai-800-5", "nist-agent-identity", "mcp-spec-2026-07-28", "owasp-agentic-top10-2026"],
-    "subjectIds": ["identity", "authorization", "action", "audit", "incident"],
+    "sourceIds": [
+      "nist-ai-800-5",
+      "nist-agent-identity",
+      "mcp-spec-2026-07-28",
+      "owasp-agentic-top10-2026"
+    ],
+    "subjectIds": [
+      "identity",
+      "authorization",
+      "action",
+      "audit",
+      "incident"
+    ],
     "reviewedAt": "2026-10-02",
-    "confidence": { "en": "SEC synthesis across named authoritative sources.", "tr": "Adı verilen yetkili kaynaklar üzerinden SEC sentezi." }
+    "confidence": {
+      "en": "SEC synthesis across named authoritative sources.",
+      "tr": "Adı verilen yetkili kaynaklar üzerinden SEC sentezi."
+    }
   },
   {
     "id": "identity-is-not-authority",
@@ -123,19 +222,44 @@
       "en": "Knowing which agent acted is necessary but does not prove that the specific action remained within delegated authority.",
       "tr": "Hangi ajanın eyleme geçtiğini bilmek gereklidir; ancak bu bilgi, belirli eylemin devredilen yetki içinde kaldığını tek başına kanıtlamaz."
     },
-    "sourceIds": ["nist-agent-identity", "nist-agent-identity-blog-2026-08-27"],
-    "subjectIds": ["identity", "authorization", "action", "audit"],
+    "sourceIds": [
+      "nist-agent-identity",
+      "nist-agent-identity-blog-2026-08-27"
+    ],
+    "subjectIds": [
+      "identity",
+      "authorization",
+      "action",
+      "audit"
+    ],
     "reviewedAt": "2026-10-02",
-    "confidence": { "en": "SEC synthesis from NIST identity and authorization questions.", "tr": "NIST kimlik ve yetkilendirme sorularından SEC sentezi." }
+    "confidence": {
+      "en": "SEC synthesis from NIST identity and authorization questions.",
+      "tr": "NIST kimlik ve yetkilendirme sorularından SEC sentezi."
+    }
   },
   {
     "id": "continuous-authority-watch",
     "kind": "watch-signal",
-    "text": {"en": "ATLAS names authority-expansion and scope-drift mitigations and now publishes them monthly. ACS v0.1.0 specifies runtime decisions, but its pinned reference implementation documents enforcement and authentication gaps; deployment evidence remains necessary.", "tr": "ATLAS, yetki genişlemesi ve kapsam sapması azaltımlarını adlandırır ve artık bunları aylık yayımlar. ACS v0.1.0 çalışma zamanı kararlarını tanımlar; ancak sabitlenmiş referans uygulama, denetim ve kimlik doğrulama eksiklerini belgeler. Dağıtıma özgü kanıt hâlâ gereklidir."},
-    "sourceIds": ["mitre-atlas", "owasp-acs-reference-2026-10-05"],
-    "subjectIds": ["authorization", "tool", "action", "audit"],
-    "reviewedAt": "2026-10-06",
-    "confidence": {"en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.", "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."}
+    "text": {
+      "en": "ATLAS names authority-expansion and scope-drift mitigations and now publishes them monthly. ACS v0.1.0 specifies runtime decisions, but its pinned reference implementation documents enforcement and authentication gaps; deployment evidence remains necessary.",
+      "tr": "ATLAS, yetki genişlemesi ve kapsam sapması azaltımlarını adlandırır ve artık bunları aylık yayımlar. ACS v0.1.0 çalışma zamanı kararlarını tanımlar; ancak sabitlenmiş referans uygulama, denetim ve kimlik doğrulama eksiklerini belgeler. Dağıtıma özgü kanıt hâlâ gereklidir."
+    },
+    "sourceIds": [
+      "mitre-atlas",
+      "owasp-acs-reference-2026-10-05"
+    ],
+    "subjectIds": [
+      "authorization",
+      "tool",
+      "action",
+      "audit"
+    ],
+    "reviewedAt": "2026-10-07",
+    "confidence": {
+      "en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.",
+      "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."
+    }
   },
   {
     "id": "acs-specification-is-not-enforcement",
@@ -152,7 +276,7 @@
       "tool",
       "audit"
     ],
-    "reviewedAt": "2026-10-06",
+    "reviewedAt": "2026-10-07",
     "confidence": {
       "en": "Maintainer-reported limits at a pinned revision; not a test run or an audit by SEC.",
       "tr": "Sabitlenmiş revizyonda geliştiricinin bildirdiği sınırlar; SEC tarafından yapılmış test veya denetim değildir."
