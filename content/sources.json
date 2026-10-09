@@ -5,7 +5,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
     "publishedAt": "2026-05-18",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -19,7 +19,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
     "publishedAt": "2026-02-17",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -47,7 +47,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
     "publishedAt": "2026-08-27",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -61,7 +61,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
@@ -75,7 +75,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
     "publishedAt": "2025-12-09",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -89,7 +89,7 @@
     "publisher": "MITRE ATLAS Project",
     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
     "publishedAt": "2026-09-15",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -103,7 +103,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
     "publishedAt": "2026-09-01",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -117,7 +117,7 @@
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
     "publishedAt": null,
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-regulation",
     "access": "available",
     "summary": {
@@ -126,12 +126,12 @@
     }
   },
   {
-    "id": "owasp-acs-reference-2026-10-05",
-    "title": "ACS specification v0.1.0 and reference implementation — revision 770f1e0",
+    "id": "owasp-acs-reference-2026-10-09",
+    "title": "ACS specification v0.1.0 and reference implementation — revision db5c89e",
     "publisher": "OWASP GenAI Security Project",
-    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/770f1e06b0a037518e910255109be4e6f2e0ca0c/README.md",
-    "publishedAt": "2026-10-04",
-    "checkedAt": "2026-10-07",
+    "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/db5c89e401d2a2bdb5700683f15830bf3e4fac01/README.md",
+    "publishedAt": "2026-10-09",
+    "checkedAt": "2026-10-09",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
@@ -145,7 +145,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-10-07",
+    "checkedAt": "2026-10-09",
     "kind": "official-documentation",
     "access": "available",
     "summary": {

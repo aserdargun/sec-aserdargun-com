@@ -4,7 +4,7 @@ import { expect, test } from '@playwright/test'
 test('root route resolves to the English brief', async ({ page }) => {
   await page.goto('/')
   await expect(page).toHaveURL(/\/en$/)
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('No recorded value changed on 7 October')
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('moved three commits today to db5c89e')
 })
 
 test('deep Turkish route and localized 404 survive direct navigation', async ({ page }) => {
