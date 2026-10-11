@@ -10,7 +10,7 @@ describe('Security Brief', () => {
     expect(await screen.findAllByText('Evidence')).not.toHaveLength(0)
     expect(screen.getAllByText('Synthesis')).not.toHaveLength(0)
     expect(screen.getAllByText('Watch signal')).not.toHaveLength(0)
-    expect(screen.getByText('Research cutoff: 2026-10-10')).toBeVisible()
+    expect(screen.getByText('Research cutoff: 2026-10-11')).toBeVisible()
     expect(screen.getByText('11 authoritative sources')).toBeVisible()
   })
 

@@ -14,7 +14,7 @@
       "action",
       "incident"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct NIST publication finding.",
       "tr": "Doğrudan NIST yayın bulgusu."
@@ -57,7 +57,7 @@
       "credential",
       "authorization"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Supported by current NIST analysis and MCP authorization direction.",
       "tr": "Güncel NIST analizi ve MCP yetkilendirme yönüyle desteklenir."
@@ -78,7 +78,7 @@
       "tool",
       "action"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct NIST analysis.",
       "tr": "Doğrudan NIST analizi."
@@ -98,7 +98,7 @@
       "authorization",
       "action"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct NIST analysis with an explicit usability caveat.",
       "tr": "Açık kullanılabilirlik uyarısı içeren doğrudan NIST analizi."
@@ -118,7 +118,7 @@
       "authorization",
       "tool"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct protocol release statement.",
       "tr": "Doğrudan protokol sürüm açıklaması."
@@ -141,7 +141,7 @@
       "action",
       "incident"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct framework scope; individual SEC mappings remain synthesis.",
       "tr": "Doğrudan çerçeve kapsamı; tekil SEC eşlemeleri sentezdir."
@@ -163,7 +163,7 @@
       "tool",
       "action"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Direct v2026.09 release observation.",
       "tr": "Doğrudan v2026.09 sürüm gözlemi."
@@ -183,7 +183,7 @@
       "audit",
       "incident"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Commission FAQ re-read on 2 October 2026; category and transitional provisions matter. Not a legal or compliance determination.",
       "tr": "2 Ekim 2026’da yeniden okunan Komisyon SSS sayfası; kategori ve geçiş hükümleri önemlidir. Hukuki değerlendirme veya uyum kararı değildir."
@@ -255,7 +255,7 @@
       "action",
       "audit"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.",
       "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."
@@ -276,7 +276,7 @@
       "tool",
       "audit"
     ],
-    "reviewedAt": "2026-10-10",
+    "reviewedAt": "2026-10-11",
     "confidence": {
       "en": "Maintainer-reported limits at a pinned revision; not a test run or an audit by SEC.",
       "tr": "Sabitlenmiş revizyonda geliştiricinin bildirdiği sınırlar; SEC tarafından yapılmış test veya denetim değildir."

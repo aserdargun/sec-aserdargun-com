@@ -41,7 +41,7 @@
     "sourceIds": [
       "nist-ai-800-5"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   },
   {
     "id": "owasp-agentic-mapping",
@@ -69,7 +69,7 @@
     "sourceIds": [
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   },
   {
     "id": "mitre-atlas-mapping",
@@ -90,7 +90,7 @@
     "sourceIds": [
       "mitre-atlas"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   },
   {
     "id": "owasp-acs-mapping",
@@ -113,7 +113,7 @@
       "owasp-agent-control-standard",
       "owasp-acs-reference-2026-10-09"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   },
   {
     "id": "mcp-authorization-mapping",
@@ -134,7 +134,7 @@
     "sourceIds": [
       "mcp-authorization-2026-07-28"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   },
   {
     "id": "eu-ai-act-mapping",
@@ -154,6 +154,6 @@
     "sourceIds": [
       "eu-ai-act-enforcement"
     ],
-    "reviewedAt": "2026-10-10"
+    "reviewedAt": "2026-10-11"
   }
 ]
