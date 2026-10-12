@@ -111,7 +111,7 @@
     },
     "sourceIds": [
       "owasp-agent-control-standard",
-      "owasp-acs-reference-2026-10-09"
+      "owasp-acs-reference-2026-10-12"
     ],
     "reviewedAt": "2026-10-11"
   },
