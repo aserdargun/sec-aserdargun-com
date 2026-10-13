@@ -4,7 +4,7 @@ test('Security Brief opens the selected trust boundary', async ({ page }) => {
   const errors: string[] = []
   page.on('console', (message) => { if (message.type() === 'error') errors.push(message.text()) })
   await page.goto('/en')
-  await expect(page.getByRole('heading', { level: 1 })).toContainText(/moved for the first time since 9 October|9 Ekim'den bu yana ilk kez hareket etti/)
+  await expect(page.getByRole('heading', { level: 1 })).toContainText(/moved since yesterday's cut|dünün kesitinden bu yana hiçbir şey hareket etmedi/)
   await page.getByRole('link', { name: 'Inspect the trust path' }).click()
   await page.getByRole('button', { name: /^05 Authorization/i }).click()
   await expect(page).toHaveURL(/\/en\/trust-path\?node=authorization$/)
