@@ -24,7 +24,7 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: /The OWASP Agent Control Standard reference repository moved for the first time in three days: the integration tip advanced two commits from 185ef4ea to e5d46647/i })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: /The OWASP Agent Control Standard shipped a release, 0.1.4, and it is the first substantive move on the specification surface since the 0.1.3 baseline/i })).toBeVisible()
     expect(window.location.pathname).toBe('/en')
   })
 
