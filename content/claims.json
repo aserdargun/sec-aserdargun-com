@@ -14,7 +14,7 @@
       "action",
       "incident"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct NIST publication finding.",
       "tr": "Doğrudan NIST yayın bulgusu."
@@ -57,7 +57,7 @@
       "credential",
       "authorization"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Supported by current NIST analysis and MCP authorization direction.",
       "tr": "Güncel NIST analizi ve MCP yetkilendirme yönüyle desteklenir."
@@ -78,7 +78,7 @@
       "tool",
       "action"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct NIST analysis.",
       "tr": "Doğrudan NIST analizi."
@@ -98,7 +98,7 @@
       "authorization",
       "action"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct NIST analysis with an explicit usability caveat.",
       "tr": "Açık kullanılabilirlik uyarısı içeren doğrudan NIST analizi."
@@ -118,7 +118,7 @@
       "authorization",
       "tool"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct protocol release statement.",
       "tr": "Doğrudan protokol sürüm açıklaması."
@@ -141,7 +141,7 @@
       "action",
       "incident"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct framework scope; individual SEC mappings remain synthesis.",
       "tr": "Doğrudan çerçeve kapsamı; tekil SEC eşlemeleri sentezdir."
@@ -163,7 +163,7 @@
       "tool",
       "action"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Direct v2026.09 release observation.",
       "tr": "Doğrudan v2026.09 sürüm gözlemi."
@@ -183,7 +183,7 @@
       "audit",
       "incident"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Commission FAQ re-read on 2 October 2026; category and transitional provisions matter. Not a legal or compliance determination.",
       "tr": "2 Ekim 2026’da yeniden okunan Komisyon SSS sayfası; kategori ve geçiş hükümleri önemlidir. Hukuki değerlendirme veya uyum kararı değildir."
@@ -247,7 +247,7 @@
     },
     "sourceIds": [
       "mitre-atlas",
-      "owasp-acs-reference-2026-10-15"
+      "owasp-acs-reference-2026-10-16"
     ],
     "subjectIds": [
       "authorization",
@@ -255,7 +255,7 @@
       "action",
       "audit"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Editorial watch signal grounded in release notes and a pinned implementation disclosure; SEC has not executed ACS.",
       "tr": "Sürüm notları ve sabitlenmiş uygulama açıklamasına dayanan editoryal izleme sinyali; SEC, ACS’yi çalıştırmamıştır."
@@ -265,18 +265,18 @@
     "id": "acs-specification-is-not-enforcement",
     "kind": "evidence",
     "text": {
-      "en": "The ACS reference README at release revision 5ee326b reports that the wire is unauthenticated — ACS-Core requires a baseline HMAC-SHA256 signature on every envelope and the reference Guardian implements none of it — that the default failure posture is fail-open, and that two of ACS's nineteen hook methods, steps/toolCallRequest and steps/toolCallResult, are evaluated live. Release 0.1.4, committed at 2026-10-15T22:56:40Z, is breaking for ACS-Trace while the specification version stays v0.1.0: the files at the /schema/v0.1.0/ URIs change in place, so the handshake cannot tell the old rules from the new and a conformance claim has to name the release or the commit. In it every step span requires acs.request_id and acs.session.id, the OCSF decision class requires finding_info, action_id, action, disposition_id, disposition, evidences and metadata.correlation_uid, defer maps to disposition_id 99, is_alert is true exactly when severity_id is 3 or higher, a late decision is emitted and flagged in finding_info.types instead of being suppressed, and a decision event records the Guardian's verdict rather than the enforced outcome, with a matching acs.decision.failure meaning the decision must not be counted as enforced. The release adds trace mappings for the skill lifecycle hooks steps/skillRegister, steps/skillLoad and steps/skillUnload in both OpenTelemetry and OCSF, adds the acs.decision.failure span event and per-hook conditional_attributes, and removes acs.provenance.lineage_depth and acs.provenance.origins_compacted from the OpenTelemetry mapping. version.txt now reads 0.1.4 and the release carries no tag and no GitHub release. None of it closes a gap: issues #70, #32 and #37 are all still open and the README still states all three verbatim. Specification conformance cannot be inferred from that demonstration, and version.txt alone can no longer stand in for it, because the schemas behind that version changed in place.",
-      "tr": "0.1.4 sürüm revizyonundaki ACS referans README'si, iletiyin kimlik doğrulanmadığını — ACS-Core her zarf için taban HMAC-SHA256 imzası gerektiriyor ve referans Guardian bunun hiçbirini uygulamıyor — hata durumunda varsayılan tutumun fail-open olduğunu ve ACS'nin on dokuz kanca yönteminden yalnızca ikisinin, steps/toolCallRequest ve steps/toolCallResult, canlı değerlendirildiğini bildirir. 0.1.4 sürümü 2026-10-15T22:56:40Z'de işlendi ve ACS-Trace için kırıcıdır, ancak şartname sürümü v0.1.0 olarak kalır: /schema/v0.1.0/ URI'lerindeki dosyalar yerinde değiştiğinden el sıkışma eski kuralları yenilerinden ayırt edemez ve uygunluk iddiası sürümü ya da commit'i adlandırmak zorundadır. Bu sürümde her adım span'i acs.request_id ve acs.session.id gerektirir, OCSF karar sınıfı finding_info, action_id, action, disposition_id, disposition, evidences ve metadata.correlation_uid ister, defer disposition_id 99'a eşlenir, is_alert tam olarak severity_id 3 veya üstü olduğunda doğrudur, geç gelen bir karar bastırılmak yerine yayımlanıp finding_info.types içinde işaretlenir ve bir karar olayı uygulanan sonucu değil Guardian'ın hükmünü kaydeder; eşleşen bir acs.decision.failure kararın uygulanmış sayılmaması gerektiği anlamına gelir. Sürüm, skill yaşam döngüsü kancaları steps/skillRegister, steps/skillLoad ve steps/skillUnload için hem OpenTelemetry hem OCSF'de iz eşlemeleri ekler, acs.decision.failure span olayını ve kanca başına conditional_attributes özniteliklerini ekler ve OpenTelemetry eşlemesinden acs.provenance.lineage_depth ile acs.provenance.origins_compacted'i çıkarır. version.txt artık 0.1.4 okuyor ve sürüm ne etiket ne de GitHub release taşıyor. Bunların hiçbiri bir açık kapatmaz: issue #70, #32 ve #37'nin üçü de hâlâ açık ve README üçünü de harfi harfine söylemeye devam ediyor. Bu gösterimden şartnameye uygunluk sonucu çıkarılamaz ve version.txt artık bunun yerine geçemez, çünkü o sürümün arkasındaki şemalar yerinde değişti."
+      "en": "The ACS reference README at release revision 834f3f0 reports that the wire is unauthenticated — ACS-Core requires a baseline HMAC-SHA256 signature on every envelope and the reference Guardian implements none of it — that the default failure posture is fail-open, and that two of ACS's nineteen hook methods, steps/toolCallRequest and steps/toolCallResult, are evaluated live. Release 0.1.4, committed at 2026-10-15T22:56:40Z, is breaking for ACS-Trace while the specification version stays v0.1.0: the files at the /schema/v0.1.0/ URIs change in place, so the handshake cannot tell the old rules from the new and a conformance claim has to name the release or the commit. In it every step span requires acs.request_id and acs.session.id, the OCSF decision class requires finding_info, action_id, action, disposition_id, disposition, evidences and metadata.correlation_uid, defer maps to disposition_id 99, is_alert is true exactly when severity_id is 3 or higher, a late decision is emitted and flagged in finding_info.types instead of being suppressed, and a decision event records the Guardian's verdict rather than the enforced outcome, with a matching acs.decision.failure meaning the decision must not be counted as enforced. The release adds trace mappings for the skill lifecycle hooks steps/skillRegister, steps/skillLoad and steps/skillUnload in both OpenTelemetry and OCSF, adds the acs.decision.failure span event and per-hook conditional_attributes, and removes acs.provenance.lineage_depth and acs.provenance.origins_compacted from the OpenTelemetry mapping. version.txt now reads 0.1.4, and the release now carries both a tag and a GitHub release: the annotated tag v0.1.4 appeared at 2026-10-16T19:12:01Z on 834f3f0d, the merge of pull request #286, and the GitHub release was published at 2026-10-16T19:15:27Z. Naming the release is now sufficient on its own, where a day earlier it named nothing at all. None of it closes a gap: issues #70, #32 and #37 are all still open and the README still states all three verbatim. Specification conformance cannot be inferred from that demonstration, and version.txt alone can no longer stand in for it, because the schemas behind that version changed in place.",
+      "tr": "0.1.4 sürüm revizyonundaki ACS referans README'si, iletiyin kimlik doğrulanmadığını — ACS-Core her zarf için taban HMAC-SHA256 imzası gerektiriyor ve referans Guardian bunun hiçbirini uygulamıyor — hata durumunda varsayılan tutumun fail-open olduğunu ve ACS'nin on dokuz kanca yönteminden yalnızca ikisinin, steps/toolCallRequest ve steps/toolCallResult, canlı değerlendirildiğini bildirir. 0.1.4 sürümü 2026-10-15T22:56:40Z'de işlendi ve ACS-Trace için kırıcıdır, ancak şartname sürümü v0.1.0 olarak kalır: /schema/v0.1.0/ URI'lerindeki dosyalar yerinde değiştiğinden el sıkışma eski kuralları yenilerinden ayırt edemez ve uygunluk iddiası sürümü ya da commit'i adlandırmak zorundadır. Bu sürümde her adım span'i acs.request_id ve acs.session.id gerektirir, OCSF karar sınıfı finding_info, action_id, action, disposition_id, disposition, evidences ve metadata.correlation_uid ister, defer disposition_id 99'a eşlenir, is_alert tam olarak severity_id 3 veya üstü olduğunda doğrudur, geç gelen bir karar bastırılmak yerine yayımlanıp finding_info.types içinde işaretlenir ve bir karar olayı uygulanan sonucu değil Guardian'ın hükmünü kaydeder; eşleşen bir acs.decision.failure kararın uygulanmış sayılmaması gerektiği anlamına gelir. Sürüm, skill yaşam döngüsü kancaları steps/skillRegister, steps/skillLoad ve steps/skillUnload için hem OpenTelemetry hem OCSF'de iz eşlemeleri ekler, acs.decision.failure span olayını ve kanca başına conditional_attributes özniteliklerini ekler ve OpenTelemetry eşlemesinden acs.provenance.lineage_depth ile acs.provenance.origins_compacted'i çıkarır. version.txt artık 0.1.4 okuyor ve sürüm artık hem etiket hem GitHub release taşıyor: sıralı etiket v0.1.4 2026-10-16T19:12:01Z'de pull request #286'nın birleştirmesi olan 834f3f0d üzerinde belirdi ve GitHub release 2026-10-16T19:15:27Z'de yayımlandı. Sürümü adlandırmak artık tek başına yeterli, bir gün önce ise hiçbir şeyi adlandırmıyordu. Bunların hiçbiri bir açık kapatmaz: issue #70, #32 ve #37'nin üçü de hâlâ açık ve README üçünü de harfi harfine söylemeye devam ediyor. Bu gösterimden şartnameye uygunluk sonucu çıkarılamaz ve version.txt artık bunun yerine geçemez, çünkü o sürümün arkasındaki şemalar yerinde değişti."
     },
     "sourceIds": [
-      "owasp-acs-reference-2026-10-15"
+      "owasp-acs-reference-2026-10-16"
     ],
     "subjectIds": [
       "authorization",
       "tool",
       "audit"
     ],
-    "reviewedAt": "2026-10-16",
+    "reviewedAt": "2026-10-17",
     "confidence": {
       "en": "Maintainer-reported limits at a pinned revision; not a test run or an audit by SEC.",
       "tr": "Sabitlenmiş revizyonda geliştiricinin bildirdiği sınırlar; SEC tarafından yapılmış test veya denetim değildir."
