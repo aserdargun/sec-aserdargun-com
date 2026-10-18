@@ -24,7 +24,7 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: /The Agent Control Standard release that yesterday carried no tag and no GitHub release now carries both/i })).toBeVisible()
+    expect(await screen.findByRole('heading', { name: /Nothing moved. The reference repository, the three documented gaps and the release that yesterday's cut named are all exactly where that cut left them/i })).toBeVisible()
     expect(window.location.pathname).toBe('/en')
   })
 
