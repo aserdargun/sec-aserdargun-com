@@ -5,7 +5,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/publications/summary-analysis-responses-request-information-regarding-security-considerations-ai",
     "publishedAt": "2026-05-18",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -19,7 +19,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/artificial-intelligence/ai-agent-standards-initiative",
     "publishedAt": "2026-02-17",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -47,7 +47,7 @@
     "publisher": "National Institute of Standards and Technology",
     "url": "https://www.nist.gov/blogs/cybersecurity-insights/back-future-why-agentic-ai-needs-strong-identity-foundation",
     "publishedAt": "2026-08-27",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-publication",
     "access": "available",
     "summary": {
@@ -61,7 +61,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
@@ -75,7 +75,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/owasp-top-10-for-agentic-applications-for-2026/",
     "publishedAt": "2025-12-09",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -89,7 +89,7 @@
     "publisher": "MITRE ATLAS Project",
     "url": "https://github.com/mitre-atlas/atlas-data/releases/tag/v2026.09",
     "publishedAt": "2026-09-15",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -103,7 +103,7 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://genai.owasp.org/resource/agent-control-standard-acs/",
     "publishedAt": "2026-09-01",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-framework",
     "access": "available",
     "summary": {
@@ -117,7 +117,7 @@
     "publisher": "European Commission AI Act Service Desk",
     "url": "https://ai-act-service-desk.ec.europa.eu/en/ai-act/faq/when-does-enforcement-start",
     "publishedAt": null,
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-regulation",
     "access": "available",
     "summary": {
@@ -131,12 +131,12 @@
     "publisher": "OWASP GenAI Security Project",
     "url": "https://github.com/GenAI-Security-Project/agent-control-standard/blob/834f3f0d51e7bbbd9a68ff682bec89f97ddd72d8/README.md",
     "publishedAt": "2026-10-16",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
-      "en": "Release 0.1.4 advances the reference tree four commits from e5d4664 to 5ee326b and is the first ACS-Core release since 0.1.3. c82310bc bumps urllib3 2.7.0 to 2.8.0. 39c94cb4 keeps a user's proxy exemptions, warns when loopback would reach a proxy and stops everything before a rerun. 685367df adds \"How the reference Guardian produces a trace\" with diagrams. 5ee326b is \"Release 0.1.4 (#281)\" and touches only CHANGELOG.md, pyproject.toml, uv.lock and version.txt, which now reads 0.1.4. The release is breaking for ACS-Trace while the specification version stays v0.1.0: the files at the /schema/v0.1.0/ URIs change in place, so the handshake cannot tell the old rules from the new and a conformance claim must name the release or commit. Every step span now requires acs.request_id and acs.session.id; the OCSF decision class requires finding_info, action_id, action, disposition_id, disposition, evidences and metadata.correlation_uid, defer maps to disposition_id 99, is_alert is true exactly when severity_id is 3 or higher, and a late decision is emitted and flagged in finding_info.types instead of being suppressed. A decision event records the Guardian's verdict rather than the enforced outcome, and a matching acs.decision.failure means the decision must not be counted as enforced. The four policy_references fields and the provenance source_id now require minLength 1. Added in this release: the acs.decision.failure span event, per-hook conditional_attributes, trace mappings for the skill lifecycle hooks steps/skillRegister, steps/skillLoad and steps/skillUnload in both OpenTelemetry and OCSF, an OTLP file and HTTP exporter plus an audit-log converter for the reference Guardian, a committed sample trace and a \"Produce a trace\" walkthrough. Removed: acs.provenance.lineage_depth and acs.provenance.origins_compacted from the OpenTelemetry mapping. The reference converter's spans now carry service.name acs-reference-audit-converter instead of acs-reference-guardian. The three documented gaps are unchanged and still open as issues #70, #32 and #37: the wire is still unauthenticated against a baseline HMAC-SHA256 requirement the Guardian implements none of, the default failure posture is still fail-open, and only steps/toolCallRequest and steps/toolCallResult are still evaluated live. The README at this revision still states all three verbatim. The specification version is still v0.1.0, but the tag list has now moved: the annotated tag v0.1.4 appeared at 2026-10-16T19:12:01Z pointing at 834f3f0d, the merge of pull request #286, and the repository published a GitHub release for v0.1.4 at 2026-10-16T19:15:27Z, so the release that carried neither tag nor release a day earlier now carries both. Past the release commit the branch tip is 8a459524, \"Address Ariel's review of the trace exporter (#289)\", which references issue #274 and reworks the reference Guardian's trace exporter into otel-mapping.ts and otlp-file-exporter.ts, extracts loopback-proxy.ts, moves reading of the proxy environment into main.ts and adds main.test.ts; its single CHANGELOG line records that the Guardian's main.ts, not the trace exporter, now reads the proxy environment and applies the loopback exemption, and that close() applies the same bounded drain whether trace export is on or off. Issue #37 took a seventeenth comment at 2026-10-16T19:27:40Z; #70 and #32 did not move.",
-      "tr": "0.1.4 sürümü referans ağacını e5d4664'ten 5ee326b'ye dört commit ilerletir ve 0.1.3'ten sonraki ilk ACS-Core sürümüdür. c82310bc urllib3'ü 2.7.0'dan 2.8.0'a yükseltir. 39c94cb4 kullanıcının proxy istisnalarını korur, döngüsel geri döngü bir proxy'ye gidecekse uyarır ve yeniden çalıştırmadan önce her şeyi durdurur. 685367df \"How the reference Guardian produces a trace\" bölümünü şemalarla ekler. 5ee326b \"Release 0.1.4 (#281)\" commitidir ve yalnızca CHANGELOG.md, pyproject.toml, uv.lock ve version.txt dosyalarına dokunur; version.txt artık 0.1.4 okur. Bu sürüm ACS-Trace için kırıcıdır, ancak şartname sürümü v0.1.0 olarak kalır: /schema/v0.1.0/ URI'lerindeki dosyalar yerinde değiştiğinden el sıkışma eski kuralları yenilerinden ayırt edemez ve uygunluk iddiası sürümü ya da commit'i adlandırmak zorundadır. Her adım span'i artık acs.request_id ve acs.session.id gerektirir; OCSF karar sınıfı finding_info, action_id, action, disposition_id, disposition, evidences ve metadata.correlation_uid ister, defer disposition_id 99'a eşlenir, is_alert tam olarak severity_id 3 veya üstü olduğunda doğrudur ve geç gelen bir karar bastırılmak yerine yayımlanıp finding_info.types içinde işaretlenir. Bir karar olayı uygulanan sonucu değil Guardian'ın hükmünü kaydeder ve eşleşen bir acs.decision.failure, kararın uygulanmış sayılmaması gerektiği anlamına gelir. Dört policy_references alanı ve provenance source_id artık minLength 1 gerektirir. Bu sürümde eklenenler: acs.decision.failure span olayı, kanca başına conditional_attributes, skill yaşam döngüsü kancaları steps/skillRegister, steps/skillLoad ve steps/skillUnload için hem OpenTelemetry hem OCSF'de iz eşlemeleri, referans Guardian için bir OTLP dosya ve HTTP dışa aktarıcısı ile denetim günlüğü dönüştürücüsü, kayıtlı örnek iz ve \"Produce a trace\" yürüyüşü. Çıkarılanlar: OpenTelemetry eşlemesinden acs.provenance.lineage_depth ve acs.provenance.origins_compacted. Referans dönüştürücünün span'leri artık acs-reference-guardian yerine service.name acs-reference-audit-converter taşıyor. Üç belgelenmiş açık değişmemiştir ve issue #70, #32 ve #37 olarak hâlâ açıktır: ileti hâlâ kimlik doğrulanmıyor ve Guardian'ın uygulamadığı taban HMAC-SHA256 gereksinimi karşısında, varsayılan hata durumu hâlâ fail-open ve canlı değerlendirilen kancalar hâlâ yalnızca steps/toolCallRequest ile steps/toolCallResult. Bu revizyondaki README üçünü de harfi harfine söylemeye devam eder. Şartname sürümü hâlâ v0.1.0, ancak etiket listesi artık hareket etti: sıralı etiket v0.1.4 2026-10-16T19:12:01Z'de belirdi ve pull request #286'nın birleştirmesi olan 834f3f0d'yi gösteriyor; depo ayrıca 2026-10-16T19:15:27Z'de v0.1.4 için bir GitHub release yayımladı, yani bir gün önce ne etiketi ne de GitHub release'ı olan sürüm artık ikisini de taşıyor. Sürüm commit'inin ötesinde dal ucu 8a459524, \"Address Ariel's review of the trace exporter (#289)\", issue #274'ü referans alır ve referans Guardian'ın iz dışa aktarıcısını otel-mapping.ts ile otlp-file-exporter.ts olarak yeniden düzenler, loopback-proxy.ts'i ayırır, proxy ortamının okunmasını main.ts'e taşır ve main.test.ts ekler; tek CHANGELOG satırı, Guardian'ın proxy ortamını ve döngüsel muafiyetini artık iz dışa aktarıcısının değil main.ts'in okuduğunu ve close()'un iz dışa aktarımı açık ya da kapalı olsun aynı sınırlı boşaltmayı uyguladığını kaydeder. Issue #37 2026-10-16T19:27:40Z'de on yedinci yorumunu aldı; #70 ve #32 hareket etmedi."
+      "en": "Release 0.1.4 advances the reference tree four commits from e5d4664 to 5ee326b and is the first ACS-Core release since 0.1.3. c82310bc bumps urllib3 2.7.0 to 2.8.0. 39c94cb4 keeps a user's proxy exemptions, warns when loopback would reach a proxy and stops everything before a rerun. 685367df adds \"How the reference Guardian produces a trace\" with diagrams. 5ee326b is \"Release 0.1.4 (#281)\" and touches only CHANGELOG.md, pyproject.toml, uv.lock and version.txt, which now reads 0.1.4. The release is breaking for ACS-Trace while the specification version stays v0.1.0: the files at the /schema/v0.1.0/ URIs change in place, so the handshake cannot tell the old rules from the new and a conformance claim must name the release or commit. Every step span now requires acs.request_id and acs.session.id; the OCSF decision class requires finding_info, action_id, action, disposition_id, disposition, evidences and metadata.correlation_uid, defer maps to disposition_id 99, is_alert is true exactly when severity_id is 3 or higher, and a late decision is emitted and flagged in finding_info.types instead of being suppressed. A decision event records the Guardian's verdict rather than the enforced outcome, and a matching acs.decision.failure means the decision must not be counted as enforced. The four policy_references fields and the provenance source_id now require minLength 1. Added in this release: the acs.decision.failure span event, per-hook conditional_attributes, trace mappings for the skill lifecycle hooks steps/skillRegister, steps/skillLoad and steps/skillUnload in both OpenTelemetry and OCSF, an OTLP file and HTTP exporter plus an audit-log converter for the reference Guardian, a committed sample trace and a \"Produce a trace\" walkthrough. Removed: acs.provenance.lineage_depth and acs.provenance.origins_compacted from the OpenTelemetry mapping. The reference converter's spans now carry service.name acs-reference-audit-converter instead of acs-reference-guardian. The three documented gaps are unchanged and still open as issues #70, #32 and #37: the wire is still unauthenticated against a baseline HMAC-SHA256 requirement the Guardian implements none of, the default failure posture is still fail-open, and only steps/toolCallRequest and steps/toolCallResult are still evaluated live. The README at this revision still states all three verbatim. The specification version is still v0.1.0, but the tag list has now moved: the annotated tag v0.1.4 appeared at 2026-10-16T19:12:01Z pointing at 834f3f0d, the merge of pull request #286, and the repository published a GitHub release for v0.1.4 at 2026-10-16T19:15:27Z, so the release that carried neither tag nor release a day earlier now carries both. Past the release commit the branch tip is 9c05f040, \"docs(instrument): correct acs_version field location (#254)\", committed 2026-10-19T01:07:13Z; it is the only commit to land since the previous cut and it changes one line of docs/spec/instrument/specification.md, where the envelope row no longer reads \"JSON-RPC 2.0, with top-level acs_version\" but \"JSON-RPC 2.0, with acs_version in params (requests) and result (responses)\". The README at that revision is byte-for-byte identical to the README at the pinned revision 834f3f0d, so the three documented gaps, the unauthenticated wire, the fail-open default and the two of nineteen live hook methods, are unaffected and still open as issues #70, #32 and #37. The commit before it, 8a459524, \"Address Ariel's review of the trace exporter (#289)\", references issue #274 and reworks the reference Guardian's trace exporter into otel-mapping.ts and otlp-file-exporter.ts, extracts loopback-proxy.ts, moves reading of the proxy environment into main.ts and adds main.test.ts; its single CHANGELOG line records that the Guardian's main.ts, not the trace exporter, now reads the proxy environment and applies the loopback exemption, and that close() applies the same bounded drain whether trace export is on or off. Issue #37 took a seventeenth comment at 2026-10-16T19:27:40Z; #70 and #32 did not move.",
+      "tr": "0.1.4 sürümü referans ağacını e5d4664'ten 5ee326b'ye dört commit ilerletir ve 0.1.3'ten sonraki ilk ACS-Core sürümüdür. c82310bc urllib3'ü 2.7.0'dan 2.8.0'a yükseltir. 39c94cb4 kullanıcının proxy istisnalarını korur, döngüsel geri döngü bir proxy'ye gidecekse uyarır ve yeniden çalıştırmadan önce her şeyi durdurur. 685367df \"How the reference Guardian produces a trace\" bölümünü şemalarla ekler. 5ee326b \"Release 0.1.4 (#281)\" commitidir ve yalnızca CHANGELOG.md, pyproject.toml, uv.lock ve version.txt dosyalarına dokunur; version.txt artık 0.1.4 okur. Bu sürüm ACS-Trace için kırıcıdır, ancak şartname sürümü v0.1.0 olarak kalır: /schema/v0.1.0/ URI'lerindeki dosyalar yerinde değiştiğinden el sıkışma eski kuralları yenilerinden ayırt edemez ve uygunluk iddiası sürümü ya da commit'i adlandırmak zorundadır. Her adım span'i artık acs.request_id ve acs.session.id gerektirir; OCSF karar sınıfı finding_info, action_id, action, disposition_id, disposition, evidences ve metadata.correlation_uid ister, defer disposition_id 99'a eşlenir, is_alert tam olarak severity_id 3 veya üstü olduğunda doğrudur ve geç gelen bir karar bastırılmak yerine yayımlanıp finding_info.types içinde işaretlenir. Bir karar olayı uygulanan sonucu değil Guardian'ın hükmünü kaydeder ve eşleşen bir acs.decision.failure, kararın uygulanmış sayılmaması gerektiği anlamına gelir. Dört policy_references alanı ve provenance source_id artık minLength 1 gerektirir. Bu sürümde eklenenler: acs.decision.failure span olayı, kanca başına conditional_attributes, skill yaşam döngüsü kancaları steps/skillRegister, steps/skillLoad ve steps/skillUnload için hem OpenTelemetry hem OCSF'de iz eşlemeleri, referans Guardian için bir OTLP dosya ve HTTP dışa aktarıcısı ile denetim günlüğü dönüştürücüsü, kayıtlı örnek iz ve \"Produce a trace\" yürüyüşü. Çıkarılanlar: OpenTelemetry eşlemesinden acs.provenance.lineage_depth ve acs.provenance.origins_compacted. Referans dönüştürücünün span'leri artık acs-reference-guardian yerine service.name acs-reference-audit-converter taşıyor. Üç belgelenmiş açık değişmemiştir ve issue #70, #32 ve #37 olarak hâlâ açıktır: ileti hâlâ kimlik doğrulanmıyor ve Guardian'ın uygulamadığı taban HMAC-SHA256 gereksinimi karşısında, varsayılan hata durumu hâlâ fail-open ve canlı değerlendirilen kancalar hâlâ yalnızca steps/toolCallRequest ile steps/toolCallResult. Bu revizyondaki README üçünü de harfi harfine söylemeye devam eder. Şartname sürümü hâlâ v0.1.0, ancak etiket listesi artık hareket etti: sıralı etiket v0.1.4 2026-10-16T19:12:01Z'de belirdi ve pull request #286'nın birleştirmesi olan 834f3f0d'yi gösteriyor; depo ayrıca 2026-10-16T19:15:27Z'de v0.1.4 için bir GitHub release yayımladı, yani bir gün önce ne etiketi ne de GitHub release'ı olan sürüm artık ikisini de taşıyor. Sürüm commit'inin ötesinde dal ucu 9c05f040, \"docs(instrument): correct acs_version field location (#254)\", 2026-10-19T01:07:13Z'de işlenmiş; önceki kesimden bu yana düşen tek commit bu ve docs/spec/instrument/specification.md dosyasının tek bir satırını değiştiriyor, zarf satırı artık \"JSON-RPC 2.0, with top-level acs_version\" değil \"JSON-RPC 2.0, with acs_version in params (requests) and result (responses)\" okuyor. O revizyondaki README, sabitlenen 834f3f0d revizyonundaki README ile bayt bayt aynıdır, bu yüzden belgelenen üç açık, kimlik doğrulanmayan ileti, fail-open varsayılan ve on dokuz kancadan canlı değerlendirilen ikisi, etkilenmez ve issue #70, #32 ve #37 olarak hâlâ açıktır. Ondan önceki commit 8a459524, \"Address Ariel's review of the trace exporter (#289)\", issue #274'ü referans alır ve referans Guardian'ın iz dışa aktarıcısını otel-mapping.ts ile otlp-file-exporter.ts olarak yeniden düzenler, loopback-proxy.ts'i ayırır, proxy ortamının okunmasını main.ts'e taşır ve main.test.ts ekler; tek CHANGELOG satırı, Guardian'ın proxy ortamını ve döngüsel muafiyetini artık iz dışa aktarıcısının değil main.ts'in okuduğunu ve close()'un iz dışa aktarımı açık ya da kapalı olsun aynı sınırlı boşaltmayı uyguladığını kaydeder. Issue #37 2026-10-16T19:27:40Z'de on yedinci yorumunu aldı; #70 ve #32 hareket etmedi."
     }
   },
   {
@@ -145,7 +145,7 @@
     "publisher": "Model Context Protocol",
     "url": "https://modelcontextprotocol.io/specification/2026-07-28/basic/authorization",
     "publishedAt": "2026-07-28",
-    "checkedAt": "2026-10-18",
+    "checkedAt": "2026-10-19",
     "kind": "official-documentation",
     "access": "available",
     "summary": {
