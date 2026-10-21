@@ -24,7 +24,11 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    expect(await screen.findByRole('heading', { name: /One commit landed. Yesterday's cut left the reference repository's branch tip at 8a459524/i })).toBeVisible()
+    const briefHeading = await screen.findByRole('heading', { name: /Nothing landed on the default branch. It still stands at 9c05f040, but two unmerged branches moved overnight/i })
+    expect(briefHeading).toBeVisible()
+    // The cut names the branch tip it measured. A later cut that moves the tip has
+    // to update this assertion rather than pass on the generic opening alone.
+    expect(briefHeading).toHaveTextContent('9c05f040')
     expect(window.location.pathname).toBe('/en')
   })
 
