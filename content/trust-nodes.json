@@ -10,7 +10,7 @@
     "requiredEvidence": [{ "en": "Model, version, system instruction, and context provenance", "tr": "Model, sürüm, sistem talimatı ve bağlam kökeni kaydı" }],
     "threatIds": ["goal-instruction-integrity", "data-context-poisoning", "agentic-supply-chain"],
     "controlIds": ["instruction-boundary", "data-provenance-gate"],
-    "sourceIds": ["nist-ai-800-5", "mitre-atlas"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["nist-ai-800-5", "mitre-atlas"], "reviewedAt": "2026-10-25"
   },
   {
     "id": "agent", "order": 2,
@@ -49,7 +49,7 @@
     "requiredEvidence": [{ "en": "Issuance, audience, expiry, rotation, and revocation trace", "tr": "Verilme, hedef, süre sonu, rotasyon ve iptal izi" }],
     "threatIds": ["identity-privilege-abuse"],
     "controlIds": ["short-lived-credentials", "audience-restricted-tokens"],
-    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["nist-agent-identity-blog-2026-08-27", "mcp-spec-2026-07-28", "mcp-authorization-2026-07-28"], "reviewedAt": "2026-10-25"
   },
   {
     "id": "authorization", "order": 5,
@@ -75,7 +75,7 @@
     "requiredEvidence": [{ "en": "Resolved tool identity, version, publisher, and allowlist result", "tr": "Çözümlenmiş araç kimliği, sürümü, yayıncısı ve izin listesi sonucu" }],
     "threatIds": ["delegated-rights-drift", "tool-misuse", "unexpected-code-execution", "agentic-supply-chain"],
     "controlIds": ["least-privilege-policy", "explicit-tool-allowlist", "continuous-authority-check"],
-    "sourceIds": ["owasp-agentic-top10-2026", "mcp-spec-2026-07-28", "owasp-agent-control-standard"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["owasp-agentic-top10-2026", "mcp-spec-2026-07-28", "owasp-agent-control-standard"], "reviewedAt": "2026-10-25"
   },
   {
     "id": "sandbox", "order": 7,
@@ -88,7 +88,7 @@
     "requiredEvidence": [{ "en": "Isolation policy and refused boundary tests", "tr": "Yalıtım politikası ve reddedilen sınır testleri" }],
     "threatIds": ["unexpected-code-execution", "agentic-supply-chain"],
     "controlIds": ["explicit-tool-allowlist", "sandbox-containment"],
-    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["owasp-agentic-top10-2026"], "reviewedAt": "2026-10-25"
   },
   {
     "id": "data", "order": 8,
@@ -101,7 +101,7 @@
     "requiredEvidence": [{ "en": "Field-level access and source provenance trace", "tr": "Alan düzeyinde erişim ve kaynak kökeni izi" }],
     "threatIds": ["goal-instruction-integrity", "data-context-poisoning"],
     "controlIds": ["instruction-boundary", "data-provenance-gate", "data-minimization"],
-    "sourceIds": ["mitre-atlas", "nist-ai-800-5"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["mitre-atlas", "nist-ai-800-5"], "reviewedAt": "2026-10-25"
   },
   {
     "id": "action", "order": 9,
@@ -140,6 +140,6 @@
     "requiredEvidence": [{ "en": "Containment cutoff and reconciled recovery inventory", "tr": "Sınırlama kesimi ve uzlaştırılmış kurtarma envanteri" }],
     "threatIds": ["audit-nonrepudiation-failure", "cascading-failure-recovery"],
     "controlIds": ["tamper-evident-action-log", "incident-revocation", "recovery-replay-test"],
-    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026"], "reviewedAt": "2026-10-02"
+    "sourceIds": ["nist-ai-800-5", "owasp-agentic-top10-2026"], "reviewedAt": "2026-10-25"
   }
 ]

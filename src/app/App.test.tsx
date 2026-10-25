@@ -24,11 +24,11 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    const briefHeading = await screen.findByRole('heading', { name: /One commit landed on the default branch, and it rewrites one line of the profile table. The branch moved from c24adc8e6 to d1ad29431/i })
+    const briefHeading = await screen.findByRole('heading', { name: /One pin inside the catalog was stale, and the reference repository itself did not move/i })
     expect(briefHeading).toBeVisible()
-    // The cut names the branch tip it measured. A later cut that moves the tip has
+    // The cut names the revision it measured. A later cut that moves the pin has
     // to update this assertion rather than pass on the generic opening alone.
-    expect(briefHeading).toHaveTextContent('d1ad29431')
+    expect(briefHeading).toHaveTextContent('834f3f0')
     expect(window.location.pathname).toBe('/en')
   })
 
