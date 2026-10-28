@@ -80,7 +80,7 @@
     "sourceIds": [
       "nist-agent-identity-blog-2026-08-27"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "audience-restricted-tokens",
@@ -125,7 +125,7 @@
       "nist-agent-identity-blog-2026-08-27",
       "mcp-authorization-2026-07-28"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "least-privilege-policy",
@@ -216,7 +216,7 @@
       "mitre-atlas",
       "nist-ai-800-5"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "explicit-tool-allowlist",
@@ -262,7 +262,7 @@
       "mitre-atlas",
       "owasp-agent-control-standard"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "sandbox-containment",
@@ -306,7 +306,7 @@
       "nist-agent-identity-blog-2026-08-27",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "data-provenance-gate",
@@ -348,7 +348,7 @@
     "sourceIds": [
       "mitre-atlas"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "data-minimization",
@@ -388,7 +388,7 @@
     "sourceIds": [
       "nist-agent-identity-blog-2026-08-27"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "human-approval-boundaries",
@@ -531,7 +531,7 @@
       "mitre-atlas",
       "owasp-agent-control-standard"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "incident-revocation",
@@ -574,7 +574,7 @@
       "nist-ai-800-5",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "recovery-replay-test",

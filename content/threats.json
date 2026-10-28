@@ -48,7 +48,7 @@
       "mitre-atlas",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "identity-privilege-abuse",
@@ -203,7 +203,7 @@
       "mitre-atlas",
       "owasp-agent-control-standard"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "data-context-poisoning",
@@ -253,7 +253,7 @@
       "nist-ai-800-5",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "unexpected-code-execution",
@@ -302,7 +302,7 @@
       "owasp-agentic-top10-2026",
       "nist-agent-identity-blog-2026-08-27"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "agentic-supply-chain",
@@ -352,7 +352,7 @@
       "owasp-agentic-top10-2026",
       "mitre-atlas"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "audit-nonrepudiation-failure",
@@ -450,7 +450,7 @@
       "nist-agent-identity-blog-2026-08-27",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "cascading-failure-recovery",
@@ -499,6 +499,6 @@
       "owasp-agentic-top10-2026",
       "nist-ai-800-5"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   }
 ]

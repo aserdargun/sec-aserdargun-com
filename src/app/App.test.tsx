@@ -24,7 +24,7 @@ describe('SEC application shell', () => {
   it('redirects the root route to English brief', async () => {
     renderAt('/')
 
-    const briefHeading = await screen.findByRole('heading', { name: /Nothing moved, and the one thing that still looks like it might have is the same thing it was/i })
+    const briefHeading = await screen.findByRole('heading', { name: /Nothing moved, and the one thing that looks like it moved did not move the part that matters/i })
     expect(briefHeading).toBeVisible()
     // The cut names the revision it measured. A later cut that moves the pin has
     // to update this assertion rather than pass on the generic opening alone.

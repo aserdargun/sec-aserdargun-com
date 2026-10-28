@@ -51,7 +51,7 @@
       "nist-ai-800-5",
       "mitre-atlas"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "agent",
@@ -208,7 +208,7 @@
       "mcp-spec-2026-07-28",
       "mcp-authorization-2026-07-28"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "authorization",
@@ -324,7 +324,7 @@
       "mcp-spec-2026-07-28",
       "owasp-agent-control-standard"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "sandbox",
@@ -376,7 +376,7 @@
     "sourceIds": [
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "data",
@@ -430,7 +430,7 @@
       "mitre-atlas",
       "nist-ai-800-5"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   },
   {
     "id": "action",
@@ -602,6 +602,6 @@
       "nist-ai-800-5",
       "owasp-agentic-top10-2026"
     ],
-    "reviewedAt": "2026-10-27"
+    "reviewedAt": "2026-10-28"
   }
 ]
